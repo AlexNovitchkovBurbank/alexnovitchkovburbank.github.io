@@ -25,6 +25,66 @@
         <a href="./Contact.html">Contact</a>
       </div>
     </nav>
-    <main></main>
+    <main>
+      <div class="box">
+        <h2><strong>Sign Up Form</strong></h2>
+        <h3 class="h3Contact">Fill up the items in the form below.</h3>
+        <form action="./Contact.html">
+          <label for="Name">Name: </label>
+          <input type="text" name="Name" id="Name" />
+          <br />
+          <br />
+          <label for="Username">Username: </label>
+          <input type="text" name="Username" id="Username" />
+          <br />
+          <br />
+          <label for="Email">Email: </label>
+          <input type="email" name="Email" id="Email" />
+          <br />
+          <br />
+          <label for="Password">Password: </label>
+          <input type="password" name="Password" id="Password" />
+          <br />
+          <br />
+          <label for="DateOfBirth">Date of birth: </label>
+          <input type="date" name="DateOfBirth" id="DateOfBirth" />
+          <br />
+          <br />
+          <h4>Preferred Pronouns:</h4>
+          <!-- Wave wants a fieldset for accessibility -->
+          <fieldset class="radioButtonBlock">
+            <legend>Pronouns</legend>
+            <input type="radio" name="Pronouns" id="She/her" value="She/her" />
+            <label for="She/her">She/her</label>
+            <br />
+            <input type="radio" name="Pronouns" id="He/him" value="He/him" />
+            <label for="He/him">He/him</label>
+            <br />
+            <input
+              type="radio"
+              name="Pronouns"
+              id="They/them"
+              value="They/them"
+            />
+            <label for="They/them">They/them</label>
+            <br />
+            <input
+              type="radio"
+              name="Pronouns"
+              id="PreferNotToSay"
+              value="PreferNotToSay"
+            />
+            <label for="PreferNotToSay">I prefer not to say</label>
+          </fieldset>
+          <br />
+          <button type="submit" class="button, submit" id="submit">
+            Submit
+          </button>
+          <button type="reset" class="button, cancel" id="cancel">
+            Cancel
+          </button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
