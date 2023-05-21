@@ -37,12 +37,17 @@ a {
   color: white;
 }
 
-/* About page */
 h1 {
   margin-top: 0.5em;
   text-align: center;
 }
 
+h2 {
+  margin-bottom: -10px;
+  text-align: center;
+}
+
+/* About page */
 #bio {
   margin: 20px auto;
   width: 300px;
@@ -52,6 +57,53 @@ h1 {
   display: block;
   margin: 0 auto;
   border-radius: 300px;
+}
+
+/* Previous Work page */
+@media (max-width: 900px) {
+  #PreviousWorkContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #SkillsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #CoursesTakenContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 901px) {
+  #PreviousWorkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #SkillsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #CoursesTakenContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.PreviousWorks {
+  display: block;
+  width: 20em;
+  text-align: center;
+  margin-bottom: -0.7em;
 }
 
 /* Projects page */
@@ -64,13 +116,13 @@ h1 {
   #PersonalProjects {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
+    align-items: center;
   }
 
   #SchoolProjects {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
+    align-items: center;
   }
 }
 
@@ -94,18 +146,29 @@ h1 {
   }
 }
 
+.h2Projects {
+  margin-bottom: 0.2em;
+}
+
 .ProjectTitle {
-  margin-top: 2em;
+  margin-top: 0.8em;
   margin-bottom: -0.3em;
   text-align: center;
   color: var(--gray);
+}
+
+.ProjectBox {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 10px;
+  border: var(--black) solid 1px;
 }
 
 .Projects {
   display: block;
   width: 20em;
   text-align: center;
-  align-self: center;
 }
 
 /* Contact page */
@@ -142,12 +205,6 @@ h1 {
     margin-left: 4%;
     margin-right: 4%;
   }
-}
-
-h2 {
-  display: inline-block;
-  margin-bottom: -20px;
-  text-align: center;
 }
 
 .h3Contact {
