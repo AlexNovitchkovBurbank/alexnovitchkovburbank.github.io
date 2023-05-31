@@ -1,3 +1,8 @@
+import "animate.css";
+
+let numBoxes = 1;
+let viewHeightOfContentOnPage;
+
 let formElement = document.querySelector("form");
 
 function displayAlert(stringToDisplay) {
@@ -22,4 +27,31 @@ function checkRequiredFields() {
 
 formElement.addEventListener("submit", () => {
   checkRequiredFields();
+});
+
+function initializePageWithContent() {
+  let PersonalProjectsContainer = document.querySelector("#PeronalProjects");
+  let projectBoxElement = document.querySelector("ProjectBox");
+
+  while (viewHeightOfContentOnPageviewHeightOfContentOnPage <= 768) {
+    projectBoxElement.item(numBoxes - 1);
+
+    numBoxes++;
+  }
+}
+
+function checkToDisplayNewProject() {
+  let projectsContainer = document.getElementById("ProjectsContainer");
+
+  if (document.getElementsByClassName("PersonalProjects").length)
+    if (projectsContainer.clientHeight >= 768) {
+    }
+
+  return false;
+}
+
+formElement.addEventListener("scroll", () => {
+  if (checkToDisplayNewProject()) {
+    document.getElementById();
+  }
 });
