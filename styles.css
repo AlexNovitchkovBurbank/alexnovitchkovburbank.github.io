@@ -18,7 +18,12 @@ nav {
   background-color: var(--black);
   justify-content: flex-end;
   height: 3em;
+  margin-top: -80px;
   margin-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  margin-left: -8px;
 }
 
 #NavDiv {
@@ -39,13 +44,17 @@ a {
 }
 
 h1 {
-  margin-top: 0.5em;
+  margin-top: 5rem;
   text-align: center;
 }
 
 h2 {
   margin-bottom: -10px;
   text-align: center;
+}
+
+:link {
+  text-decoration: none;
 }
 
 /* About page */
@@ -114,7 +123,6 @@ h2 {
   #ProjectsContainer {
     display: flex;
     flex-direction: column;
-    margin-top: -20px;
   }
 
   #PersonalProjects {
@@ -282,4 +290,8 @@ label {
 
 #Astrisk {
   color: var(--dark-red);
+}
+
+.ProjectBox:hover {
+  animation: backwards;
 }
