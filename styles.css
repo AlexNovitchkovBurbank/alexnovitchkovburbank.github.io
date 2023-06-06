@@ -1,3 +1,16 @@
+:root {
+  --black: #080808;
+  --white: #fefefe;
+  --gray: #565656;
+  --light-gray: rgba(120, 118, 118, 0.5);
+  --violetred: #a2106d;
+  --dark-red: #bb0000;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 body {
   font-family: "Sans Serif", sans-serif;
   font-size: 18px;
@@ -6,12 +19,18 @@ body {
 
 nav {
   display: flex;
-  background-color: black;
+  background-color: var(--black);
   justify-content: flex-end;
   height: 3em;
+  margin-top: -80px;
+  margin-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  margin-left: -8px;
 }
 
-#NavDiv {
+.NavDiv {
   display: flex;
   justify-content: center;
   width: 5em;
@@ -21,19 +40,28 @@ nav {
 }
 
 #NavDiv:hover {
-  background-color: purple;
+  background-color: var(--violetred);
 }
 
 a {
   color: white;
 }
 
-/* About page */
 h1 {
-  margin-top: 0.5em;
+  margin-top: 5rem;
   text-align: center;
 }
 
+h2 {
+  margin-bottom: -10px;
+  text-align: center;
+}
+
+:link {
+  text-decoration: none;
+}
+
+/* About page */
 #bio {
   margin: 20px auto;
   width: 300px;
@@ -45,25 +73,229 @@ h1 {
   border-radius: 300px;
 }
 
+/* Previous Work page */
+@media (max-width: 900px) {
+  #PreviousWorkContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #SkillsContainer {
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #CoursesTakenContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 901px) {
+  #PreviousWorkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #SkillsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #CoursesTakenContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.PreviousWorks {
+  display: block;
+  width: 20em;
+  text-align: center;
+  margin-bottom: -0.7em;
+}
+
 /* Projects page */
-#PersonalProjects {
+@media (max-width: 900px) {
+  #ProjectsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #PersonalProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #SchoolProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 901px) {
+  #ProjectsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #PersonalProjects {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  #SchoolProjects {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+}
+
+.h2Projects {
+  margin-bottom: 0.2em;
+}
+
+.ProjectTitle {
+  margin-top: 0.8em;
+  margin-bottom: -0.3em;
+  text-align: center;
+  color: var(--gray);
+}
+
+.ProjectBox {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  align-content: flex-start;
+  padding: 10px;
+  border: var(--black) solid 1px;
 }
 
-#SchoolProjects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.Projects {
+  display: block;
+  width: 20em;
+  text-align: center;
 }
 
-#ProjectsContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+/* Contact page */
+@media (max-width: 413px) {
+  .box {
+    border: var(--black) solid 1px;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-ul {
-  margin-left: -1.3em;
+@media (min-width: 1024px) {
+  .box {
+    border: var(--black) solid 1px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 30.5%;
+    margin-right: 30.5%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 1023px) {
+  .box {
+    border: var(--black) solid 1px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
+.h3Contact {
+  display: inline-block;
+  color: var(--gray);
+  width: 50em;
+  height: 1em;
+}
+
+h4 {
+  display: inline-block;
+  width: 50em;
+  height: 0.6em;
+}
+
+.radioButtonBlock {
+  margin-bottom: 5%;
+}
+
+.button {
+  width: 6em;
+  height: 3em;
+}
+
+@media (min-width: 1024px) {
+  .submit {
+    width: 40%;
+    height: 40px;
+    margin-left: 0.8em;
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  .cancel {
+    width: 40%;
+    height: 40px;
+    background-color: var(--white);
+    margin-left: 6.5%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .submit {
+    width: 40%;
+    height: 40px;
+    margin-left: 0.8em;
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  .cancel {
+    width: 40%;
+    height: 40px;
+    background-color: var(--white);
+    margin-left: 7%;
+  }
+}
+
+.submit:hover {
+  background-color: var(--violetred);
+}
+
+.cancel:hover {
+  background-color: var(--light-gray);
+}
+
+label {
+  height: 1%;
+  width: 5%;
+}
+
+.Astrisk {
+  color: var(--dark-red);
+}
+
+.ProjectBox:hover {
+  animation: backwards;
 }

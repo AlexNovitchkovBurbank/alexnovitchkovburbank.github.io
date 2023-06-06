@@ -9,19 +9,19 @@
   </head>
   <body>
     <nav>
-      <div id="NavDiv">
+      <div class="NavDiv">
         <a href="./index.html">Home</a>
       </div>
-      <div id="NavDiv">
+      <div class="NavDiv">
         <a href="./About.html">About</a>
       </div>
-      <div id="NavDiv">
+      <div class="NavDiv">
         <a href="./PreviousWork.html">Previous Work</a>
       </div>
-      <div id="NavDiv">
+      <div class="NavDiv">
         <a href="./Projects.html">Projects</a>
       </div>
-      <div id="NavDiv">
+      <div class="NavDiv">
         <a href="./Contact.html">Contact</a>
       </div>
     </nav>
@@ -29,18 +29,34 @@
       <h1>Projects</h1>
       <div id="ProjectsContainer">
         <div id="PersonalProjects">
-          <h2>Personal</h2>
-          <ul>
-            <li>Full stack C# prooject</li>
-            <p></p>
-          </ul>
+          <h2 class="h2Projects">Personal</h2>
+          <div id="ProjectBox0" class="ProjectBox">
+            <h3 class="ProjectTitle">Full stack C# prooject</h3>
+            <p class="Projects">
+              This project was done using .Net core and MVC. I implemented a
+              very simple UI with a Rest API that has a lot of various methods
+              on it. This project was an experimental project.
+            </p>
+          </div>
+          <div id="ProjectBox1" class="ProjectBox">
+            <h3 class="ProjectTitle">Serverless cloud project</h3>
+            <p class="Projects">
+              This project was done in AWS. It was and is currently built using
+              the serverless framework. So far, I am building Sign in
+              funcionality with Cognito. I also built an API gateway. I have an
+              S3 bucket and am writing any code in node.js and react.js.
+            </p>
+          </div>
         </div>
         <div id="SchoolProjects">
-          <h2>School</h2>
-          <ul>
-            <li>CS300</li>
-            <p></p>
-          </ul>
+          <h2 class="h2Projects">School</h2>
+          <div id="ProjectBox1000" class="ProjectBox">
+            <h3 class="ProjectTitle">CS300</h3>
+            <p class="Projects">
+              Was part of a team working on a C# project. I did the report
+              generation and some of the terminal (command line) interface.
+            </p>
+          </div>
         </div>
       </div>
     </main>
