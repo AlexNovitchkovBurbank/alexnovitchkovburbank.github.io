@@ -7,6 +7,10 @@
   --dark-red: #bb0000;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 body {
   font-family: "Sans Serif", sans-serif;
   font-size: 18px;
@@ -26,7 +30,7 @@ nav {
   margin-left: -8px;
 }
 
-#NavDiv {
+.NavDiv {
   display: flex;
   justify-content: center;
   width: 5em;
@@ -288,7 +292,7 @@ label {
   width: 5%;
 }
 
-#Astrisk {
+.Astrisk {
   color: var(--dark-red);
 }
 
