@@ -1,0 +1,12 @@
+---
+layout: home
+---
+
+{{ content }}
+<br />
+{% for page in site.pages %} {% if page.title %}
+<p>{{ page.title }} was rebuilt on {{ site.time }}</p>
+{% endif %} {% endfor %}
+
+<br />
+<br />
