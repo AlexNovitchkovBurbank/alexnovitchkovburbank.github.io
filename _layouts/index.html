@@ -1,0 +1,13 @@
+---
+layout: home
+---
+
+{{ content }}
+<img src="../assets/AlexNovitchkovBurbank.png" height="1rem" width="1rem" alt="Image of Alex Novitchkov-Burbank"></img>
+<br />
+{% for page in site.pages %} {% if page.title %}
+<p>{{ page.title }} was rebuilt on {{ site.time }}</p>
+{% endif %} {% endfor %}
+
+<br />
+<br />
