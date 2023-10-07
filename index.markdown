@@ -1,8 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: index
+layout: home
+permalink: /
 ---
+
+  <img src="../assets/AlexNovitchkovBurbank.png" class="home-page-image" alt="Image of Alex Novitchkov-Burbank" />
+
 
 Hello World
