@@ -1,9 +1,6 @@
 ---
-layout: home
+layout: index
 permalink: /
 ---
 
-  <img src="../assets/AlexNovitchkovBurbank.png" class="home-page-image" alt="Image of Alex Novitchkov-Burbank" />
-
-
-Hello World
+<img src="../assets/AlexNovitchkovBurbank.png" class="index-page-image" alt="Image of Alex Novitchkov-Burbank" />
