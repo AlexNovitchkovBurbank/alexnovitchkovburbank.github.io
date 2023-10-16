@@ -14,8 +14,40 @@
   flex: 1;
 }
 
+.main {
+  font-size: fs-3;
+}
+
 .about-page-image {
   width: 10%;
   height: auto;
   border-radius: 100%;
+}
+
+form {
+  width: 50%;
+  margin-top: 0px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  background-color: white;
+  border-radius: 1%;
+}
+
+.form-title {
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-end;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
