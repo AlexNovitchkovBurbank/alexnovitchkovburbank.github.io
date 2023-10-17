@@ -4,7 +4,8 @@ title: About
 permalink: /about/
 ---
 
-![Image of Alex Novitchkov-Burbank]({{ site.url }}/{{site.baseurl}}/assets/AlexNovitchkovBurbank.png){:width="40px" height="40px"}
+blah blah  
+blah blah
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
