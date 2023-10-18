@@ -4,6 +4,12 @@ title: Contact
 permalink: /contact/
 ---
 
-<img src="../assets/AlexNovitchkovBurbank.png" class="about-page-image" alt="Image of Alex Novitchkov-Burbank" />
-email adress <seraphim7@outlook.com>  
-blah blah
+<img src="../assets/brown.png" class="about-page-image" alt="Solid brown color" />
+Solid brown
+"replace with email adress"
+<br>
+
+<img src="../assets/brown.png" class="about-page-image" alt="Solid brown color" />
+Solid brown
+"replace with email adress"
+<br>
