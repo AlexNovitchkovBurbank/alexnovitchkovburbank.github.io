@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="form-flex-container">
-  <form>
+  <form action="https://formspree.io/f/mbjvnyyg" method="POST">
     <div class="form-title-flex-container">
       <h1>Form</h1>
     </div>
@@ -17,8 +17,13 @@ layout: default
     </div>
     <div class="form-field-flex-container">
       <label for="num-people">Number of people:</label>
-      <input type="number" name="num-people" id="num-people" />
+      <input type="number" name="number-of-people" id="num-people" />
     </div>
+    <input
+      type="hidden"
+      name="_subject"
+      value="New submission from contact form"
+    />
     <button type="submit" name="submit" value="submit" id="submit-button">
       Submit
     </button>
