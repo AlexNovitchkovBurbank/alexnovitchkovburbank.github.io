@@ -8,8 +8,8 @@ const StringToIntConverter = {
 
 const otherFamilyMemberRecordsRemover = {
   Remove() {
-    const formBodyElement = document.querySelector(".formBody");
-    const recordsContainer = document.querySelector(".recordsContainer");
+    const formBodyElement = document.querySelector(".form-body");
+    const recordsContainer = document.querySelector(".form-records-container");
 
     if (recordsContainer != null) formBodyElement.removeChild(recordsContainer);
   },
@@ -43,22 +43,45 @@ const ContainerForNumPeopleRecordsCreator = {
       throw new Error("number is not an integer");
 
     const recordsContainerElement = document.createElement("div");
-    recordsContainerElement.className = "recordsContainer";
+    recordsContainerElement.className = "form-records-container";
 
     for (let i = 1; i <= numberOfPeople; i++) {
       const recordDivElement = document.createElement("div");
+      recordDivElement.className = "form-field-flex-container";
 
-      const firstNameLabelElement = document.createElement("label");
-      firstNameLabelElement.textContent = `Member ${i.toLocaleString()}:`;
-      firstNameLabelElement.className = "formLabel";
-      firstNameLabelElement.id = `Person${i.toLocaleString()}FirstNameLabel`;
+      const memberLabelElement = document.createElement("label");
+      memberLabelElement.textContent = `Member ${i.toLocaleString()}:`;
 
       const FirstNameInputElement = document.createElement("input");
-      FirstNameInputElement.className = "formInput personRecordInputAndLabels";
-      FirstNameInputElement.id = `Person${numberOfPeople.toLocaleString()}FirstNameInput`;
+      FirstNameInputElement.placeholder = "First name";
+      FirstNameInputElement.className = "form-input";
+      FirstNameInputElement.required = true;
+      FirstNameInputElement.ariaLabel = `Member ${i.toLocaleString()} First name`;
+      FirstNameInputElement.id = `Person${i.toLocaleString()}FirstNameInput`;
+      FirstNameInputElement.name = `Member ${i.toLocaleString()}'s first name`;
 
-      recordDivElement.append(firstNameLabelElement);
+      const AgeInputElement = document.createElement("input");
+      AgeInputElement.placeholder = "Age";
+      AgeInputElement.className = "form-input";
+      AgeInputElement.required = true;
+      AgeInputElement.ariaLabel = `Member ${i.toLocaleString()} Age`;
+      AgeInputElement.id = `Person${i.toLocaleString()}AgeInput`;
+      AgeInputElement.name = `Member ${i.toLocaleString()}'s Age`;
+
+      const RelationshipInputElement = document.createElement("input");
+      RelationshipInputElement.placeholder = "Relationship";
+      RelationshipInputElement.className = "form-input";
+      RelationshipInputElement.required = true;
+      RelationshipInputElement.ariaLabel = `Member ${i.toLocaleString()} Relationship`;
+      RelationshipInputElement.id = `Person${i.toLocaleString()}RelationshipInput`;
+      RelationshipInputElement.name = `Member ${i.toLocaleString()}'s relationship`;
+
+      recordDivElement.append(memberLabelElement);
       recordDivElement.append(FirstNameInputElement);
+      recordDivElement.append(AgeInputElement);
+      recordDivElement.append(RelationshipInputElement);
+
+      // TODO: add clergy title checkbox and volunteer or staff checkbox
 
       recordsContainerElement.append(recordDivElement);
     }
@@ -71,8 +94,10 @@ const DisplayNumberOfEntriesProcessor = {
   Process(numberOfPeopleString) {
     const numPeopleValidInt = NumPeopleValidator.Validate(numberOfPeopleString);
 
-    if (!numPeopleValidInt)
+    if (!numPeopleValidInt) {
+      otherFamilyMemberRecordsRemover.Remove();
       throw new Error("The number of people must be an number");
+    }
 
     const numberOfPeopleInt =
       StringToIntConverter.Convert(numberOfPeopleString);
@@ -93,7 +118,7 @@ const DisplayNumberOfEntriesProcessor = {
 
 const ContainerInFormBodyDisplayer = {
   Display(container) {
-    const formBodyElement = document.querySelector(".formBody");
+    const formBodyElement = document.querySelector(".form-body");
     formBodyElement.append(container);
   },
 };

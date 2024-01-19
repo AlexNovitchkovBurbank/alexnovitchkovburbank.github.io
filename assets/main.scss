@@ -36,8 +36,8 @@ form {
 }
 
 [id$='button'] {
-  width: 20%;
-  height: 13%;
+  width: 60px;
+  height: 30px;
   background-color: lightblue;
   color: black;
   border-radius: 10%;
@@ -48,6 +48,11 @@ form {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 15px;
+}
+
+.form-records-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-flex-container {
