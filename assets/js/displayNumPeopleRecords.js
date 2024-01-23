@@ -86,9 +86,45 @@ const FamilyInfoContainerCreator = {
     formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleLabel);
     formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleInput);
 
+    const stayInChaletContainer = document.createElement("div");
+    const stayInChaletCheckboxLabel = document.createElement("label");
+    stayInChaletCheckboxLabel.textContent = "We will stay in chalet:";
+    const stayInChaletCheckbox = document.createElement("input");
+    stayInChaletCheckbox.type = "checkbox";
+    stayInChaletContainer.append(stayInChaletCheckboxLabel);
+    stayInChaletContainer.append(stayInChaletCheckbox);
+
+    const stayInRvContainer = document.createElement("div");
+    const stayInRvCheckboxLabel = document.createElement("label");
+    stayInRvCheckboxLabel.textContent = "We will stay in an RV:";
+    const stayInRvCheckbox = document.createElement("input");
+    stayInRvCheckbox.type = "checkbox";
+    stayInRvContainer.append(stayInRvCheckboxLabel);
+    stayInRvContainer.append(stayInRvCheckbox);
+
+    const stayInTentsContainer = document.createElement("div");
+    const stayInTentsCheckboxLabel = document.createElement("label");
+    stayInTentsCheckboxLabel.textContent = "We will stay in tent(s):";
+    const stayInTentsCheckbox = document.createElement("input");
+    stayInTentsCheckbox.type = "checkbox";
+    stayInTentsContainer.append(stayInTentsCheckboxLabel);
+    stayInTentsContainer.append(stayInTentsCheckbox);
+
+    const sleepOnGroundContainer = document.createElement("div");
+    const sleepOnGroundCheckboxLabel = document.createElement("label");
+    sleepOnGroundCheckboxLabel.textContent = "We will sleep on the ground:";
+    const sleepOnGroundCheckbox = document.createElement("input");
+    sleepOnGroundCheckbox.type = "checkbox";
+    sleepOnGroundContainer.append(sleepOnGroundCheckboxLabel);
+    sleepOnGroundContainer.append(sleepOnGroundCheckbox);
+    
     familyInfoContainer.append(formFieldFlexFamilyNameContainerElement);
     familyInfoContainer.append(formFieldFlexEmailContainerElement);
     familyInfoContainer.append(formFieldFlexNumPeopleContainerElement);
+    familyInfoContainer.append(stayInChaletContainer);
+    familyInfoContainer.append(stayInRvContainer);
+    familyInfoContainer.append(stayInTentsContainer);
+    familyInfoContainer.append(sleepOnGroundContainer);
 
     return familyInfoContainer;
   },
