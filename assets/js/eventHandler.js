@@ -1,15 +1,19 @@
-import DisplayNumberOfEntriesProcessor from "./displayNumPeopleRecords.js";
+import {
+  DisplayNumberOfEntriesProcessor,
+  DisplayFamilyInfoProcessor,
+} from "./displayNumPeopleRecords.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  DisplayFamilyInfoProcessor.Process();
+
   const numPeopleInput = document.querySelector("#num-people");
 
   if (numPeopleInput !== null) {
-    numPeopleInput.addEventListener("keypress", () => {
+    numPeopleInput.addEventListener("keyup", () => {
       try {
         const inputElement = document.querySelector("input#num-people");
-        DisplayNumberOfEntriesProcessor.Process(inputElement.nodeValue);
-      }
-      catch (error) {
+        DisplayNumberOfEntriesProcessor.Process(inputElement.value);
+      } catch (error) {
         alert(error.message);
       }
     });
