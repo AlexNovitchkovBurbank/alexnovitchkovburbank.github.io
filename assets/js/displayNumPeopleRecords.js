@@ -37,58 +37,210 @@ const RemoveOtherFamilyRecordsValidator = {
   },
 };
 
+const FamilyInfoContainerCreator = {
+  Create() {
+    const familyInfoContainer = document.createElement("div");
+    familyInfoContainer.className = "family-info";
+
+    const formFieldFlexFamilyNameContainerElement =
+      document.createElement("div");
+    formFieldFlexFamilyNameContainerElement.className =
+      "form-field-flex-container-large-screen-width";
+    const familyNameLabel = document.createElement("label");
+    familyNameLabel.textContent = "Family name:";
+    familyNameLabel.htmlFor = "family-name";
+    const familyNameInput = document.createElement("input");
+    familyNameInput.type = "text";
+    familyNameInput.name = "family-name";
+    familyNameInput.id = "family-name";
+    familyNameInput.required = true;
+    formFieldFlexFamilyNameContainerElement.appendChild(familyNameLabel);
+    formFieldFlexFamilyNameContainerElement.appendChild(familyNameInput);
+
+    const formFieldFlexEmailContainerElement = document.createElement("div");
+    formFieldFlexEmailContainerElement.className =
+      "form-field-flex-container-large-screen-width";
+    const EmailLabel = document.createElement("label");
+    EmailLabel.textContent = "Email:";
+    EmailLabel.htmlFor = "email";
+    const EmailInput = document.createElement("input");
+    EmailInput.type = "email";
+    EmailInput.name = "email";
+    EmailInput.id = "email";
+    EmailInput.required = true;
+    formFieldFlexEmailContainerElement.appendChild(EmailLabel);
+    formFieldFlexEmailContainerElement.appendChild(EmailInput);
+
+    const formFieldFlexNumPeopleContainerElement =
+      document.createElement("div");
+    formFieldFlexNumPeopleContainerElement.className =
+      "form-field-flex-container-large-screen-width";
+    const NumPeopleLabel = document.createElement("label");
+    NumPeopleLabel.textContent = "Number of people:";
+    NumPeopleLabel.htmlFor = "num-people";
+    const NumPeopleInput = document.createElement("input");
+    NumPeopleInput.type = "num-people";
+    NumPeopleInput.name = "number-of-people";
+    NumPeopleInput.id = "num-people";
+    NumPeopleInput.required = true;
+    formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleLabel);
+    formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleInput);
+
+    familyInfoContainer.append(formFieldFlexFamilyNameContainerElement);
+    familyInfoContainer.append(formFieldFlexEmailContainerElement);
+    familyInfoContainer.append(formFieldFlexNumPeopleContainerElement);
+
+    return familyInfoContainer;
+  },
+};
+
 const ContainerForNumPeopleRecordsCreator = {
   Create(numberOfPeople) {
     if (!Number.isInteger(numberOfPeople))
       throw new Error("number is not an integer");
 
-    const recordsContainerElement = document.createElement("div");
-    recordsContainerElement.className = "form-records-container";
+    const recordsContainerElementLargeScreenWidth =
+      document.createElement("div");
+    recordsContainerElementLargeScreenWidth.className =
+      "form-records-container";
 
     for (let i = 1; i <= numberOfPeople; i++) {
-      const recordDivElement = document.createElement("div");
-      recordDivElement.className = "form-field-flex-container";
+      const recordDivElementLargeScreenWidth =
+        createLargeScreenMemberRecordContainer(i); // Can be renamed to createMemberRecordContainer
 
-      const memberLabelElement = document.createElement("label");
-      memberLabelElement.textContent = `Member ${i.toLocaleString()}:`;
-
-      const FirstNameInputElement = document.createElement("input");
-      FirstNameInputElement.placeholder = "First name";
-      FirstNameInputElement.className = "form-input";
-      FirstNameInputElement.required = true;
-      FirstNameInputElement.ariaLabel = `Member ${i.toLocaleString()} First name`;
-      FirstNameInputElement.id = `Person${i.toLocaleString()}FirstNameInput`;
-      FirstNameInputElement.name = `Member ${i.toLocaleString()}'s first name`;
-
-      const AgeInputElement = document.createElement("input");
-      AgeInputElement.placeholder = "Age";
-      AgeInputElement.className = "form-input";
-      AgeInputElement.required = true;
-      AgeInputElement.ariaLabel = `Member ${i.toLocaleString()} Age`;
-      AgeInputElement.id = `Person${i.toLocaleString()}AgeInput`;
-      AgeInputElement.name = `Member ${i.toLocaleString()}'s Age`;
-
-      const RelationshipInputElement = document.createElement("input");
-      RelationshipInputElement.placeholder = "Relationship";
-      RelationshipInputElement.className = "form-input";
-      RelationshipInputElement.required = true;
-      RelationshipInputElement.ariaLabel = `Member ${i.toLocaleString()} Relationship`;
-      RelationshipInputElement.id = `Person${i.toLocaleString()}RelationshipInput`;
-      RelationshipInputElement.name = `Member ${i.toLocaleString()}'s relationship`;
-
-      recordDivElement.append(memberLabelElement);
-      recordDivElement.append(FirstNameInputElement);
-      recordDivElement.append(AgeInputElement);
-      recordDivElement.append(RelationshipInputElement);
-
-      // TODO: add clergy title checkbox and volunteer or staff checkbox
-
-      recordsContainerElement.append(recordDivElement);
+      recordsContainerElementLargeScreenWidth.append(
+        recordDivElementLargeScreenWidth
+      );
     }
 
-    return recordsContainerElement;
+    return recordsContainerElementLargeScreenWidth;
   },
 };
+
+const createLargeScreenMemberRecordContainer =
+  function createLargeWidthScreenMemberRecordContainer(i) {
+    const recordDivElementLargeScreenWidth = document.createElement("div");
+    recordDivElementLargeScreenWidth.className = "record-large-screen-width";
+
+    const FirstNameFieldElementLargeScreenWidth = document.createElement("div");
+    FirstNameFieldElementLargeScreenWidth.className =
+      "form-field-flex-container-large-screen-width";
+    const FirstNameLabelElementLargeScreenWidth =
+      document.createElement("label");
+    FirstNameLabelElementLargeScreenWidth.textContent = `Family member ${i.toLocaleString()} first name:`;
+    FirstNameLabelElementLargeScreenWidth.htmlFor = `Person${i.toLocaleString()}FirstNameInput`;
+    const FirstNameInputElementLargeScreenWidth =
+      document.createElement("input");
+    FirstNameInputElementLargeScreenWidth.className =
+      "form-input-large-screen-width";
+    FirstNameInputElementLargeScreenWidth.required = true;
+    FirstNameInputElementLargeScreenWidth.ariaLabel = `Member ${i.toLocaleString()} First name`;
+    FirstNameInputElementLargeScreenWidth.id = `Person${i.toLocaleString()}FirstNameInput`;
+    FirstNameInputElementLargeScreenWidth.name = `Member ${i.toLocaleString()}'s first name`;
+    FirstNameFieldElementLargeScreenWidth.append(
+      FirstNameLabelElementLargeScreenWidth
+    );
+    FirstNameFieldElementLargeScreenWidth.append(
+      FirstNameInputElementLargeScreenWidth
+    );
+
+    const AgeFieldElementLargeScreenWidth = document.createElement("div");
+    AgeFieldElementLargeScreenWidth.className =
+      "form-field-flex-container-large-screen-width";
+    const AgeLabelElementLargeScreenWidth = document.createElement("label");
+    AgeLabelElementLargeScreenWidth.textContent = `Family member ${i.toLocaleString()} age:`;
+    AgeLabelElementLargeScreenWidth.htmlFor = `Person${i.toLocaleString()}AgeInput`;
+    const AgeInputElementLargeScreenWidth = document.createElement("input");
+    AgeInputElementLargeScreenWidth.className = "form-input-large-screen-width";
+    AgeInputElementLargeScreenWidth.required = true;
+    AgeInputElementLargeScreenWidth.ariaLabel = `Member ${i.toLocaleString()} Age`;
+    AgeInputElementLargeScreenWidth.id = `Person${i.toLocaleString()}AgeInput`;
+    AgeInputElementLargeScreenWidth.name = `Member ${i.toLocaleString()}'s Age`;
+    AgeFieldElementLargeScreenWidth.append(AgeLabelElementLargeScreenWidth);
+    AgeFieldElementLargeScreenWidth.append(AgeInputElementLargeScreenWidth);
+
+    const RelationshipFieldElementLargeScreenWidth =
+      document.createElement("div");
+    RelationshipFieldElementLargeScreenWidth.className =
+      "form-field-flex-container-large-screen-width";
+    const RelationshipLabelElementLargeScreenWidth =
+      document.createElement("label");
+    RelationshipLabelElementLargeScreenWidth.textContent = `Family member ${i.toLocaleString()} relationship:`;
+    RelationshipLabelElementLargeScreenWidth.htmlFor = `Person${i.toLocaleString()}RelationshipInput`;
+    const RelationshipInputElementLargeScreenWidth =
+      document.createElement("input");
+    RelationshipInputElementLargeScreenWidth.className =
+      "form-input-large-screen-width";
+    RelationshipInputElementLargeScreenWidth.required = true;
+    RelationshipInputElementLargeScreenWidth.ariaLabel = `Member ${i.toLocaleString()} Relationship`;
+    RelationshipInputElementLargeScreenWidth.id = `Person${i.toLocaleString()}RelationshipInput`;
+    RelationshipInputElementLargeScreenWidth.name = `Member ${i.toLocaleString()}'s relationship`;
+    RelationshipFieldElementLargeScreenWidth.append(
+      RelationshipLabelElementLargeScreenWidth
+    );
+    RelationshipFieldElementLargeScreenWidth.append(
+      RelationshipInputElementLargeScreenWidth
+    );
+
+    // TODO: add clergy title checkbox and volunteer or staff checkbox
+
+    recordDivElementLargeScreenWidth.append(
+      FirstNameFieldElementLargeScreenWidth
+    );
+    recordDivElementLargeScreenWidth.append(AgeFieldElementLargeScreenWidth);
+    recordDivElementLargeScreenWidth.append(
+      RelationshipFieldElementLargeScreenWidth
+    );
+
+    return recordDivElementLargeScreenWidth;
+  };
+
+const createSmallScreenMemberRecordContainer =
+  function createSmallWidthScreenMemberRecordContainer(i) {
+    const recordDivElementSmallScreenWidth = document.createElement("div");
+
+    const FirstNameInputElementSmallScreenWidth =
+      document.createElement("input");
+    FirstNameInputElementSmallScreenWidth.className =
+      "form-input-small-screen-width";
+    FirstNameInputElementSmallScreenWidth.placeholder = `Family member ${i.toLocaleString()} first name:`;
+    FirstNameInputElementSmallScreenWidth.required = true;
+    FirstNameInputElementSmallScreenWidth.ariaLabel = `Member ${i.toLocaleString()} First name`;
+    FirstNameInputElementSmallScreenWidth.id = `Person${i.toLocaleString()}FirstNameInput`;
+    FirstNameInputElementSmallScreenWidth.name = `Member ${i.toLocaleString()}'s first name`;
+
+    const AgeInputElementSmallScreenWidth = document.createElement("input");
+    AgeInputElementSmallScreenWidth.placeholder = `Family member ${i.toLocaleString()} age:`;
+    AgeInputElementSmallScreenWidth.className = "form-input-small-screen-width";
+    AgeInputElementSmallScreenWidth.required = true;
+    AgeInputElementSmallScreenWidth.ariaLabel = `Member ${i.toLocaleString()} Age`;
+    AgeInputElementSmallScreenWidth.id = `Person${i.toLocaleString()}AgeInput`;
+    AgeInputElementSmallScreenWidth.name = `Member ${i.toLocaleString()}'s Age`;
+
+    const RelationshipInputElementSmallScreenWidth =
+      document.createElement("input");
+    RelationshipInputElementSmallScreenWidth.placeholder = `Family member ${i.toLocaleString()} relationship:`;
+    RelationshipInputElementSmallScreenWidth.className =
+      "form-input-small-screen-width";
+    RelationshipInputElementSmallScreenWidth.required = true;
+    RelationshipInputElementSmallScreenWidth.ariaLabel = `Member ${i.toLocaleString()} Relationship`;
+    RelationshipInputElementSmallScreenWidth.id = `Person${i.toLocaleString()}RelationshipInput`;
+    RelationshipInputElementSmallScreenWidth.name = `Member ${i.toLocaleString()}'s relationship`;
+
+    // TODO: add clergy title checkbox and volunteer or staff checkbox
+
+    recordDivElementSmallScreenWidth.append(
+      FirstNameInputElementSmallScreenWidth
+    );
+
+    recordDivElementSmallScreenWidth.append(AgeInputElementSmallScreenWidth);
+
+    recordDivElementSmallScreenWidth.append(
+      RelationshipInputElementSmallScreenWidth
+    );
+
+    return recordDivElementSmallScreenWidth;
+  };
 
 const DisplayNumberOfEntriesProcessor = {
   Process(numberOfPeopleString) {
@@ -123,4 +275,12 @@ const ContainerInFormBodyDisplayer = {
   },
 };
 
-export default DisplayNumberOfEntriesProcessor;
+const DisplayFamilyInfoProcessor = {
+  Process() {
+    const familyInfoContainer = FamilyInfoContainerCreator.Create();
+
+    ContainerInFormBodyDisplayer.Display(familyInfoContainer);
+  },
+};
+
+export { DisplayNumberOfEntriesProcessor, DisplayFamilyInfoProcessor };
