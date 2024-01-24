@@ -91,8 +91,10 @@ const FamilyInfoContainerCreator = {
     stayInChaletCheckboxLabel.textContent = "We will stay in chalet:";
     const stayInChaletCheckbox = document.createElement("input");
     stayInChaletCheckbox.type = "checkbox";
+    const numPeopleContainer = createNumberPeopleContainer();
     stayInChaletContainer.append(stayInChaletCheckboxLabel);
     stayInChaletContainer.append(stayInChaletCheckbox);
+    stayInChaletContainer.append(numPeopleContainer);
 
     const stayInRvContainer = document.createElement("div");
     const stayInRvCheckboxLabel = document.createElement("label");
