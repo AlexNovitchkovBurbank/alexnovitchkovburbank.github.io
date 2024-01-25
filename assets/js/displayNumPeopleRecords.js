@@ -37,6 +37,25 @@ const RemoveOtherFamilyRecordsValidator = {
   },
 };
 
+const createNumberPeopleContainer = function numPeopleContainer() {
+  const formFieldFlexNumPeopleContainerElement =
+      document.createElement("div");
+    formFieldFlexNumPeopleContainerElement.className =
+      "form-field-flex-container-large-screen-width";
+    const NumPeopleLabel = document.createElement("label");
+    NumPeopleLabel.textContent = "Number of people:";
+    NumPeopleLabel.htmlFor = "num-people";
+    const NumPeopleInput = document.createElement("input");
+    NumPeopleInput.type = "num-people";
+    NumPeopleInput.name = "number-of-people";
+    NumPeopleInput.id = "num-people";
+    NumPeopleInput.required = true;
+    formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleLabel);
+    formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleInput);
+
+    return formFieldFlexNumPeopleContainerElement;
+}
+
 const FamilyInfoContainerCreator = {
   Create() {
     const familyInfoContainer = document.createElement("div");
@@ -91,34 +110,40 @@ const FamilyInfoContainerCreator = {
     stayInChaletCheckboxLabel.textContent = "We will stay in chalet:";
     const stayInChaletCheckbox = document.createElement("input");
     stayInChaletCheckbox.type = "checkbox";
-    //const numPeopleContainer = createNumberPeopleContainer();
+    const numPeopleContainerInChalet = createNumberPeopleContainer();
     stayInChaletContainer.append(stayInChaletCheckboxLabel);
     stayInChaletContainer.append(stayInChaletCheckbox);
-    stayInChaletContainer.append(numPeopleContainer);
+    stayInChaletContainer.append(numPeopleContainerInChalet);
 
     const stayInRvContainer = document.createElement("div");
     const stayInRvCheckboxLabel = document.createElement("label");
     stayInRvCheckboxLabel.textContent = "We will stay in an RV:";
     const stayInRvCheckbox = document.createElement("input");
     stayInRvCheckbox.type = "checkbox";
+    const numPeopleContainerInRv = createNumberPeopleContainer();
     stayInRvContainer.append(stayInRvCheckboxLabel);
     stayInRvContainer.append(stayInRvCheckbox);
+    stayInChaletContainer.append(numPeopleContainerInRv);
 
     const stayInTentsContainer = document.createElement("div");
     const stayInTentsCheckboxLabel = document.createElement("label");
     stayInTentsCheckboxLabel.textContent = "We will stay in tent(s):";
     const stayInTentsCheckbox = document.createElement("input");
     stayInTentsCheckbox.type = "checkbox";
+    const numPeopleContainerInTent = createNumberPeopleContainer();
     stayInTentsContainer.append(stayInTentsCheckboxLabel);
     stayInTentsContainer.append(stayInTentsCheckbox);
+    stayInTentsContainer.append(numPeopleContainerInTent);
 
     const sleepOnGroundContainer = document.createElement("div");
     const sleepOnGroundCheckboxLabel = document.createElement("label");
     sleepOnGroundCheckboxLabel.textContent = "We will sleep on the ground:";
     const sleepOnGroundCheckbox = document.createElement("input");
     sleepOnGroundCheckbox.type = "checkbox";
+    const numPeopleContainerSleepOnGround = createNumberPeopleContainer();
     sleepOnGroundContainer.append(sleepOnGroundCheckboxLabel);
     sleepOnGroundContainer.append(sleepOnGroundCheckbox);
+    stayInTentsContainer.append(numPeopleContainerSleepOnGround);
     
     familyInfoContainer.append(formFieldFlexFamilyNameContainerElement);
     familyInfoContainer.append(formFieldFlexEmailContainerElement);
