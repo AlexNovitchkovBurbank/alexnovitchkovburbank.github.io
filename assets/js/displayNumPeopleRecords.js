@@ -11,7 +11,7 @@ const otherFamilyMemberRecordsRemover = {
     const formBodyElement = document.querySelector(".form-body");
     const recordsContainer = document.querySelector(".form-records-container");
 
-    if (recordsContainer != null) formBodyElement.removeChild(recordsContainer);
+    if (recordsContainer !== null) formBodyElement.removeChild(recordsContainer);
   },
 };
 
@@ -25,13 +25,49 @@ const NumPeopleValidator = {
   },
 };
 
+const stayInChaletNumberOfPeopleRemover = {
+  Remove() {
+    const stayInChaletContainer = document.querySelector("#stay-in-chalet-container");
+    const numberOfPeopleElement = document.querySelector("#stay-in-chalet-num-people-input");
+
+    if (stayInChaletContainer !== null && numberOfPeopleElement !== null) stayInChaletContainer.removeChild(numberOfPeopleElement);
+  }
+}
+
+const stayInRvNumberOfPeopleRemover = {
+  Remove() {
+    const stayInRvContainer = document.querySelector("#stay-in-rv-container");
+    const numberOfPeopleElement = document.querySelector("#stay-in-rv-num-people-input");
+
+    if (stayInRvContainer !== null && numberOfPeopleElement !== null) stayInRvContainer.removeChild(numberOfPeopleElement);
+  }
+}
+
+const stayInTentsNumberOfPeopleRemover = {
+  Remove() {
+    const stayInTentsContainer = document.querySelector("#stay-in-tents-container");
+    const numberOfPeopleElement = document.querySelector("#stay-in-tents-num-people-input");
+
+    if (stayInTentsContainer !== null && numberOfPeopleElement !== null) stayInTentsContainer.removeChild(numberOfPeopleElement);
+  }
+}
+
+const sleepOnGroundNumberOfPeopleRemover = {
+  Remove() {
+    const sleepOnGroundContainer = document.querySelector("#sleep-on-ground-container");
+    const numberOfPeopleElement = document.querySelector("#sleep-on-ground-num-people-input");
+
+    if (sleepOnGroundContainer !== null && numberOfPeopleElement !== null) sleepOnGroundContainer.removeChild(numberOfPeopleElement);
+  }
+}
+
 const RemoveOtherFamilyRecordsValidator = {
   Validate(numberOfPeopleInt) {
     const firstNameInputs = document.querySelectorAll(
       "[id^=Person][id$=FirstNameInput]"
     ); // Starts with Person and ends with FirstNameInput
 
-    if (firstNameInputs.length != numberOfPeopleInt) return true;
+    if (firstNameInputs.length !== numberOfPeopleInt) return true;
 
     return false;
   },
@@ -106,44 +142,57 @@ const FamilyInfoContainerCreator = {
     formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleInput);
 
     const stayInChaletContainer = document.createElement("div");
+    stayInChaletContainer.id = "stay-in-chalet-container";
     const stayInChaletCheckboxLabel = document.createElement("label");
-    stayInChaletCheckboxLabel.textContent = "We will stay in chalet:";
+    stayInChaletCheckboxLabel.textContent = "We will stay in a chalet:";
     const stayInChaletCheckbox = document.createElement("input");
     stayInChaletCheckbox.type = "checkbox";
+    stayInChaletCheckbox.id = "stay-in-chalet-checkbox";
     const numPeopleContainerInChalet = createNumberPeopleContainer();
+    numPeopleContainerInChalet.id = "stay-in-chalet-num-people-input";
     stayInChaletContainer.append(stayInChaletCheckboxLabel);
     stayInChaletContainer.append(stayInChaletCheckbox);
     stayInChaletContainer.append(numPeopleContainerInChalet);
 
     const stayInRvContainer = document.createElement("div");
+    stayInRvContainer.id = "stay-in-rv-container";
     const stayInRvCheckboxLabel = document.createElement("label");
     stayInRvCheckboxLabel.textContent = "We will stay in an RV:";
     const stayInRvCheckbox = document.createElement("input");
     stayInRvCheckbox.type = "checkbox";
+    stayInRvCheckbox.id = "stay-in-rv-checkbox";
     const numPeopleContainerInRv = createNumberPeopleContainer();
+    numPeopleContainerInRv.id = "stay-in-rv-num-people-input";
     stayInRvContainer.append(stayInRvCheckboxLabel);
     stayInRvContainer.append(stayInRvCheckbox);
-    stayInChaletContainer.append(numPeopleContainerInRv);
+    stayInRvContainer.append(numPeopleContainerInRv);
 
     const stayInTentsContainer = document.createElement("div");
+    stayInTentsContainer.id = "stay-in-tents-container";
     const stayInTentsCheckboxLabel = document.createElement("label");
     stayInTentsCheckboxLabel.textContent = "We will stay in tent(s):";
     const stayInTentsCheckbox = document.createElement("input");
     stayInTentsCheckbox.type = "checkbox";
+    stayInTentsCheckbox.id = "stay-in-tents-checkbox";
+    stayInTentsCheckbox.id = "stay-in-tents-checkbox";
     const numPeopleContainerInTent = createNumberPeopleContainer();
+    numPeopleContainerInTent.id = "stay-in-tents-num-people-input";
     stayInTentsContainer.append(stayInTentsCheckboxLabel);
     stayInTentsContainer.append(stayInTentsCheckbox);
     stayInTentsContainer.append(numPeopleContainerInTent);
 
     const sleepOnGroundContainer = document.createElement("div");
+    sleepOnGroundContainer.id = "sleep-on-ground-container";
     const sleepOnGroundCheckboxLabel = document.createElement("label");
     sleepOnGroundCheckboxLabel.textContent = "We will sleep on the ground:";
     const sleepOnGroundCheckbox = document.createElement("input");
     sleepOnGroundCheckbox.type = "checkbox";
+    sleepOnGroundCheckbox.id = "sleep-on-ground-checkbox";
     const numPeopleContainerSleepOnGround = createNumberPeopleContainer();
+    numPeopleContainerSleepOnGround.id = "sleep-on-ground-num-people-input";
     sleepOnGroundContainer.append(sleepOnGroundCheckboxLabel);
     sleepOnGroundContainer.append(sleepOnGroundCheckbox);
-    stayInTentsContainer.append(numPeopleContainerSleepOnGround);
+    sleepOnGroundContainer.append(numPeopleContainerSleepOnGround);
     
     familyInfoContainer.append(formFieldFlexFamilyNameContainerElement);
     familyInfoContainer.append(formFieldFlexEmailContainerElement);
