@@ -12,7 +12,7 @@ const ContainerForLargeScreenMemberRecordContainersCreator = {
       const recordDivElementLargeScreenWidth =
         createLargeScreenMemberRecordContainer(i); // Can be renamed to createMemberRecordContainer
 
-      recordsContainerElementLargeScreenWidth.append(
+      recordsContainerElementLargeScreenWidth.appendChild(
         recordDivElementLargeScreenWidth
       );
     }
@@ -41,10 +41,10 @@ const createLargeScreenMemberRecordContainer =
     FirstNameInputElementLargeScreenWidth.ariaLabel = `Member ${i.toLocaleString()} First name`;
     FirstNameInputElementLargeScreenWidth.id = `Person${i.toLocaleString()}FirstNameInput`;
     FirstNameInputElementLargeScreenWidth.name = `Member ${i.toLocaleString()}'s first name`;
-    FirstNameFieldElementLargeScreenWidth.append(
+    FirstNameFieldElementLargeScreenWidth.appendChild(
       FirstNameLabelElementLargeScreenWidth
     );
-    FirstNameFieldElementLargeScreenWidth.append(
+    FirstNameFieldElementLargeScreenWidth.appendChild(
       FirstNameInputElementLargeScreenWidth
     );
 
@@ -60,8 +60,8 @@ const createLargeScreenMemberRecordContainer =
     AgeInputElementLargeScreenWidth.ariaLabel = `Member ${i.toLocaleString()} Age`;
     AgeInputElementLargeScreenWidth.id = `Person${i.toLocaleString()}AgeInput`;
     AgeInputElementLargeScreenWidth.name = `Member ${i.toLocaleString()}'s Age`;
-    AgeFieldElementLargeScreenWidth.append(AgeLabelElementLargeScreenWidth);
-    AgeFieldElementLargeScreenWidth.append(AgeInputElementLargeScreenWidth);
+    AgeFieldElementLargeScreenWidth.appendChild(AgeLabelElementLargeScreenWidth);
+    AgeFieldElementLargeScreenWidth.appendChild(AgeInputElementLargeScreenWidth);
 
     const RelationshipFieldElementLargeScreenWidth =
       document.createElement("div");
@@ -79,20 +79,20 @@ const createLargeScreenMemberRecordContainer =
     RelationshipInputElementLargeScreenWidth.ariaLabel = `Member ${i.toLocaleString()} Relationship`;
     RelationshipInputElementLargeScreenWidth.id = `Person${i.toLocaleString()}RelationshipInput`;
     RelationshipInputElementLargeScreenWidth.name = `Member ${i.toLocaleString()}'s relationship`;
-    RelationshipFieldElementLargeScreenWidth.append(
+    RelationshipFieldElementLargeScreenWidth.appendChild(
       RelationshipLabelElementLargeScreenWidth
     );
-    RelationshipFieldElementLargeScreenWidth.append(
+    RelationshipFieldElementLargeScreenWidth.appendChild(
       RelationshipInputElementLargeScreenWidth
     );
 
     // TODO: add clergy title checkbox and volunteer or staff checkbox
 
-    recordDivElementLargeScreenWidth.append(
+    recordDivElementLargeScreenWidth.appendChild(
       FirstNameFieldElementLargeScreenWidth
     );
-    recordDivElementLargeScreenWidth.append(AgeFieldElementLargeScreenWidth);
-    recordDivElementLargeScreenWidth.append(
+    recordDivElementLargeScreenWidth.appendChild(AgeFieldElementLargeScreenWidth);
+    recordDivElementLargeScreenWidth.appendChild(
       RelationshipFieldElementLargeScreenWidth
     );
 

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const stayInChaletContainer = document.querySelector(
             "#stay-in-chalet-container"
           );
-          stayInChaletContainer.append(formFieldFlexNumPeopleContainerElement);
+          stayInChaletContainer.appendChild(formFieldFlexNumPeopleContainerElement);
         } else stayInChaletNumberOfPeopleRemover.Remove();
       } catch (error) {
         alert(error.message);
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const stayInRvContainer = document.querySelector(
             "#stay-in-rv-container"
           );
-          stayInRvContainer.append(formFieldFlexNumPeopleContainerElement);
+          stayInRvContainer.appendChild(formFieldFlexNumPeopleContainerElement);
         } else stayInRvNumberOfPeopleRemover.Remove();
       } catch (error) {
         alert(error.message);
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const stayInTentsContainer = document.querySelector(
             "#stay-in-tents-container"
           );
-          stayInTentsContainer.append(formFieldFlexNumPeopleContainerElement);
+          stayInTentsContainer.appendChild(formFieldFlexNumPeopleContainerElement);
         } else {
           stayInTentsNumberOfPeopleRemover.Remove();
         }
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const sleepOnGroundContainer = document.querySelector(
             "#sleep-on-ground-container"
           );
-          sleepOnGroundContainer.append(formFieldFlexNumPeopleContainerElement);
+          sleepOnGroundContainer.appendChild(formFieldFlexNumPeopleContainerElement);
         } else sleepOnGroundNumberOfPeopleRemover.Remove();
       } catch (error) {
         alert(error.message);

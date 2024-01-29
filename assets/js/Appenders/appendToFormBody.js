@@ -1,7 +1,7 @@
 const ToFormBodyAppender = {
     Append(container) {
-      const formBodyElement = document.querySelector(".form-body");
-      formBodyElement.append(container);
+      const formBodyElement = document.querySelector("#form-body");
+      formBodyElement.appendChild(container);
     },
   };
 

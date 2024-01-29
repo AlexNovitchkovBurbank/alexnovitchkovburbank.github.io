@@ -32,13 +32,13 @@ const createSmallScreenMemberRecordContainer =
 
     // TODO: add clergy title checkbox and volunteer or staff checkbox
 
-    recordDivElementSmallScreenWidth.append(
+    recordDivElementSmallScreenWidth.appendChild(
       FirstNameInputElementSmallScreenWidth
     );
 
-    recordDivElementSmallScreenWidth.append(AgeInputElementSmallScreenWidth);
+    recordDivElementSmallScreenWidth.appendChild(AgeInputElementSmallScreenWidth);
 
-    recordDivElementSmallScreenWidth.append(
+    recordDivElementSmallScreenWidth.appendChild(
       RelationshipInputElementSmallScreenWidth
     );
 

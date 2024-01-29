@@ -2,11 +2,12 @@
 layout: default
 ---
 
-<script type="module" src="../assets/pricings/chalet/chaletPricing.js"></script>
+<script type="module" src="../assets/pricings/chalet/eventHandler.js"></script>
+<script type="module" src="../assets/pricings/rv/eventHandler.js"></script>
 
-<div>
-  <button onclick="chaletPricing()">Chalet</button>
-  <button onclick="window.open('/form/index.html', '_self')">
-    Registration Form
-  </button>
-</div>
+<button id="chalet-pricing-button">Chalet</button>
+<button id="rv-pricing-button">Rv</button>
+<div id="main-pricing-container"></div>
+<button onclick="window.open('/form/index.html', '_blank')" id="registration-form-button">
+  Registration Form
+</button>

@@ -56,8 +56,8 @@ const FamilyInfoContainerLargeCreator = {
       const stayInChaletCheckbox = document.createElement("input");
       stayInChaletCheckbox.type = "checkbox";
       stayInChaletCheckbox.id = "stay-in-chalet-checkbox";
-      stayInChaletContainer.append(stayInChaletCheckboxLabel);
-      stayInChaletContainer.append(stayInChaletCheckbox);
+      stayInChaletContainer.appendChild(stayInChaletCheckboxLabel);
+      stayInChaletContainer.appendChild(stayInChaletCheckbox);
   
       const stayInRvContainer = document.createElement("div");
       stayInRvContainer.id = "stay-in-rv-container";
@@ -66,8 +66,8 @@ const FamilyInfoContainerLargeCreator = {
       const stayInRvCheckbox = document.createElement("input");
       stayInRvCheckbox.type = "checkbox";
       stayInRvCheckbox.id = "stay-in-rv-checkbox";
-      stayInRvContainer.append(stayInRvCheckboxLabel);
-      stayInRvContainer.append(stayInRvCheckbox);
+      stayInRvContainer.appendChild(stayInRvCheckboxLabel);
+      stayInRvContainer.appendChild(stayInRvCheckbox);
   
       const stayInTentsContainer = document.createElement("div");
       stayInTentsContainer.id = "stay-in-tents-container";
@@ -76,8 +76,8 @@ const FamilyInfoContainerLargeCreator = {
       const stayInTentsCheckbox = document.createElement("input");
       stayInTentsCheckbox.type = "checkbox";
       stayInTentsCheckbox.id = "stay-in-tents-checkbox";
-      stayInTentsContainer.append(stayInTentsCheckboxLabel);
-      stayInTentsContainer.append(stayInTentsCheckbox);
+      stayInTentsContainer.appendChild(stayInTentsCheckboxLabel);
+      stayInTentsContainer.appendChild(stayInTentsCheckbox);
   
       const sleepOnGroundContainer = document.createElement("div");
       sleepOnGroundContainer.id = "sleep-on-ground-container";
@@ -86,16 +86,16 @@ const FamilyInfoContainerLargeCreator = {
       const sleepOnGroundCheckbox = document.createElement("input");
       sleepOnGroundCheckbox.type = "checkbox";
       sleepOnGroundCheckbox.id = "sleep-on-ground-checkbox";
-      sleepOnGroundContainer.append(sleepOnGroundCheckboxLabel);
-      sleepOnGroundContainer.append(sleepOnGroundCheckbox);
+      sleepOnGroundContainer.appendChild(sleepOnGroundCheckboxLabel);
+      sleepOnGroundContainer.appendChild(sleepOnGroundCheckbox);
       
-      familyInfoContainer.append(formFieldFlexFamilyNameContainerElement);
-      familyInfoContainer.append(formFieldFlexEmailContainerElement);
-      familyInfoContainer.append(formFieldFlexNumPeopleContainerElement);
-      familyInfoContainer.append(stayInChaletContainer);
-      familyInfoContainer.append(stayInRvContainer);
-      familyInfoContainer.append(stayInTentsContainer);
-      familyInfoContainer.append(sleepOnGroundContainer);
+      familyInfoContainer.appendChild(formFieldFlexFamilyNameContainerElement);
+      familyInfoContainer.appendChild(formFieldFlexEmailContainerElement);
+      familyInfoContainer.appendChild(formFieldFlexNumPeopleContainerElement);
+      familyInfoContainer.appendChild(stayInChaletContainer);
+      familyInfoContainer.appendChild(stayInRvContainer);
+      familyInfoContainer.appendChild(stayInTentsContainer);
+      familyInfoContainer.appendChild(sleepOnGroundContainer);
   
       return familyInfoContainer;
     },
