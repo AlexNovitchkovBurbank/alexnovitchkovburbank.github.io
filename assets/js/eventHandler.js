@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const numPeopleContainer = document.querySelector("#num-people-container");
   if (numPeopleContainer !== null) {
-    const numPeopleInput = numPeopleContainer.querySelector("#num-people");
+    const numPeopleInput = numPeopleContainer.querySelector("#num-people-input");
     if (numPeopleInput !== null) {
       numPeopleInput.addEventListener("keyup", () => {
         try {
