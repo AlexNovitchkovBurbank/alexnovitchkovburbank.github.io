@@ -6,11 +6,11 @@ const CreateNumPeopleContainerLargeCreator = {
       "form-field-flex-container-large-screen-width";
     const NumPeopleLabel = document.createElement("label");
     NumPeopleLabel.textContent = "Number of people:";
-    NumPeopleLabel.htmlFor = "num-people";
+    NumPeopleLabel.htmlFor = "num-people-input";
     const NumPeopleInput = document.createElement("input");
     NumPeopleInput.type = "num-people";
     NumPeopleInput.name = "number-of-people";
-    NumPeopleInput.id = "num-people";
+    NumPeopleInput.id = "num-people-input";
     NumPeopleInput.required = true;
     formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleLabel);
     formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleInput);
