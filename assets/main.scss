@@ -102,3 +102,10 @@ h1 {
 .input-error {
   border: 1px solid red;
 }
+
+.save-space-if-room {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 7px;
+}

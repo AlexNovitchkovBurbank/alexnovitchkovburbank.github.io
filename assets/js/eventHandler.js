@@ -108,4 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
+  const resetButton = document.querySelector("#reset-button");
+
+  resetButton.addEventListener('click', () => {
+    resetProcessor.Process();
+  })
 });

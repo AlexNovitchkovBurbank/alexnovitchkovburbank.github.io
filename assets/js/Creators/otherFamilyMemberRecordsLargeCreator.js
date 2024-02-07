@@ -116,7 +116,13 @@ const createLargeScreenMemberRecordContainer =
       isStaffContainer.appendChild(isStaffLabel);
       isStaffContainer.appendChild(isStaffCheckbox);
 
-    recordDivElementLargeScreenWidth.appendChild(isClergyContainer);
+      const clergyVolunteerStaffContainer = document.createElement("div");
+      clergyVolunteerStaffContainer.className = "save-space-if-room";
+      clergyVolunteerStaffContainer.appendChild(isClergyContainer);
+      clergyVolunteerStaffContainer.appendChild(isVolunteerContainer);
+      clergyVolunteerStaffContainer.appendChild(isStaffContainer);
+
+    recordDivElementLargeScreenWidth.appendChild(clergyVolunteerStaffContainer);
     recordDivElementLargeScreenWidth.appendChild(
       FirstNameFieldElementLargeScreenWidth
     );

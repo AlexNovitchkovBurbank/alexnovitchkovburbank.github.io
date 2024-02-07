@@ -1,4 +1,4 @@
-const OtherFamilyMemberRecordsRemover = {
+const CurrentOtherFamilyMemberRecordsContainerRemover = {
     Remove() {
       const formBodyElement = document.querySelector("#form-body");
       const recordsContainer = document.querySelector(".form-records-container");
@@ -7,4 +7,4 @@ const OtherFamilyMemberRecordsRemover = {
     },
   };
 
-  export default OtherFamilyMemberRecordsRemover;
+  export default CurrentOtherFamilyMemberRecordsContainerRemover;

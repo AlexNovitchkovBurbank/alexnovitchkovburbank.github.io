@@ -1,5 +1,5 @@
 import NumPeopleInputValidator from "../Validators/numPeopleInputValidator.js";
-import OtherFamilyMemberRecordsRemover from '../Removers/otherFamilyMemberRecordsRemover.js';
+import CurrentOtherFamilyMemberRecordsContainerRemover from '../Removers/CurrentOtherFamilyMemberRecordsContainerRemover.js';
 import StringToIntConverter from '../Helpers/stringToInt.js';
 import RemoveOtherFamilyRecordsValidator from '../Validators/removeOtherFamilyRecordsValidator.js';
 import ContainerForLargeScreenMemberRecordContainersCreator from '../Creators/otherFamilyMemberRecordsLargeCreator.js';
@@ -10,7 +10,7 @@ const DisplayOtherFamilyRecordsProcessor = {
       const numPeopleValidInt = NumPeopleInputValidator.Validate(numberOfPeopleString);
 
       if (!numPeopleValidInt) {
-        OtherFamilyMemberRecordsRemover.Remove();
+        CurrentOtherFamilyMemberRecordsContainerRemover.Remove();
         createVisualErrorForNumPeopleField();
 
         return;
@@ -28,7 +28,7 @@ const DisplayOtherFamilyRecordsProcessor = {
         RemoveOtherFamilyRecordsValidator.Validate(numberOfPeopleInt);
   
       if (shouldRemoveOtherMemberRecords) {
-        OtherFamilyMemberRecordsRemover.Remove();
+        CurrentOtherFamilyMemberRecordsContainerRemover.Remove();
   
         const numPeopleRecordsContainer =
         ContainerForLargeScreenMemberRecordContainersCreator.Create(numberOfPeopleInt);
