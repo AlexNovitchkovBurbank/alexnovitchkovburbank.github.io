@@ -99,6 +99,13 @@ h1 {
   width: 60%;
 }
 
+#main-tents-pricing-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 60%;
+}
+
 .input-error {
   border: 1px solid red;
 }
