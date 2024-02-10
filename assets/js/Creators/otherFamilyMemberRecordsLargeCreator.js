@@ -86,8 +86,43 @@ const createLargeScreenMemberRecordContainer =
       RelationshipInputElementLargeScreenWidth
     );
 
-    // TODO: add clergy title checkbox and volunteer or staff checkbox
+    const isClergyContainer = document.createElement("div");
+    isClergyContainer.id = "is-clergy-container";
+      const isClergyLabel = document.createElement("label");
+      isClergyLabel.textContent = "Clergy: ";
+      const isClergyCheckbox = document.createElement("input");
+      isClergyCheckbox.type = "checkbox";
+      isClergyCheckbox.id = "is-clergy-checkbox";
+      isClergyContainer.appendChild(isClergyLabel);
+      isClergyContainer.appendChild(isClergyCheckbox);
 
+    const isVolunteerContainer = document.createElement("div");
+    isVolunteerContainer.id = "is-volunteer-container";
+      const isVolunteerLabel = document.createElement("label");
+      isVolunteerLabel.textContent = "Volunteer: ";
+      const isVolunteerCheckbox = document.createElement("input");
+      isVolunteerCheckbox.type = "checkbox";
+      isVolunteerCheckbox.id = "is-volunteer-checkbox";
+      isVolunteerContainer.appendChild(isVolunteerLabel);
+      isVolunteerContainer.appendChild(isVolunteerCheckbox);
+
+      const isStaffContainer = document.createElement("div");
+      isStaffContainer.id = "is-staff-container";
+      const isStaffLabel = document.createElement("label");
+      isStaffLabel.textContent = "Staff: ";
+      const isStaffCheckbox = document.createElement("input");
+      isStaffCheckbox.type = "checkbox";
+      isStaffCheckbox.id = "is-staff-checkbox";
+      isStaffContainer.appendChild(isStaffLabel);
+      isStaffContainer.appendChild(isStaffCheckbox);
+
+      const clergyVolunteerStaffContainer = document.createElement("div");
+      clergyVolunteerStaffContainer.className = "save-space-if-room";
+      clergyVolunteerStaffContainer.appendChild(isClergyContainer);
+      clergyVolunteerStaffContainer.appendChild(isVolunteerContainer);
+      clergyVolunteerStaffContainer.appendChild(isStaffContainer);
+
+    recordDivElementLargeScreenWidth.appendChild(clergyVolunteerStaffContainer);
     recordDivElementLargeScreenWidth.appendChild(
       FirstNameFieldElementLargeScreenWidth
     );

@@ -1,26 +1,26 @@
-const ChaletPricingLargeContainerCreator = {
+const OvernightPricingLargeContainerCreator = {
   Create() {
-    const mainChaletPricingContainer = document.createElement("div");
-    mainChaletPricingContainer.id = "main-chalet-pricing-container";
+    const mainOvernightPricingContainer = document.createElement("div");
+    mainOvernightPricingContainer.id = "main-overnight-pricing-container";
     const prices = [
-      "$137.00",
-      "$265.00",
-      "$365.00",
-      "$465.00",
-      "$565.00",
-      "$665.00",
-      "$765.00",
-      "$865.00",
-      "$965.00",
-      "$1065.00",
-      "$1165.00",
-      "$1265.00",
-      "$1365.00",
+      "$30.00",
+      "$60.00",
+      "$90.00",
+      "$120.00",
+      "$150.00",
+      "$180.00",
+      "$210.00",
+      "$240.00",
+      "$270.00",
+      "$300.00",
+      "$330.00",
+      "$360.00",
+      "$390.00",
     ];
 
     const titleElement = document.createElement("h2");
-    titleElement.textContent = "5 day chalet pricing";
-    mainChaletPricingContainer.appendChild(titleElement);
+    titleElement.textContent = "Overnight (with meals) pricing";
+    mainOvernightPricingContainer.appendChild(titleElement);
 
     for (let i = 1; i <= 13; i++) {
       const descriptionPriceContainer = document.createElement("div");
@@ -35,11 +35,11 @@ const ChaletPricingLargeContainerCreator = {
 
       descriptionPriceContainer.appendChild(descriptionElement);
       descriptionPriceContainer.appendChild(priceElement);
-      mainChaletPricingContainer.appendChild(descriptionPriceContainer);
+      mainOvernightPricingContainer.appendChild(descriptionPriceContainer);
     }
 
-    return mainChaletPricingContainer;
+    return mainOvernightPricingContainer;
   },
 };
 
-export default ChaletPricingLargeContainerCreator;
+export default OvernightPricingLargeContainerCreator;

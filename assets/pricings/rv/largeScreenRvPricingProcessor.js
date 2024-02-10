@@ -1,18 +1,17 @@
 import RvPricingLargeContainerCreator from "./largeScreenCreator.js";
-import MainPricingContainerAppender from "./mainPricingContainerAppender.js";
-import MainPricingContainerRemover from "./MainPricingContainerRemover.js";
-import OtherMainPricingContainersRemover from "./OtherMainPricingContainersRemover.js";
+import pricingContainerAppender from "../pricingContainerAppender.js";
+import pricingContainersRemover from "../pricingContainersRemover.js";
 
 const LargeScreenRvPricingProcessor = {
     Process() {
         const mainRvPricingContainer = document.querySelector("#main-rv-pricing-container");
-      if (mainRvPricingContainer !== null) MainPricingContainerRemover.Remove();
+      if (mainRvPricingContainer !== null) pricingContainersRemover.Remove();
       else {
         const container = RvPricingLargeContainerCreator.Create();
 
-        OtherMainPricingContainersRemover.Remove();
+        pricingContainersRemover.Remove();
 
-        MainPricingContainerAppender.Append(container);
+        pricingContainerAppender.Append(container);
       }
     }
 }

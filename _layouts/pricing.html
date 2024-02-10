@@ -4,10 +4,35 @@ layout: default
 
 <script type="module" src="../assets/pricings/chalet/eventHandler.js"></script>
 <script type="module" src="../assets/pricings/rv/eventHandler.js"></script>
+<script type="module" src="../assets/pricings/tents/eventHandler.js"></script>
+<script
+  type="module"
+  src="../assets/pricings/overnight/eventHandler.js"
+></script>
 
-<button id="chalet-pricing-button">Chalet</button>
-<button id="rv-pricing-button">Rv</button>
-<div id="main-pricing-container"></div>
-<button onclick="window.open('/form/index.html', '_blank')" id="registration-form-button">
+<div id="containers-side-by-side">
+  <div class="pricing-type-section">
+    <div>5 days options</div>
+    <div class="pricing-buttons-section">
+      <button id="chalet-pricing-button">Chalet</button>
+      <button id="rv-pricing-button">Rv</button>
+      <button id="tents-pricing-button">Tent</button>
+    </div>
+  </div>
+  <div class="pricing-type-section">
+    <div>Overnight with meals options</div>
+    <div class="pricing-buttons-section">
+      <button id="overnight-pricing-button">Overnight</button>
+    </div>
+  </div>
+</div>
+<div id="display-pricing-container"></div>
+<div id="registration-form-button-section">
+<div>Registration form</div>
+<button
+  onclick="window.open('/form/index.html', '_blank')"
+  id="registration-form-button"
+>
   Registration Form
 </button>
+</div>

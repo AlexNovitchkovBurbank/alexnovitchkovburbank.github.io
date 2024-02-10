@@ -1,18 +1,17 @@
 import ChaletPricingLargeContainerCreator from "./largeScreenCreator.js";
-import MainPricingContainerAppender from "./mainPricingContainerAppender.js";
-import MainPricingContainerRemover from "./MainPricingContainerRemover.js";
-import OtherMainPricingContainersRemover from "./OtherMainPricingContainersRemover.js";
+import pricingContainerAppender from "../pricingContainerAppender.js";
+import pricingContainersRemover from "../pricingContainersRemover.js";
 
 const LargeScreenChaletPricingProcessor = {
     Process() {
         const mainChaletPricingContainer = document.querySelector("#main-chalet-pricing-container");
-      if (mainChaletPricingContainer !== null) MainPricingContainerRemover.Remove();
+      if (mainChaletPricingContainer !== null) pricingContainersRemover.Remove();
       else {
         const container = ChaletPricingLargeContainerCreator.Create();
 
-        OtherMainPricingContainersRemover.Remove();
+        pricingContainersRemover.Remove();
 
-        MainPricingContainerAppender.Append(container);
+        pricingContainerAppender.Append(container);
       }
     }
 }

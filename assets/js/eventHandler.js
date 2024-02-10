@@ -5,6 +5,7 @@ import stayInChaletNumberOfPeopleRemover from "../js/Removers/familyInfoStayInCh
 import stayInRvNumberOfPeopleRemover from "../js/Removers/familyInfoStayInRvNumPeopleRemover.js";
 import stayInTentsNumberOfPeopleRemover from "../js/Removers/familyInfoStayInTentsNumPeopleRemover.js";
 import sleepOnGroundNumberOfPeopleRemover from "../js/Removers/familyInfoSleepOnGroundNumPeopleRemover.js";
+import resetProcessor from "./Processors/resetProcessor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   DisplayFamilyInfoProcessor.Process();
@@ -108,4 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
+  const resetButton = document.querySelector("#reset-button");
+  resetButton.addEventListener('click', () => {
+    resetProcessor.Process();
+  })
 });
