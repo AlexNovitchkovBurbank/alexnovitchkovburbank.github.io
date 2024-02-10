@@ -1,7 +1,7 @@
-const OtherOvernightPricingContainersRemover = {
+const pricingContainersRemover = {
   Remove() {
     const overnightPricingContainer = document.querySelector(
-      "#overnight-pricing-container"
+      "#display-pricing-container"
     );
 
     if (overnightPricingContainer === null)
@@ -16,4 +16,4 @@ const OtherOvernightPricingContainersRemover = {
   },
 };
 
-export default OtherOvernightPricingContainersRemover;
+export default pricingContainersRemover;

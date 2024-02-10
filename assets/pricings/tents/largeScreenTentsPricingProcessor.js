@@ -1,18 +1,17 @@
 import TentsPricingLargeContainerCreator from "./largeScreenCreator.js";
-import FiveDayPricingContainerAppender from "./fiveDayPricingContainerAppender.js";
-import FiveDayPricingContainerRemover from "./FiveDayPricingContainerRemover.js";
-import OtherFiveDayPricingContainersRemover from "../OtherFiveDayPricingContainersRemover.js";
+import pricingContainerAppender from "../pricingContainerAppender.js";
+import pricingContainersRemover from "../pricingContainersRemover.js";
 
 const LargeScreenTentsPricingProcessor = {
     Process() {
         const mainTentsPricingContainer = document.querySelector("#main-tents-pricing-container");
-      if (mainTentsPricingContainer !== null) FiveDayPricingContainerRemover.Remove();
+      if (mainTentsPricingContainer !== null) pricingContainersRemover.Remove();
       else {
         const container = TentsPricingLargeContainerCreator.Create();
 
-        OtherFiveDayPricingContainersRemover.Remove();
+        pricingContainersRemover.Remove();
 
-        FiveDayPricingContainerAppender.Append(container);
+        pricingContainerAppender.Append(container);
       }
     }
 }

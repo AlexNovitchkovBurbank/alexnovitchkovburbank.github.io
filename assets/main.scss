@@ -94,28 +94,28 @@ h1 {
 #main-chalet-pricing-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 60%;
 }
 
 #main-rv-pricing-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 60%;
 }
 
 #main-tents-pricing-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 60%;
 }
 
 #main-overnight-pricing-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 60%;
 }
 
@@ -128,4 +128,40 @@ h1 {
   flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 7px;
+}
+
+#containers-side-by-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+#display-pricing-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 7px;
+}
+
+.pricing-buttons-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pricing-type-section {
+  text-align: center;
+}
+
+#registration-form-button-section {
+  text-align: center;
+}
+
+#registration-form-button {
+  justify-self: center;
+}
+
+h2 {
+  text-align: center;
 }

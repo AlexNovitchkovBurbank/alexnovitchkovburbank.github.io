@@ -1,17 +1,17 @@
 import RvPricingLargeContainerCreator from "./largeScreenCreator.js";
-import FiveDayPricingContainerAppender from "./fiveDayPricingContainerAppender.js";
-import FiveDayPricingContainerRemover from "./FiveDayPricingContainerRemover.js";
-import OtherFiveDayPricingContainersRemover from "../OtherFiveDayPricingContainersRemover.js";
+import pricingContainerAppender from "../pricingContainerAppender.js";
+import pricingContainersRemover from "../pricingContainersRemover.js";
+
 const LargeScreenRvPricingProcessor = {
     Process() {
         const mainRvPricingContainer = document.querySelector("#main-rv-pricing-container");
-      if (mainRvPricingContainer !== null) FiveDayPricingContainerRemover.Remove();
+      if (mainRvPricingContainer !== null) pricingContainersRemover.Remove();
       else {
         const container = RvPricingLargeContainerCreator.Create();
 
-        OtherFiveDayPricingContainersRemover.Remove();
+        pricingContainersRemover.Remove();
 
-        FiveDayPricingContainerAppender.Append(container);
+        pricingContainerAppender.Append(container);
       }
     }
 }

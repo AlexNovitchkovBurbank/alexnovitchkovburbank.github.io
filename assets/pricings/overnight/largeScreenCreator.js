@@ -3,23 +3,28 @@ const OvernightPricingLargeContainerCreator = {
     const mainOvernightPricingContainer = document.createElement("div");
     mainOvernightPricingContainer.id = "main-overnight-pricing-container";
     const prices = [
+      "$30.00",
+      "$60.00",
+      "$90.00",
       "$120.00",
-      "$175.00",
-      "$215.00",
-      "$255.00",
-      "$295.00",
-      "$335.00",
-      "$375.00",
-      "$415.00",
-      "$445.00",
-      "$295.00",
-      "$525.00",
-      "$595.00",
-      "$615.00",
+      "$150.00",
+      "$180.00",
+      "$210.00",
+      "$240.00",
+      "$270.00",
+      "$300.00",
+      "$330.00",
+      "$360.00",
+      "$390.00",
     ];
+
+    const titleElement = document.createElement("h2");
+    titleElement.textContent = "Overnight (with meals) pricing";
+    mainOvernightPricingContainer.appendChild(titleElement);
+
     for (let i = 1; i <= 13; i++) {
-      const descriptionPriceContiner = document.createElement("div");
-      descriptionPriceContiner.className =
+      const descriptionPriceContainer = document.createElement("div");
+      descriptionPriceContainer.className =
         "price-flex-container-large-screen-width";
       const descriptionElement = document.createElement("p");
       const priceElement = document.createElement("p");
@@ -28,9 +33,9 @@ const OvernightPricingLargeContainerCreator = {
       else descriptionElement.textContent = `${i} people over 6`;
       priceElement.textContent = prices[i - 1];
 
-      descriptionPriceContiner.appendChild(descriptionElement);
-      descriptionPriceContiner.appendChild(priceElement);
-      mainOvernightPricingContainer.appendChild(descriptionPriceContiner);
+      descriptionPriceContainer.appendChild(descriptionElement);
+      descriptionPriceContainer.appendChild(priceElement);
+      mainOvernightPricingContainer.appendChild(descriptionPriceContainer);
     }
 
     return mainOvernightPricingContainer;

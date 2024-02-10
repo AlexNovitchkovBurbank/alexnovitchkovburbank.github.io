@@ -10,25 +10,29 @@ layout: default
   src="../assets/pricings/overnight/eventHandler.js"
 ></script>
 
-<div class="pricing-section">
-  <p>5 days options</p>
-  <div class="section-buttons">
-    <button id="chalet-pricing-button">Chalet</button>
-    <button id="rv-pricing-button">Rv</button>
-    <button id="tents-pricing-button">Tent</button>
+<div id="containers-side-by-side">
+  <div class="pricing-type-section">
+    <div>5 days options</div>
+    <div class="pricing-buttons-section">
+      <button id="chalet-pricing-button">Chalet</button>
+      <button id="rv-pricing-button">Rv</button>
+      <button id="tents-pricing-button">Tent</button>
+    </div>
   </div>
-  <div id="fiveDay-pricing-container"></div>
-</div>
-<div class="pricing-section">
-  <p>Overnight with meals options</p>
-  <div class="section-buttons">
-    <button id="overnight-pricing-button">Overnight</button>
+  <div class="pricing-type-section">
+    <div>Overnight with meals options</div>
+    <div class="pricing-buttons-section">
+      <button id="overnight-pricing-button">Overnight</button>
+    </div>
   </div>
-  <div id="overnight-pricing-container"></div>
 </div>
+<div id="display-pricing-container"></div>
+<div id="registration-form-button-section">
+<div>Registration form</div>
 <button
   onclick="window.open('/form/index.html', '_blank')"
   id="registration-form-button"
 >
   Registration Form
 </button>
+</div>

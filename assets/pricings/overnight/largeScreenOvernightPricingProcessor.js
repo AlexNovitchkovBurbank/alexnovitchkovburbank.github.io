@@ -1,18 +1,17 @@
 import OvernightPricingLargeContainerCreator from "./largeScreenCreator.js";
-import MainPricingContainerAppender from "./overnightPricingContainerAppender.js";
-import MainPricingContainerRemover from "./OvernightPricingContainerRemover.js";
-import OtherMainPricingContainersRemover from "../OtherOvernightPricingContainersRemover.js";
+import pricingContainerAppender from "../pricingContainerAppender.js";
+import pricingContainersRemover from "../pricingContainersRemover.js";
 
 const LargeScreenOvernightPricingProcessor = {
     Process() {
         const mainOvernightPricingContainer = document.querySelector("#main-overnight-pricing-container");
-      if (mainOvernightPricingContainer !== null) MainPricingContainerRemover.Remove();
+      if (mainOvernightPricingContainer !== null) pricingContainersRemover.Remove();
       else {
         const container = OvernightPricingLargeContainerCreator.Create();
 
-        OtherMainPricingContainersRemover.Remove();
+        pricingContainersRemover.Remove();
 
-        MainPricingContainerAppender.Append(container);
+        pricingContainerAppender.Append(container);
       }
     }
 }
