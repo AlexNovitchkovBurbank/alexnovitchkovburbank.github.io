@@ -1,5 +1,5 @@
 import FamilyInfoContainerCreator from '../Creators/familyInfoCreator.js';
-import ToFormBodyAppender from '../Appenders/appendToFormBody.js';
+import ToFormBodyAppender from '../Appenders/FormBodyAppender.js';
 
 const DisplayFamilyInfoProcessor = {
     Process() {

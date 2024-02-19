@@ -36,7 +36,7 @@ const createMemberRecordContainer =
     const FirstNameInputElement =
       document.createElement("input");
     FirstNameInputElement.className =
-      "form-input---width";
+      "form-input";
     FirstNameInputElement.required = true;
     FirstNameInputElement.ariaLabel = `Member ${i.toLocaleString()} First name`;
     FirstNameInputElement.id = `Person${i.toLocaleString()}FirstNameInput`;
@@ -55,7 +55,7 @@ const createMemberRecordContainer =
     AgeLabelElement.textContent = `Family member ${i.toLocaleString()} age:`;
     AgeLabelElement.htmlFor = `Person${i.toLocaleString()}AgeInput`;
     const AgeInputElement = document.createElement("input");
-    AgeInputElement.className = "form-input---width";
+    AgeInputElement.className = "form-input";
     AgeInputElement.required = true;
     AgeInputElement.ariaLabel = `Member ${i.toLocaleString()} Age`;
     AgeInputElement.id = `Person${i.toLocaleString()}AgeInput`;
@@ -74,7 +74,7 @@ const createMemberRecordContainer =
     const RelationshipInputElement =
       document.createElement("input");
     RelationshipInputElement.className =
-      "form-input---width";
+      "form-input";
     RelationshipInputElement.required = true;
     RelationshipInputElement.ariaLabel = `Member ${i.toLocaleString()} Relationship`;
     RelationshipInputElement.id = `Person${i.toLocaleString()}RelationshipInput`;
