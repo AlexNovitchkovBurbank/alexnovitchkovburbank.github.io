@@ -5,6 +5,7 @@ import stayInChaletNumberOfPeopleRemover from "./Removers/familyInfoStayInChalet
 import stayInRvNumberOfPeopleRemover from "./Removers/familyInfoStayInRvNumPeopleRemover.js";
 import stayInTentsNumberOfPeopleRemover from "./Removers/familyInfoStayInTentsNumPeopleRemover.js";
 import sleepOnGroundNumberOfPeopleRemover from "./Removers/familyInfoSleepOnGroundNumPeopleRemover.js";
+import stayOvernightNumberOfPeopleRemover from "./Removers/familyInfoStayOvernightNumPeopleRemover.js.js";
 import resetProcessor from "./Processors/resetProcessor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -108,6 +109,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
+  }
+
+  const stayOvernightCheckboxElement = document.querySelector(
+    "#stay-in-rv-checkbox"
+  );
+  if (stayOvernightCheckboxElement !== null) {
+    stayOvernightCheckboxElement.addEventListener("change", () => {
+      try {
+        if (stayOvernightCheckboxElement.checked) {
+          const formFieldFlexNumPeopleContainerElement =
+            CreateNumPeopleContainerCreator.Create();
+
+          const stayOvernightContainer = document.querySelector(
+            "#stay-in-rv-container"
+          );
+          stayOvernightContainer.appendChild(formFieldFlexNumPeopleContainerElement);
+        } else stayOvernightNumberOfPeopleRemover.Remove();
+      } catch (error) {
+        alert(error.message);
+      }
+    });
   }
 
   const resetButton = document.querySelector("#reset-button");

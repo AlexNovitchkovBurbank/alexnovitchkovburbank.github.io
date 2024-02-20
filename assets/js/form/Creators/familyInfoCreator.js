@@ -88,6 +88,16 @@ const FamilyInfoContainerCreator = {
     sleepOnGroundContainer.appendChild(sleepOnGroundCheckboxLabel);
     sleepOnGroundContainer.appendChild(sleepOnGroundCheckbox);
 
+    const stayOvernightContainer = document.createElement("div");
+    stayOvernightContainer.id = "stay-overnight-container";
+    const stayOvernightCheckboxLabel = document.createElement("label");
+    stayOvernightCheckboxLabel.textContent = "We will stay overnight:";
+    const stayOvernightCheckbox = document.createElement("input");
+    stayOvernightCheckbox.type = "checkbox";
+    stayOvernightCheckbox.id = "stay-overnight-checkbox";
+    stayOvernightContainer.appendChild(stayOvernightCheckboxLabel);
+    stayOvernightContainer.appendChild(stayOvernightCheckbox);
+
     familyInfoContainer.appendChild(formFieldFlexFamilyNameContainerElement);
     familyInfoContainer.appendChild(formFieldFlexEmailContainerElement);
     familyInfoContainer.appendChild(formFieldFlexNumPeopleContainerElement);
@@ -95,6 +105,7 @@ const FamilyInfoContainerCreator = {
     familyInfoContainer.appendChild(stayInRvContainer);
     familyInfoContainer.appendChild(stayInTentsContainer);
     familyInfoContainer.appendChild(sleepOnGroundContainer);
+    familyInfoContainer.appendChild(stayOvernightContainer);
 
     return familyInfoContainer;
   },

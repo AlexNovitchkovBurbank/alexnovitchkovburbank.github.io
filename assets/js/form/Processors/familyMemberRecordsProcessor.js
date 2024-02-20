@@ -3,7 +3,7 @@ import CurrentFamilyMemberRecordsContainerRemover from '../Removers/CurrentFamil
 import StringToIntConverter from '../Helpers/stringToInt.js';
 import removeCurrentFamilyRecordsContainerValidator from '../Validators/removeCurrentFamilyRecordsContainerValidator.js';
 import ContainerForMemberRecordContainersCreator from '../Creators/familyMemberRecordContainerCreator.js';
-import ToFormBodyAppender from '../Appenders/appendToFormBody.js';
+import ToFormBodyAppender from '../Appenders/FormBodyAppender.js';
 
 const DisplayFamilyMemberRecordsProcessor = {
     Process(numberOfPeopleString) {
