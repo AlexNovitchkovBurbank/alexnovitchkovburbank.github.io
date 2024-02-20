@@ -35,9 +35,16 @@ const resetProcessor = {
       familyInfoSleepOnGroundContainer.removeChild(familyInfoNumPeopleSleepOnGroundContainer);
     }
 
+    const familyInfoStayOvernightContainer = document.querySelector("#stay-overnight-container");
+    if (familyInfoStayOvernightContainer !== null) {
+      const familyInfoNumPeopleStayOvernightContainer = familyInfoStayOvernightContainer.querySelector(".form-field-container");
+
+      if (familyInfoNumPeopleStayOvernightContainer !== null)
+      familyInfoStayOvernightContainer.removeChild(familyInfoNumPeopleStayOvernightContainer);
+    }
+
     const formBodyElement = document.querySelector("#form-body");
     const recordsContainer = document.querySelector(".form-family-member-records-container");
-
     if (recordsContainer !== null)
       formBodyElement.removeChild(recordsContainer);
   },

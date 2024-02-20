@@ -1,105 +1,19 @@
 import DisplayFamilyMemberRecordsProcessor from "./Processors/familyMemberRecordsProcessor.js";
 import DisplayFamilyInfoProcessor from "./Processors/familyInfoProcessor.js";
-import CreateNumPeopleContainerCreator from "./Creators/NumPeopleContainerCreator.js";
-import stayInChaletNumberOfPeopleRemover from "./Removers/familyInfoStayInChaletNumPeopleRemover.js";
-import stayInRvNumberOfPeopleRemover from "./Removers/familyInfoStayInRvNumPeopleRemover.js";
-import stayInTentsNumberOfPeopleRemover from "./Removers/familyInfoStayInTentsNumPeopleRemover.js";
-import sleepOnGroundNumberOfPeopleRemover from "./Removers/familyInfoSleepOnGroundNumPeopleRemover.js";
-import stayOvernightNumberOfPeopleRemover from "./Removers/familyInfoStayOvernightNumPeopleRemover.js.js";
+import onChaletCheckboxClickProcessor from "./Processors/onChaletCheckboxClickProcessor.js";
+import onRvCheckboxClickProcessor from "./Processors/onRvCheckboxClickProcessor.js";
+import onTentCheckboxClickProcessor from "./Processors/onTentCheckboxClickProcessor.js";
+import onSleepOnGroundCheckboxClickProcessor from "./Processors/onSleepOnGroundCheckboxClickProcessor.js";
+import onStayOvernightCheckboxClickProcessor from "./Processors/onOvernightCheckboxClickProcessor.js";
 import resetProcessor from "./Processors/resetProcessor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   DisplayFamilyInfoProcessor.Process();
 
-  const stayInChaletCheckboxElement = document.querySelector(
-    "#stay-in-chalet-checkbox"
-  );
-  if (stayInChaletCheckboxElement !== null) {
-    stayInChaletCheckboxElement.addEventListener("change", () => {
-      try {
-        if (stayInChaletCheckboxElement.checked) {
-          const formFieldFlexNumPeopleContainerElement =
-            CreateNumPeopleContainerCreator.Create();
-
-          const stayInChaletContainer = document.querySelector(
-            "#stay-in-chalet-container"
-          );
-          stayInChaletContainer.appendChild(formFieldFlexNumPeopleContainerElement);
-        } else stayInChaletNumberOfPeopleRemover.Remove();
-      } catch (error) {
-        alert(error.message);
-      }
-    });
-  }
-
-  const stayInRvCheckboxElement = document.querySelector(
-    "#stay-in-rv-checkbox"
-  );
-  if (stayInRvCheckboxElement !== null) {
-    stayInRvCheckboxElement.addEventListener("change", () => {
-      try {
-        if (stayInRvCheckboxElement.checked) {
-          const formFieldFlexNumPeopleContainerElement =
-            CreateNumPeopleContainerCreator.Create();
-
-          const stayInRvContainer = document.querySelector(
-            "#stay-in-rv-container"
-          );
-          stayInRvContainer.appendChild(formFieldFlexNumPeopleContainerElement);
-        } else stayInRvNumberOfPeopleRemover.Remove();
-      } catch (error) {
-        alert(error.message);
-      }
-    });
-  }
-
-  const stayInTentsCheckboxElement = document.querySelector(
-    "#stay-in-tents-checkbox"
-  );
-  if (stayInTentsCheckboxElement !== null) {
-    stayInTentsCheckboxElement.addEventListener("change", () => {
-      try {
-        if (stayInTentsCheckboxElement.checked) {
-          const formFieldFlexNumPeopleContainerElement =
-            CreateNumPeopleContainerCreator.Create();
-
-          const stayInTentsContainer = document.querySelector(
-            "#stay-in-tents-container"
-          );
-          stayInTentsContainer.appendChild(formFieldFlexNumPeopleContainerElement);
-        } else {
-          stayInTentsNumberOfPeopleRemover.Remove();
-        }
-      } catch (error) {
-        alert(error.message);
-      }
-    });
-  }
-
-  const sleepOnGroundCheckboxElement = document.querySelector(
-    "#sleep-on-ground-checkbox"
-  );
-  if (sleepOnGroundCheckboxElement !== null) {
-    sleepOnGroundCheckboxElement.addEventListener("change", () => {
-      try {
-        if (sleepOnGroundCheckboxElement.checked) {
-          const formFieldFlexNumPeopleContainerElement =
-            CreateNumPeopleContainerCreator.Create();
-
-          const sleepOnGroundContainer = document.querySelector(
-            "#sleep-on-ground-container"
-          );
-          sleepOnGroundContainer.appendChild(formFieldFlexNumPeopleContainerElement);
-        } else sleepOnGroundNumberOfPeopleRemover.Remove();
-      } catch (error) {
-        alert(error.message);
-      }
-    });
-  }
-
   const numPeopleContainer = document.querySelector("#num-people-container");
   if (numPeopleContainer !== null) {
-    const numPeopleInput = numPeopleContainer.querySelector("#num-people-input");
+    const numPeopleInput =
+      numPeopleContainer.querySelector("#num-people-input");
     if (numPeopleInput !== null) {
       numPeopleInput.addEventListener("keyup", () => {
         try {
@@ -111,29 +25,53 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const stayOvernightCheckboxElement = document.querySelector(
+  const stayInChaletCheckboxElement = document.querySelector(
+    "#stay-in-chalet-checkbox"
+  );
+  if (stayInChaletCheckboxElement !== null) {
+    stayInChaletCheckboxElement.addEventListener("change", () => {
+      onChaletCheckboxClickProcessor.Process();
+    });
+  }
+
+  const stayInRvCheckboxElement = document.querySelector(
     "#stay-in-rv-checkbox"
+  );
+  if (stayInRvCheckboxElement !== null) {
+    stayInRvCheckboxElement.addEventListener("change", () => {
+      onRvCheckboxClickProcessor.Process();
+    });
+  }
+
+  const stayInTentsCheckboxElement = document.querySelector(
+    "#stay-in-tents-checkbox"
+  );
+  if (stayInTentsCheckboxElement !== null) {
+    stayInTentsCheckboxElement.addEventListener("change", () => {
+      onTentCheckboxClickProcessor.Process();
+    });
+  }
+
+  const sleepOnGroundCheckboxElement = document.querySelector(
+    "#sleep-on-ground-checkbox"
+  );
+  if (sleepOnGroundCheckboxElement !== null) {
+    sleepOnGroundCheckboxElement.addEventListener("change", () => {
+      onSleepOnGroundCheckboxClickProcessor.Process();
+    });
+  }
+
+  const stayOvernightCheckboxElement = document.querySelector(
+    "#stay-overnight-checkbox"
   );
   if (stayOvernightCheckboxElement !== null) {
     stayOvernightCheckboxElement.addEventListener("change", () => {
-      try {
-        if (stayOvernightCheckboxElement.checked) {
-          const formFieldFlexNumPeopleContainerElement =
-            CreateNumPeopleContainerCreator.Create();
-
-          const stayOvernightContainer = document.querySelector(
-            "#stay-in-rv-container"
-          );
-          stayOvernightContainer.appendChild(formFieldFlexNumPeopleContainerElement);
-        } else stayOvernightNumberOfPeopleRemover.Remove();
-      } catch (error) {
-        alert(error.message);
-      }
+      onStayOvernightCheckboxClickProcessor.Process();
     });
   }
 
   const resetButton = document.querySelector("#reset-button");
-  resetButton.addEventListener('click', () => {
+  resetButton.addEventListener("click", () => {
     resetProcessor.Process();
-  })
+  });
 });
