@@ -1,5 +1,5 @@
-import CreateNumPeopleContainerCreator from "./Creators/NumPeopleContainerCreator.js";
-import stayInChaletNumberOfPeopleRemover from "./Removers/familyInfoStayInChaletNumPeopleRemover.js";
+import CreateNumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
+import stayInChaletNumberOfPeopleRemover from "../Removers/familyInfoStayInChaletNumPeopleRemover.js";
 
 const onChaletCheckboxClickProcessor = {
   Process() {

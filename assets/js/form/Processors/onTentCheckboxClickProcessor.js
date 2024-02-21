@@ -1,5 +1,5 @@
-import CreateNumPeopleContainerCreator from "./Creators/NumPeopleContainerCreator.js";
-import stayInTentNumberOfPeopleRemover from "./Removers/familyInfoStayInTentsNumPeopleRemover.js";
+import CreateNumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
+import stayInTentNumberOfPeopleRemover from "../Removers/familyInfoStayInTentNumPeopleRemover.js";
 
 const onTentCheckboxClickProcessor = {
   Process() {

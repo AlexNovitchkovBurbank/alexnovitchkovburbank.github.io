@@ -5,17 +5,17 @@ const tentPriceCalculator = {
         if (!Number.parseInt(numPeople))
             throw new Error("Number of people for tent is not a number");
 
-        let totalCostForTentStay = 0;
+        let totalCostFortenttay = 0;
         
         if (numPeople > 6) {
             const numPeopleOver6 = numPeople - 6;
-            totalCostForTentStay = tentPricesOver6People[numPeopleOver6];
+            totalCostFortenttay = tentPricesOver6People[numPeopleOver6];
           }
           else {
-            totalCostForTentStay = tentBaseRate;
+            totalCostFortenttay = tentBaseRate;
           }
 
-          return totalCostForTentStay;
+          return totalCostFortenttay;
     }
 }
 

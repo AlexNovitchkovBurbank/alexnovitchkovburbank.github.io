@@ -43,11 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const stayInTentsCheckboxElement = document.querySelector(
-    "#stay-in-tents-checkbox"
+  const stayInTentCheckboxElement = document.querySelector(
+    "#stay-in-tent-checkbox"
   );
-  if (stayInTentsCheckboxElement !== null) {
-    stayInTentsCheckboxElement.addEventListener("change", () => {
+  if (stayInTentCheckboxElement !== null) {
+    stayInTentCheckboxElement.addEventListener("change", () => {
       onTentCheckboxClickProcessor.Process();
     });
   }

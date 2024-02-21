@@ -19,12 +19,12 @@ const resetProcessor = {
         familyInfoStayInRvContainer.removeChild(familyInfoNumPeopleInRvContainer);
     }
 
-    const familyInfoStayInTentsContainer = document.querySelector("#stay-in-tents-container");
-    if (familyInfoStayInTentsContainer !== null) {
-      const familyInfoNumPeopleInTentsContainer = familyInfoStayInTentsContainer.querySelector(".form-field-container");
+    const familyInfoStayInTentContainer = document.querySelector("#stay-in-tent-container");
+    if (familyInfoStayInTentContainer !== null) {
+      const familyInfoNumPeopleInTentContainer = familyInfoStayInTentContainer.querySelector(".form-field-container");
 
-      if (familyInfoNumPeopleInTentsContainer !== null)
-        familyInfoStayInTentsContainer.removeChild(familyInfoNumPeopleInTentsContainer);
+      if (familyInfoNumPeopleInTentContainer !== null)
+        familyInfoStayInTentContainer.removeChild(familyInfoNumPeopleInTentContainer);
     }
 
     const familyInfoSleepOnGroundContainer = document.querySelector("#sleep-on-ground-container");

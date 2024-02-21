@@ -1,5 +1,5 @@
-import CreateNumPeopleContainerCreator from "./Creators/NumPeopleContainerCreator.js";
-import stayInRvNumberOfPeopleRemover from "./Removers/familyInfoStayInRvNumPeopleRemover.js";
+import CreateNumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
+import stayInRvNumberOfPeopleRemover from "../Removers/familyInfoStayInRvNumPeopleRemover.js";
 
 const onRvCheckboxClickProcessor = {
   Process() {

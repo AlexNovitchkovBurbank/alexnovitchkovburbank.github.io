@@ -1,10 +1,10 @@
-import CreateNumPeopleContainerCreator from "./Creators/NumPeopleContainerCreator.js";
-import stayOvernightNumberOfPeopleRemover from "./Removers/familyInfoStayOvernightNumPeopleRemover.js";
+import CreateNumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
+import stayOvernightNumberOfPeopleRemover from "../Removers/familyInfoStayOvernightNumPeopleRemover.js";
 
 const onStayOvernightCheckboxClickProcessor = {
   Process() {
     const stayOvernightCheckboxElement = document.querySelector(
-      "#stay-in-tent-checkbox"
+      "#stay-overnight-checkbox"
     );
 
     try {
@@ -13,7 +13,7 @@ const onStayOvernightCheckboxClickProcessor = {
           CreateNumPeopleContainerCreator.Create();
 
         const stayOvernightContainer = document.querySelector(
-          "#stay-in-tent-container"
+          "#stay-overnight-container"
         );
         stayOvernightContainer.appendChild(
           formFieldFlexNumPeopleContainerElement

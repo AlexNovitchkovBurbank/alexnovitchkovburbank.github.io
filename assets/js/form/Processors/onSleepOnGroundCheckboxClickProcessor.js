@@ -1,5 +1,5 @@
-import CreateNumPeopleContainerCreator from "./Creators/NumPeopleContainerCreator.js";
-import sleepOnGroundNumberOfPeopleRemover from "./Removers/familyInfoSleepOnGroundNumPeopleRemover.js";
+import CreateNumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
+import sleepOnGroundNumberOfPeopleRemover from "../Removers/familyInfoSleepOnGroundNumPeopleRemover.js";
 
 const onSleepOnGroundCheckboxClickProcessor = {
   Process() {

@@ -1,13 +1,13 @@
 import {tentPricesOver6People, tentBaseRate} from "../../tentPrices.js";
 
-const TentsPricingContainerCreator = {
+const tentPricingContainerCreator = {
   Create() {
-    const mainTentsPricingContainer = document.createElement("div");
-    mainTentsPricingContainer.id = "main-tents-pricing-container";
+    const maInTentPricingContainer = document.createElement("div");
+    maInTentPricingContainer.id = "main-tent-pricing-container";
 
     const titleElement = document.createElement("h2");
     titleElement.textContent = "5 day tent pricing";
-    mainTentsPricingContainer.appendChild(titleElement);
+    maInTentPricingContainer.appendChild(titleElement);
 
     for (let i = 1; i <= 13; i++) {
       const descriptionPriceContainer = document.createElement("div");
@@ -22,11 +22,11 @@ const TentsPricingContainerCreator = {
 
       descriptionPriceContainer.appendChild(descriptionElement);
       descriptionPriceContainer.appendChild(priceElement);
-      mainTentsPricingContainer.appendChild(descriptionPriceContainer);
+      maInTentPricingContainer.appendChild(descriptionPriceContainer);
     }
 
-    return mainTentsPricingContainer;
+    return maInTentPricingContainer;
   },
 };
 
-export default TentsPricingContainerCreator;
+export default tentPricingContainerCreator;
