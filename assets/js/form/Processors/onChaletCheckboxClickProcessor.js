@@ -9,8 +9,10 @@ const onChaletCheckboxClickProcessor = {
 
     try {
       if (stayInChaletCheckboxElement.checked) {
+        const numPeopleInputName = "number-of-people-in-chalet";
+        const numPeopleInputId = "num-people-in-chalet";
         const formFieldFlexNumPeopleContainerElement =
-          CreateNumPeopleContainerCreator.Create();
+          CreateNumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const stayInChaletContainer = document.querySelector(
           "#stay-in-chalet-container"

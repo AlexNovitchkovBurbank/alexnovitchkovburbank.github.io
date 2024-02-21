@@ -9,8 +9,11 @@ const onRvCheckboxClickProcessor = {
 
     try {
       if (stayInRvCheckboxElement.checked) {
+        const numPeopleInputName = "number-of-people-in-rv";
+        const numPeopleInputId = "num-people-in-rv";
+
         const formFieldFlexNumPeopleContainerElement =
-          CreateNumPeopleContainerCreator.Create();
+          CreateNumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const stayInRvContainer = document.querySelector(
           "#stay-in-rv-container"

@@ -9,8 +9,11 @@ const onSleepOnGroundCheckboxClickProcessor = {
 
     try {
       if (sleepOnGroundCheckboxElement.checked) {
+        const numPeopleInputName = "number-of-people-to-sleep-on-the-ground";
+        const numPeopleInputId = "num-people-sleep-on-ground";
+
         const formFieldFlexNumPeopleContainerElement =
-          CreateNumPeopleContainerCreator.Create();
+          CreateNumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const sleepOnGroundContainer = document.querySelector(
           "#sleep-on-ground-container"

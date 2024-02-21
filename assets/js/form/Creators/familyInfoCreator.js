@@ -1,3 +1,5 @@
+import CreateNumPeopleContainerCreator from "./NumPeopleContainerCreator.js";
+
 const FamilyInfoContainerCreator = {
   Create() {
     const familyInfoContainer = document.createElement("div");
@@ -32,21 +34,9 @@ const FamilyInfoContainerCreator = {
     formFieldFlexEmailContainerElement.appendChild(EmailLabel);
     formFieldFlexEmailContainerElement.appendChild(EmailInput);
 
-    const formFieldFlexNumPeopleContainerElement =
-      document.createElement("div");
-    formFieldFlexNumPeopleContainerElement.id = "num-people-container";
-    formFieldFlexNumPeopleContainerElement.className =
-      "form-field-container";
-    const NumPeopleLabel = document.createElement("label");
-    NumPeopleLabel.textContent = "Number of people:";
-    NumPeopleLabel.htmlFor = "num-people-input";
-    const NumPeopleInput = document.createElement("input");
-    NumPeopleInput.type = "num-people";
-    NumPeopleInput.name = "number-of-people";
-    NumPeopleInput.id = "num-people-input";
-    NumPeopleInput.required = true;
-    formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleLabel);
-    formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleInput);
+    const nameForInput = "number-of-people";
+    const idForInput = "num-people-input";
+    const formFieldFlexNumPeopleContainerElement = CreateNumPeopleContainerCreator.Create(idForInput, nameForInput);
 
     const stayInChaletContainer = document.createElement("div");
     stayInChaletContainer.id = "stay-in-chalet-container";

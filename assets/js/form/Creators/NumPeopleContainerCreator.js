@@ -1,21 +1,22 @@
 const CreateNumPeopleContainerCreator = {
-  Create() {
-    const formFieldFlexNumPeopleContainerElement =
+  Create(idForInput, nameForInput) {
+    const NumPeopleContainer =
       document.createElement("div");
-    formFieldFlexNumPeopleContainerElement.className =
+    NumPeopleContainer.className =
       "form-field-container";
+    NumPeopleContainer.id = "num-people-container";
     const NumPeopleLabel = document.createElement("label");
     NumPeopleLabel.textContent = "Number of people:";
-    NumPeopleLabel.htmlFor = "num-people-input";
+    NumPeopleLabel.htmlFor = idForInput;
     const NumPeopleInput = document.createElement("input");
     NumPeopleInput.type = "num-people";
-    NumPeopleInput.name = "number-of-people";
-    NumPeopleInput.id = "num-people-input";
+    NumPeopleInput.name = nameForInput;
+    NumPeopleInput.id = idForInput;
     NumPeopleInput.required = true;
-    formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleLabel);
-    formFieldFlexNumPeopleContainerElement.appendChild(NumPeopleInput);
+    NumPeopleContainer.appendChild(NumPeopleLabel);
+    NumPeopleContainer.appendChild(NumPeopleInput);
 
-    return formFieldFlexNumPeopleContainerElement;
+    return NumPeopleContainer;
   },
 };
 

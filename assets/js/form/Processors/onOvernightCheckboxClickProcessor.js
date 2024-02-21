@@ -9,8 +9,11 @@ const onStayOvernightCheckboxClickProcessor = {
 
     try {
       if (stayOvernightCheckboxElement.checked) {
+        const numPeopleInputName = "number-of-overnight-stayers";
+        const numPeopleInputId = "num-people-stay-overnight";
+
         const formFieldFlexNumPeopleContainerElement =
-          CreateNumPeopleContainerCreator.Create();
+          CreateNumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const stayOvernightContainer = document.querySelector(
           "#stay-overnight-container"
