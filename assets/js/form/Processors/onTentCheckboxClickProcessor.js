@@ -1,4 +1,4 @@
-import CreateNumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
+import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
 import stayInTentNumberOfPeopleRemover from "../Removers/familyInfoStayInTentNumPeopleRemover.js";
 
 const onTentCheckboxClickProcessor = {
@@ -12,14 +12,14 @@ const onTentCheckboxClickProcessor = {
         const numPeopleInputName = "number-of-people-in-tent(s)";
         const numPeopleInputId = "num-people-in-tent";
 
-        const formFieldFlexNumPeopleContainerElement =
-          CreateNumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
+        const formFieldNumPeopleContainerElement =
+          NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const stayInTentContainer = document.querySelector(
           "#stay-in-tent-container"
         );
         stayInTentContainer.appendChild(
-          formFieldFlexNumPeopleContainerElement
+          formFieldNumPeopleContainerElement
         );
       } else stayInTentNumberOfPeopleRemover.Remove();
     } catch (error) {

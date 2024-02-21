@@ -1,4 +1,4 @@
-import CreateNumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
+import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
 import stayInChaletNumberOfPeopleRemover from "../Removers/familyInfoStayInChaletNumPeopleRemover.js";
 
 const onChaletCheckboxClickProcessor = {
@@ -11,14 +11,14 @@ const onChaletCheckboxClickProcessor = {
       if (stayInChaletCheckboxElement.checked) {
         const numPeopleInputName = "number-of-people-in-chalet";
         const numPeopleInputId = "num-people-in-chalet";
-        const formFieldFlexNumPeopleContainerElement =
-          CreateNumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
+        const formFieldNumPeopleContainerElement =
+        NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const stayInChaletContainer = document.querySelector(
           "#stay-in-chalet-container"
         );
         stayInChaletContainer.appendChild(
-          formFieldFlexNumPeopleContainerElement
+          formFieldNumPeopleContainerElement
         );
       } else stayInChaletNumberOfPeopleRemover.Remove();
     } catch (error) {

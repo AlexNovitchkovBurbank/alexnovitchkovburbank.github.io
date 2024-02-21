@@ -1,10 +1,12 @@
 import DisplayFamilyMemberRecordsProcessor from "./Processors/familyMemberRecordsProcessor.js";
 import DisplayFamilyInfoProcessor from "./Processors/familyInfoProcessor.js";
+import NumPeopleInputProcessor from "./Processors/NumPeopleInputProcessor.js";
 import onChaletCheckboxClickProcessor from "./Processors/onChaletCheckboxClickProcessor.js";
 import onRvCheckboxClickProcessor from "./Processors/onRvCheckboxClickProcessor.js";
 import onTentCheckboxClickProcessor from "./Processors/onTentCheckboxClickProcessor.js";
 import onSleepOnGroundCheckboxClickProcessor from "./Processors/onSleepOnGroundCheckboxClickProcessor.js";
 import onStayOvernightCheckboxClickProcessor from "./Processors/onOvernightCheckboxClickProcessor.js";
+import onDayUseOnlyCheckboxClickProcessor from "./Processors/onDayUseOnlyCheckboxClickProcessor.js";
 import resetProcessor from "./Processors/resetProcessor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       numPeopleInput.addEventListener("keyup", () => {
         try {
           DisplayFamilyMemberRecordsProcessor.Process(numPeopleInput.value);
+          NumPeopleInputProcessor.Process();
         } catch (error) {
           alert(error.message);
         }
@@ -67,6 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (stayOvernightCheckboxElement !== null) {
     stayOvernightCheckboxElement.addEventListener("change", () => {
       onStayOvernightCheckboxClickProcessor.Process();
+    });
+  }
+
+  const dayUseOnlyCheckboxElement = document.querySelector(
+    "#day-use-only-checkbox"
+  );
+  if (dayUseOnlyCheckboxElement !== null) {
+    stayOvernightCheckboxElement.addEventListener("change", () => {
+      onDayUseOnlyCheckboxClickProcessor.Process();
     });
   }
 

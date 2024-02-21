@@ -1,13 +1,13 @@
-import CreateNumPeopleContainerCreator from "./NumPeopleContainerCreator.js";
+import NumPeopleContainerCreator from "./NumPeopleContainerCreator.js";
 
 const FamilyInfoContainerCreator = {
   Create() {
     const familyInfoContainer = document.createElement("div");
     familyInfoContainer.className = "family-info-container";
 
-    const formFieldFlexFamilyNameContainerElement =
+    const familyNameFieldContainerElement =
       document.createElement("div");
-    formFieldFlexFamilyNameContainerElement.className =
+      familyNameFieldContainerElement.className =
       "form-field-container";
     const familyNameLabel = document.createElement("label");
     familyNameLabel.textContent = "Family name:";
@@ -17,26 +17,26 @@ const FamilyInfoContainerCreator = {
     familyNameInput.name = "family-name";
     familyNameInput.id = "family-name";
     familyNameInput.required = true;
-    formFieldFlexFamilyNameContainerElement.appendChild(familyNameLabel);
-    formFieldFlexFamilyNameContainerElement.appendChild(familyNameInput);
+    familyNameFieldContainerElement.appendChild(familyNameLabel);
+    familyNameFieldContainerElement.appendChild(familyNameInput);
 
-    const formFieldFlexEmailContainerElement = document.createElement("div");
-    formFieldFlexEmailContainerElement.className =
+    const emailFieldContainerElement = document.createElement("div");
+    emailFieldContainerElement.className =
       "form-field-container";
-    const EmailLabel = document.createElement("label");
-    EmailLabel.textContent = "Email:";
-    EmailLabel.htmlFor = "email";
-    const EmailInput = document.createElement("input");
-    EmailInput.type = "email";
-    EmailInput.name = "email";
-    EmailInput.id = "email";
-    EmailInput.required = true;
-    formFieldFlexEmailContainerElement.appendChild(EmailLabel);
-    formFieldFlexEmailContainerElement.appendChild(EmailInput);
+    const emailLabel = document.createElement("label");
+    emailLabel.textContent = "Email:";
+    emailLabel.htmlFor = "email";
+    const emailInput = document.createElement("input");
+    emailInput.type = "email";
+    emailInput.name = "email";
+    emailInput.id = "email";
+    emailInput.required = true;
+    emailFieldContainerElement.appendChild(emailLabel);
+    emailFieldContainerElement.appendChild(emailInput);
 
     const nameForInput = "number-of-people";
     const idForInput = "num-people-input";
-    const formFieldFlexNumPeopleContainerElement = CreateNumPeopleContainerCreator.Create(idForInput, nameForInput);
+    const numPeopleFieldContainerElement = NumPeopleContainerCreator.Create(idForInput, nameForInput);
 
     const stayInChaletContainer = document.createElement("div");
     stayInChaletContainer.id = "stay-in-chalet-container";
@@ -88,14 +88,25 @@ const FamilyInfoContainerCreator = {
     stayOvernightContainer.appendChild(stayOvernightCheckboxLabel);
     stayOvernightContainer.appendChild(stayOvernightCheckbox);
 
-    familyInfoContainer.appendChild(formFieldFlexFamilyNameContainerElement);
-    familyInfoContainer.appendChild(formFieldFlexEmailContainerElement);
-    familyInfoContainer.appendChild(formFieldFlexNumPeopleContainerElement);
+    const dayUseOnlyContainer = document.createElement("div");
+    dayUseOnlyContainer.id = "day-use-only-container";
+    const dayUseOnlyCheckboxLabel = document.createElement("label");
+    dayUseOnlyCheckboxLabel.textContent = "Day use only:";
+    const dayUseOnlyCheckbox = document.createElement("input");
+    dayUseOnlyCheckbox.type = "checkbox";
+    dayUseOnlyCheckbox.id = "day-use-only-checkbox";
+    dayUseOnlyContainer.appendChild(dayUseOnlyCheckboxLabel);
+    dayUseOnlyContainer.appendChild(dayUseOnlyCheckbox);
+
+    familyInfoContainer.appendChild(familyNameFieldContainerElement);
+    familyInfoContainer.appendChild(emailFieldContainerElement);
+    familyInfoContainer.appendChild(numPeopleFieldContainerElement);
     familyInfoContainer.appendChild(stayInChaletContainer);
     familyInfoContainer.appendChild(stayInRvContainer);
     familyInfoContainer.appendChild(stayInTentContainer);
     familyInfoContainer.appendChild(sleepOnGroundContainer);
     familyInfoContainer.appendChild(stayOvernightContainer);
+    familyInfoContainer.appendChild(dayUseOnlyContainer);
 
     return familyInfoContainer;
   },
