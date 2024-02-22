@@ -1,13 +1,13 @@
-import { overnightPricesOver6People, overnightBaseRate } from "../../overnightPrices.js";
+import {tentPricesOver6People, tentBaseRate} from "../../TentPrices.js";
 
-const OvernightPricingContainerCreator = {
+const TentPricingContainerCreator = {
   Create() {
-    const mainOvernightPricingContainer = document.createElement("div");
-    mainOvernightPricingContainer.id = "main-overnight-pricing-container";
+    const maInTentPricingContainer = document.createElement("div");
+    maInTentPricingContainer.id = "tent-pricing-container";
 
     const titleContainer = document.createElement("h2");
-    titleContainer.textContent = "Overnight (with meals) pricing";
-    mainOvernightPricingContainer.appendChild(titleContainer);
+    titleContainer.textContent = "5 day tent pricing";
+    maInTentPricingContainer.appendChild(titleContainer);
 
     for (let i = 1; i <= 13; i++) {
       const descriptionPriceContainer = document.createElement("div");
@@ -18,15 +18,15 @@ const OvernightPricingContainerCreator = {
 
       if (i === 1) descriptionContainer.textContent = `${i} person over 6`;
       else descriptionContainer.textContent = `${i} people over 6`;
-      priceContainer.textContent = overnightPricesOver6People[i - 1];
+      priceContainer.textContent = tentPricesOver6People[i - 1];
 
       descriptionPriceContainer.appendChild(descriptionContainer);
       descriptionPriceContainer.appendChild(priceContainer);
-      mainOvernightPricingContainer.appendChild(descriptionPriceContainer);
+      maInTentPricingContainer.appendChild(descriptionPriceContainer);
     }
 
-    return mainOvernightPricingContainer;
+    return maInTentPricingContainer;
   },
 };
 
-export default OvernightPricingContainerCreator;
+export default TentPricingContainerCreator;

@@ -1,11 +1,11 @@
-import NumPeopleInputValidator from "../Validators/numPeopleInputValidator.js";
+import NumPeopleInputValidator from "../Validators/NumPeopleInputValidator.js";
 import CurrentFamilyMemberRecordsContainerRemover from '../Removers/CurrentFamilyMemberRecordsContainerRemover.js';
-import StringToIntConverter from '../Helpers/stringToInt.js';
-import removeCurrentFamilyRecordsContainerValidator from '../Validators/removeCurrentFamilyRecordsContainerValidator.js';
-import ContainerForMemberRecordContainersCreator from '../Creators/familyMemberRecordContainerCreator.js';
-import ToFormBodyAppender from '../Appenders/FormBodyAppender.js';
+import StringToIntConverter from '../Converters/StringToIntConverter.js';
+import RemoveCurrentFamilyRecordsContainerValidator from '../Validators/RemoveCurrentFamilyRecordsContainerValidator.js';
+import ContainerForMemberRecordContainersCreator from '../Creators/ContainerForMemberRecordContainersCreator.js';
+import FormBodyAppender from '../Appenders/FormBodyAppender.js';
 
-const DisplayFamilyMemberRecordsProcessor = {
+const FamilyMemberRecordsProcessor = {
     Process(numberOfPeopleString) {
       const numPeopleValidInt = NumPeopleInputValidator.Validate(numberOfPeopleString);
 
@@ -19,7 +19,7 @@ const DisplayFamilyMemberRecordsProcessor = {
         StringToIntConverter.Convert(numberOfPeopleString);
   
       const shouldRemoveFamilyMemberRecords =
-      removeCurrentFamilyRecordsContainerValidator.Validate(numberOfPeopleInt);
+      RemoveCurrentFamilyRecordsContainerValidator.Validate(numberOfPeopleInt);
   
       if (shouldRemoveFamilyMemberRecords) {
         CurrentFamilyMemberRecordsContainerRemover.Remove();
@@ -27,9 +27,9 @@ const DisplayFamilyMemberRecordsProcessor = {
         const numPeopleRecordsContainer =
         ContainerForMemberRecordContainersCreator.Create(numberOfPeopleInt);
   
-        ToFormBodyAppender.Append(numPeopleRecordsContainer);
+        FormBodyAppender.Append(numPeopleRecordsContainer);
       }
     },
   };
 
-  export default DisplayFamilyMemberRecordsProcessor;
+  export default FamilyMemberRecordsProcessor;

@@ -17,28 +17,28 @@
     justify-content: center;
   }
   
-  #main-chalet-pricing-container {
+  #chalet-pricing-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     width: 60%;
   }
   
-  #main-rv-pricing-container {
+  #rv-pricing-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     width: 60%;
   }
   
-  #main-tent-pricing-container {
+  #tent-pricing-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     width: 60%;
   }
   
-  #main-overnight-pricing-container {
+  #overnight-pricing-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;

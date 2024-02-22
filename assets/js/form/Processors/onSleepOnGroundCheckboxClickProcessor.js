@@ -1,7 +1,7 @@
 import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
-import sleepOnGroundNumberOfPeopleRemover from "../Removers/familyInfoSleepOnGroundNumPeopleRemover.js";
+import sleepOnGroundNumberOfPeopleRemover from "../Removers/SleepOnGroundNumPeopleRemover.js";
 
-const onSleepOnGroundCheckboxClickProcessor = {
+const OnSleepOnGroundCheckboxClickProcessor = {
   Process() {
     const sleepOnGroundCheckboxContainer = document.querySelector(
       "#sleep-on-ground-checkbox"
@@ -28,4 +28,4 @@ const onSleepOnGroundCheckboxClickProcessor = {
   },
 };
 
-export default onSleepOnGroundCheckboxClickProcessor;
+export default OnSleepOnGroundCheckboxClickProcessor;

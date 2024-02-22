@@ -1,7 +1,7 @@
 import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
-import dayUseOnlyNumberOfPeopleRemover from "../Removers/familyInfoDayUseOnlyNumPeopleRemover.js";
+import DayUseOnlyNumberOfPeopleRemover from "../Removers/DayUseOnlyNumPeopleRemover.js";
 
-const onDayUseOnlyCheckboxClickProcessor = {
+const OnDayUseOnlyCheckboxClickProcessor = {
   Process() {
     const dayUseOnlyCheckboxContainer = document.querySelector(
       "#day-use-only-checkbox"
@@ -21,11 +21,11 @@ const onDayUseOnlyCheckboxClickProcessor = {
         dayUseOnlyContainer.appendChild(
           formFieldNumPeopleContainer
         );
-      } else dayUseOnlyNumberOfPeopleRemover.Remove();
+      } else DayUseOnlyNumberOfPeopleRemover.Remove();
     } catch (error) {
       alert(error.message);
     }
   },
 };
 
-export default onDayUseOnlyCheckboxClickProcessor;
+export default OnDayUseOnlyCheckboxClickProcessor;

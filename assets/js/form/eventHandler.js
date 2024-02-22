@@ -1,16 +1,16 @@
-import DisplayFamilyMemberRecordsProcessor from "./Processors/familyMemberRecordsProcessor.js";
-import DisplayFamilyInfoProcessor from "./Processors/familyInfoProcessor.js";
+import FamilyMemberRecordsProcessor from "./Processors/FamilyMemberRecordsProcessor.js";
+import FamilyInfoProcessor from "./Processors/FamilyInfoProcessor.js";
 import NumPeopleInputProcessor from "./Processors/NumPeopleInputProcessor.js";
-import onChaletCheckboxClickProcessor from "./Processors/onChaletCheckboxClickProcessor.js";
-import onRvCheckboxClickProcessor from "./Processors/onRvCheckboxClickProcessor.js";
-import onTentCheckboxClickProcessor from "./Processors/onTentCheckboxClickProcessor.js";
-import onSleepOnGroundCheckboxClickProcessor from "./Processors/onSleepOnGroundCheckboxClickProcessor.js";
-import onStayOvernightCheckboxClickProcessor from "./Processors/onOvernightCheckboxClickProcessor.js";
-import onDayUseOnlyCheckboxClickProcessor from "./Processors/onDayUseOnlyCheckboxClickProcessor.js";
-import resetProcessor from "./Processors/resetProcessor.js";
+import OnChaletCheckboxClickProcessor from "./Processors/OnChaletCheckboxClickProcessor.js";
+import OnRvCheckboxClickProcessor from "./Processors/OnRvCheckboxClickProcessor.js";
+import OnTentCheckboxClickProcessor from "./Processors/OnTentCheckboxClickProcessor.js";
+import OnSleepOnGroundCheckboxClickProcessor from "./Processors/OnSleepOnGroundCheckboxClickProcessor.js";
+import OnStayOvernightCheckboxClickProcessor from "./Processors/onOvernightCheckboxClickProcessor.js";
+import OnDayUseOnlyCheckboxClickProcessor from "./Processors/OnDayUseOnlyCheckboxClickProcessor.js";
+import ResetProcessor from "./Processors/ResetProcessor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  DisplayFamilyInfoProcessor.Process();
+  FamilyInfoProcessor.Process();
 
   const numPeopleContainer = document.querySelector("#num-people-container");
   if (numPeopleContainer !== null) {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (numPeopleInput !== null) {
       numPeopleInput.addEventListener("keyup", () => {
         try {
-          DisplayFamilyMemberRecordsProcessor.Process(numPeopleInput.value);
+          FamilyMemberRecordsProcessor.Process(numPeopleInput.value);
           NumPeopleInputProcessor.Process();
         } catch (error) {
           alert(error.message);
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   if (stayInChaletCheckboxContainer !== null) {
     stayInChaletCheckboxContainer.addEventListener("change", () => {
-      onChaletCheckboxClickProcessor.Process();
+      OnChaletCheckboxClickProcessor.Process();
     });
   }
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   if (stayInRvCheckboxContainer !== null) {
     stayInRvCheckboxContainer.addEventListener("change", () => {
-      onRvCheckboxClickProcessor.Process();
+      OnRvCheckboxClickProcessor.Process();
     });
   }
 
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   if (stayInTentCheckboxContainer !== null) {
     stayInTentCheckboxContainer.addEventListener("change", () => {
-      onTentCheckboxClickProcessor.Process();
+      OnTentCheckboxClickProcessor.Process();
     });
   }
 
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   if (sleepOnGroundCheckboxContainer !== null) {
     sleepOnGroundCheckboxContainer.addEventListener("change", () => {
-      onSleepOnGroundCheckboxClickProcessor.Process();
+      OnSleepOnGroundCheckboxClickProcessor.Process();
     });
   }
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   if (stayOvernightCheckboxContainer !== null) {
     stayOvernightCheckboxContainer.addEventListener("change", () => {
-      onStayOvernightCheckboxClickProcessor.Process();
+      OnStayOvernightCheckboxClickProcessor.Process();
     });
   }
 
@@ -78,12 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   if (dayUseOnlyCheckboxContainer !== null) {
     dayUseOnlyCheckboxContainer.addEventListener("change", () => {
-      onDayUseOnlyCheckboxClickProcessor.Process();
+      OnDayUseOnlyCheckboxClickProcessor.Process();
     });
   }
 
   const resetButton = document.querySelector("#reset-button");
   resetButton.addEventListener("click", () => {
-    resetProcessor.Process();
+    ResetProcessor.Process();
   });
 });

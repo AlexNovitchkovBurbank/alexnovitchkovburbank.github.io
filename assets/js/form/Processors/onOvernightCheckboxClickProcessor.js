@@ -1,8 +1,8 @@
 import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
 import NumNightsContainerCreator from "../Creators/NumNightsContainerCreator.js";
-import stayOvernightNumberOfPeopleRemover from "../Removers/familyInfoStayOvernightNumPeopleRemover.js";
+import StayOvernightNumberOfPeopleRemover from "../Removers/StayOvernightNumPeopleRemover.js";
 
-const onStayOvernightCheckboxClickProcessor = {
+const OnStayOvernightCheckboxClickProcessor = {
   Process() {
     const stayOvernightCheckboxContainer = document.querySelector(
       "#stay-overnight-checkbox"
@@ -31,11 +31,11 @@ const onStayOvernightCheckboxClickProcessor = {
         stayOvernightContainer.appendChild(
           formFieldNumNightsContainer
         );
-      } else stayOvernightNumberOfPeopleRemover.Remove();
+      } else StayOvernightNumberOfPeopleRemover.Remove();
     } catch (error) {
       alert(error.message);
     }
   },
 };
 
-export default onStayOvernightCheckboxClickProcessor;
+export default OnStayOvernightCheckboxClickProcessor;

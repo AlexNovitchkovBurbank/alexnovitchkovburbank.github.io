@@ -1,4 +1,4 @@
-import NumPeopleInputValidator from "../Validators/numPeopleInputValidator.js";
+import NumPeopleInputValidator from "../Validators/NumPeopleInputValidator.js";
 import NumPeopleFieldErrorCreator from "../Creators/NumPeopleFieldErrorCreator.js";
 import NumPeopleFieldErrorRemover from "../Removers/NumPeopleFieldErrorRemover.js";
 

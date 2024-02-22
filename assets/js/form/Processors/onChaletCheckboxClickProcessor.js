@@ -1,7 +1,7 @@
 import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
-import stayInChaletNumberOfPeopleRemover from "../Removers/familyInfoStayInChaletNumPeopleRemover.js";
+import StayInChaletNumberOfPeopleRemover from "../Removers/StayInChaletNumPeopleRemover.js";
 
-const onChaletCheckboxClickProcessor = {
+const OnChaletCheckboxClickProcessor = {
   Process() {
     const stayInChaletCheckboxContainer = document.querySelector(
       "#stay-in-chalet-checkbox"
@@ -20,11 +20,11 @@ const onChaletCheckboxClickProcessor = {
         stayInChaletContainer.appendChild(
           formFieldNumPeopleContainer
         );
-      } else stayInChaletNumberOfPeopleRemover.Remove();
+      } else StayInChaletNumberOfPeopleRemover.Remove();
     } catch (error) {
       alert(error.message);
     }
   },
 };
 
-export default onChaletCheckboxClickProcessor;
+export default OnChaletCheckboxClickProcessor;

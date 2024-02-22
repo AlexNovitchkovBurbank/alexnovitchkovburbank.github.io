@@ -1,4 +1,4 @@
-const removeCurrentFamilyRecordsContainerValidator = {
+const RemoveCurrentFamilyRecordsContainerValidator = {
   Validate(numberOfPeopleInt) {
     const firstNameInputs = document.querySelectorAll(
       "[id^=Person][id$=FirstNameInput]"
@@ -10,4 +10,4 @@ const removeCurrentFamilyRecordsContainerValidator = {
   },
 };
 
-export default removeCurrentFamilyRecordsContainerValidator;
+export default RemoveCurrentFamilyRecordsContainerValidator;

@@ -1,4 +1,4 @@
-const pricingContainerAppender = {
+const MainPricingContainerAppender = {
     Append(container) {
         const fiveDayPricingContainer = document.querySelector("#display-pricing-container");
 
@@ -6,4 +6,4 @@ const pricingContainerAppender = {
     }
 }
 
-export default pricingContainerAppender;
+export default MainPricingContainerAppender;

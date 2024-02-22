@@ -1,7 +1,7 @@
 import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
-import stayInRvNumberOfPeopleRemover from "../Removers/familyInfoStayInRvNumPeopleRemover.js";
+import StayInRvNumberOfPeopleRemover from "../Removers/StayInRvNumPeopleRemover.js";
 
-const onRvCheckboxClickProcessor = {
+const OnRvCheckboxClickProcessor = {
   Process() {
     const stayInRvCheckboxContainer = document.querySelector(
       "#stay-in-rv-checkbox"
@@ -19,11 +19,11 @@ const onRvCheckboxClickProcessor = {
           "#stay-in-rv-container"
         );
         stayInRvContainer.appendChild(formFieldNumPeopleContainer);
-      } else stayInRvNumberOfPeopleRemover.Remove();
+      } else StayInRvNumberOfPeopleRemover.Remove();
     } catch (error) {
       alert(error.message);
     }
   },
 };
 
-export default onRvCheckboxClickProcessor;
+export default OnRvCheckboxClickProcessor;

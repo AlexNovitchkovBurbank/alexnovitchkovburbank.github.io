@@ -1,13 +1,13 @@
-import {chaletPricesOver6People, chaletBaseRate} from "../../chaletPrices.js";
+import { overnightPricesOver6People, overnightBaseRate } from "../../OvernightPrices.js";
 
-const ChaletPricingContainerCreator = {
+const OvernightPricingContainerCreator = {
   Create() {
-    const mainChaletPricingContainer = document.createElement("div");
-    mainChaletPricingContainer.id = "main-chalet-pricing-container";
+    const mainOvernightPricingContainer = document.createElement("div");
+    mainOvernightPricingContainer.id = "overnight-pricing-container";
 
     const titleContainer = document.createElement("h2");
-    titleContainer.textContent = "5 day chalet pricing";
-    mainChaletPricingContainer.appendChild(titleContainer);
+    titleContainer.textContent = "Overnight (with meals) pricing";
+    mainOvernightPricingContainer.appendChild(titleContainer);
 
     for (let i = 1; i <= 13; i++) {
       const descriptionPriceContainer = document.createElement("div");
@@ -18,15 +18,15 @@ const ChaletPricingContainerCreator = {
 
       if (i === 1) descriptionContainer.textContent = `${i} person over 6`;
       else descriptionContainer.textContent = `${i} people over 6`;
-      priceContainer.textContent = chaletPricesOver6People[i - 1];
+      priceContainer.textContent = overnightPricesOver6People[i - 1];
 
       descriptionPriceContainer.appendChild(descriptionContainer);
       descriptionPriceContainer.appendChild(priceContainer);
-      mainChaletPricingContainer.appendChild(descriptionPriceContainer);
+      mainOvernightPricingContainer.appendChild(descriptionPriceContainer);
     }
 
-    return mainChaletPricingContainer;
+    return mainOvernightPricingContainer;
   },
 };
 
-export default ChaletPricingContainerCreator;
+export default OvernightPricingContainerCreator;

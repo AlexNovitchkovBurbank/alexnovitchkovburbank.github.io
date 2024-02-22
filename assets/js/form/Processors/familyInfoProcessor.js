@@ -1,12 +1,12 @@
-import FamilyInfoContainerCreator from '../Creators/familyInfoCreator.js';
-import ToFormBodyAppender from '../Appenders/FormBodyAppender.js';
+import FamilyInfoContainerCreator from '../Creators/FamilyInfoContainerCreator.js';
+import FormBodyAppender from '../Appenders/FormBodyAppender.js';
 
-const DisplayFamilyInfoProcessor = {
+const FamilyInfoProcessor = {
     Process() {
       const familyInfoContainer = FamilyInfoContainerCreator.Create();
   
-      ToFormBodyAppender.Append(familyInfoContainer);
+      FormBodyAppender.Append(familyInfoContainer);
     },
   };
 
-export default DisplayFamilyInfoProcessor;
+export default FamilyInfoProcessor;

@@ -1,9 +1,9 @@
-import {rvPricesOver6People, rvBaseRate} from "../../rvPrices.js";
+import {rvPricesOver6People, rvBaseRate} from "../../RVPrices.js";
 
-const RvPricingContainerCreator = {
+const RVPricingContainerCreator = {
   Create() {
     const mainRvPricingContainer = document.createElement("div");
-    mainRvPricingContainer.id = "main-rv-pricing-container";
+    mainRvPricingContainer.id = "rv-pricing-container";
 
     const titleContainer = document.createElement("h2");
     titleContainer.textContent = "5 day RV pricing";
@@ -29,4 +29,4 @@ const RvPricingContainerCreator = {
   },
 };
 
-export default RvPricingContainerCreator;
+export default RVPricingContainerCreator;
