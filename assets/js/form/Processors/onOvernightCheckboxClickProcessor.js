@@ -4,32 +4,32 @@ import stayOvernightNumberOfPeopleRemover from "../Removers/familyInfoStayOverni
 
 const onStayOvernightCheckboxClickProcessor = {
   Process() {
-    const stayOvernightCheckboxElement = document.querySelector(
+    const stayOvernightCheckboxContainer = document.querySelector(
       "#stay-overnight-checkbox"
     );
 
     try {
-      if (stayOvernightCheckboxElement.checked) {
+      if (stayOvernightCheckboxContainer.checked) {
         const numPeopleInputName = "number-of-overnight-stayers";
         const numPeopleInputId = "num-people-stay-overnight";
 
-        const formFieldNumPeopleContainerElement =
+        const formFieldNumPeopleContainer =
         NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const numNightsInputName = "number-of-nights";
         const numNightsInputId = "num-nights";
 
-        const formFieldNumNightsContainerElement =
+        const formFieldNumNightsContainer =
         NumNightsContainerCreator.Create(numNightsInputId, numNightsInputName);
 
         const stayOvernightContainer = document.querySelector(
           "#stay-overnight-container"
         );
         stayOvernightContainer.appendChild(
-          formFieldNumPeopleContainerElement
+          formFieldNumPeopleContainer
         );
         stayOvernightContainer.appendChild(
-          formFieldNumNightsContainerElement
+          formFieldNumNightsContainer
         );
       } else stayOvernightNumberOfPeopleRemover.Remove();
     } catch (error) {

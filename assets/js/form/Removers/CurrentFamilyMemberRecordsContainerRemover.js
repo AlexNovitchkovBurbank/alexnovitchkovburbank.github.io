@@ -1,9 +1,9 @@
 const CurrentFamilyMemberRecordsContainerRemover = {
     Remove() {
-      const formBodyElement = document.querySelector("#form-body");
+      const formBodyContainer = document.querySelector("#form-body");
       const recordsContainer = document.querySelector(".form-family-member-records-container");
   
-      if (recordsContainer !== null) formBodyElement.removeChild(recordsContainer);
+      if (recordsContainer !== null) formBodyContainer.removeChild(recordsContainer);
     },
   };
 

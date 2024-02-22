@@ -3,87 +3,87 @@ const ContainerForMemberRecordContainersCreator = {
     if (!Number.isInteger(numberOfPeople))
       throw new Error("number is not an integer");
 
-    const recordsContainerElement =
+    const recordsContainer =
       document.createElement("div");
-    recordsContainerElement.className =
+    recordsContainer.className =
       "form-family-member-records-container";
 
     for (let i = 1; i <= numberOfPeople; i++) {
-      const recordDivElement =
+      const recordDivContainer =
         createMemberRecordContainer(i); // Can be renamed to createMemberRecordContainer
 
-      recordsContainerElement.appendChild(
-        recordDivElement
+      recordsContainer.appendChild(
+        recordDivContainer
       );
     }
 
-    return recordsContainerElement;
+    return recordsContainer;
   },
 };
 
 const createMemberRecordContainer =
   function createMemberRecordContainer(i) {
-    const recordDivElement = document.createElement("div");
-    recordDivElement.className = "family-member-record-container";
+    const recordDivContainer = document.createElement("div");
+    recordDivContainer.className = "family-member-record-container";
 
-    const FirstNameFieldElement = document.createElement("div");
-    FirstNameFieldElement.className =
-      "form-field-container";
-    const FirstNameLabelElement =
+    const FirstNameFieldContainer = document.createElement("div");
+    FirstNameFieldContainer.className =
+      "field";
+    const FirstNameLabelContainer =
       document.createElement("label");
-    FirstNameLabelElement.textContent = `Family member ${i.toLocaleString()} first name:`;
-    FirstNameLabelElement.htmlFor = `Person${i.toLocaleString()}FirstNameInput`;
-    const FirstNameInputElement =
+    FirstNameLabelContainer.textContent = `Family member ${i.toLocaleString()} first name:`;
+    FirstNameLabelContainer.htmlFor = `Person${i.toLocaleString()}FirstNameInput`;
+    const FirstNameInputContainer =
       document.createElement("input");
-    FirstNameInputElement.className =
+    FirstNameInputContainer.className =
       "form-input";
-    FirstNameInputElement.required = true;
-    FirstNameInputElement.ariaLabel = `Member ${i.toLocaleString()} First name`;
-    FirstNameInputElement.id = `Person${i.toLocaleString()}FirstNameInput`;
-    FirstNameInputElement.name = `Member ${i.toLocaleString()}'s first name`;
-    FirstNameFieldElement.appendChild(
-      FirstNameLabelElement
+    FirstNameInputContainer.required = true;
+    FirstNameInputContainer.ariaLabel = `Member ${i.toLocaleString()} First name`;
+    FirstNameInputContainer.id = `Person${i.toLocaleString()}FirstNameInput`;
+    FirstNameInputContainer.name = `Member ${i.toLocaleString()}'s first name`;
+    FirstNameFieldContainer.appendChild(
+      FirstNameLabelContainer
     );
-    FirstNameFieldElement.appendChild(
-      FirstNameInputElement
+    FirstNameFieldContainer.appendChild(
+      FirstNameInputContainer
     );
 
-    const AgeFieldElement = document.createElement("div");
-    AgeFieldElement.className =
-      "form-field-container";
-    const AgeLabelElement = document.createElement("label");
-    AgeLabelElement.textContent = `Family member ${i.toLocaleString()} age:`;
-    AgeLabelElement.htmlFor = `Person${i.toLocaleString()}AgeInput`;
-    const AgeInputElement = document.createElement("input");
-    AgeInputElement.className = "form-input";
-    AgeInputElement.required = true;
-    AgeInputElement.ariaLabel = `Member ${i.toLocaleString()} Age`;
-    AgeInputElement.id = `Person${i.toLocaleString()}AgeInput`;
-    AgeInputElement.name = `Member ${i.toLocaleString()}'s Age`;
-    AgeFieldElement.appendChild(AgeLabelElement);
-    AgeFieldElement.appendChild(AgeInputElement);
+    const AgeFieldContainer = document.createElement("div");
+    AgeFieldContainer.className =
+      "field";
+    const AgeLabelContainer = document.createElement("label");
+    AgeLabelContainer.textContent = `Family member ${i.toLocaleString()} age:`;
+    AgeLabelContainer.htmlFor = `Person${i.toLocaleString()}AgeInput`;
+    const AgeInputContainer = document.createElement("input");
+    AgeInputContainer.className = "form-input";
+    AgeInputContainer.required = true;
+    AgeInputContainer.ariaLabel = `Member ${i.toLocaleString()} Age`;
+    AgeInputContainer.id = `Person${i.toLocaleString()}AgeInput`;
+    AgeInputContainer.name = `Member ${i.toLocaleString()}'s Age`;
+    AgeFieldContainer.appendChild(AgeLabelContainer);
+    AgeFieldContainer.appendChild(AgeInputContainer);
 
-    const RelationshipFieldElement =
+    const RelationshipFieldContainer =
       document.createElement("div");
-    RelationshipFieldElement.className =
-      "form-field-container";
-    const RelationshipLabelElement =
+    RelationshipFieldContainer.className =
+      "field";
+    const RelationshipLabelContainer =
       document.createElement("label");
-    RelationshipLabelElement.textContent = `Family member ${i.toLocaleString()} relationship:`;
-    RelationshipLabelElement.htmlFor = `Person${i.toLocaleString()}RelationshipInput`;
-    const RelationshipInputElement =
+    RelationshipLabelContainer.textContent = `Family member ${i.toLocaleString()} relationship:`;
+    RelationshipLabelContainer.htmlFor = `Person${i.toLocaleString()}RelationshipInput`;
+    const RelationshipInputContainer =
       document.createElement("input");
-    RelationshipInputElement.className =
+    RelationshipInputContainer.className =
       "form-input";
-    RelationshipInputElement.required = true;
-    RelationshipInputElement.ariaLabel = `Member ${i.toLocaleString()} Relationship`;
-    RelationshipInputElement.id = `Person${i.toLocaleString()}RelationshipInput`;
-    RelationshipInputElement.name = `Member ${i.toLocaleString()}'s relationship`;
-    RelationshipFieldElement.appendChild(
-      RelationshipLabelElement
+    RelationshipInputContainer.required = true;
+    RelationshipInputContainer.ariaLabel = `Member ${i.toLocaleString()} Relationship`;
+    RelationshipInputContainer.id = `Person${i.toLocaleString()}RelationshipInput`;
+    RelationshipInputContainer.name = `Member ${i.toLocaleString()}'s relationship`;
+    RelationshipFieldContainer.appendChild(
+      RelationshipLabelContainer
     );
-    RelationshipFieldElement.appendChild(
-      RelationshipInputElement
+    RelationshipFieldContainer.appendChild(
+      RelationshipInputContainer
     );
 
     const isClergyContainer = document.createElement("div");
@@ -122,16 +122,16 @@ const createMemberRecordContainer =
       clergyVolunteerStaffContainer.appendChild(isVolunteerContainer);
       clergyVolunteerStaffContainer.appendChild(isStaffContainer);
 
-    recordDivElement.appendChild(clergyVolunteerStaffContainer);
-    recordDivElement.appendChild(
-      FirstNameFieldElement
+    recordDivContainer.appendChild(clergyVolunteerStaffContainer);
+    recordDivContainer.appendChild(
+      FirstNameFieldContainer
     );
-    recordDivElement.appendChild(AgeFieldElement);
-    recordDivElement.appendChild(
-      RelationshipFieldElement
+    recordDivContainer.appendChild(AgeFieldContainer);
+    recordDivContainer.appendChild(
+      RelationshipFieldContainer
     );
 
-    return recordDivElement;
+    return recordDivContainer;
   };
 
   export default ContainerForMemberRecordContainersCreator;

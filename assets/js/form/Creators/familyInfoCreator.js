@@ -5,10 +5,10 @@ const FamilyInfoContainerCreator = {
     const familyInfoContainer = document.createElement("div");
     familyInfoContainer.className = "family-info-container";
 
-    const familyNameFieldContainerElement =
+    const familyNameFieldContainer =
       document.createElement("div");
-      familyNameFieldContainerElement.className =
-      "form-field-container";
+      familyNameFieldContainer.className =
+      "field";
     const familyNameLabel = document.createElement("label");
     familyNameLabel.textContent = "Family name:";
     familyNameLabel.htmlFor = "family-name";
@@ -17,12 +17,12 @@ const FamilyInfoContainerCreator = {
     familyNameInput.name = "family-name";
     familyNameInput.id = "family-name";
     familyNameInput.required = true;
-    familyNameFieldContainerElement.appendChild(familyNameLabel);
-    familyNameFieldContainerElement.appendChild(familyNameInput);
+    familyNameFieldContainer.appendChild(familyNameLabel);
+    familyNameFieldContainer.appendChild(familyNameInput);
 
-    const emailFieldContainerElement = document.createElement("div");
-    emailFieldContainerElement.className =
-      "form-field-container";
+    const emailFieldContainer = document.createElement("div");
+    emailFieldContainer.className =
+      "field";
     const emailLabel = document.createElement("label");
     emailLabel.textContent = "Email:";
     emailLabel.htmlFor = "email";
@@ -31,12 +31,12 @@ const FamilyInfoContainerCreator = {
     emailInput.name = "email";
     emailInput.id = "email";
     emailInput.required = true;
-    emailFieldContainerElement.appendChild(emailLabel);
-    emailFieldContainerElement.appendChild(emailInput);
+    emailFieldContainer.appendChild(emailLabel);
+    emailFieldContainer.appendChild(emailInput);
 
     const nameForInput = "number-of-people";
     const idForInput = "num-people-input";
-    const numPeopleFieldContainerElement = NumPeopleContainerCreator.Create(idForInput, nameForInput);
+    const numPeopleFieldContainer = NumPeopleContainerCreator.Create(idForInput, nameForInput);
 
     const stayInChaletContainer = document.createElement("div");
     stayInChaletContainer.id = "stay-in-chalet-container";
@@ -98,9 +98,9 @@ const FamilyInfoContainerCreator = {
     dayUseOnlyContainer.appendChild(dayUseOnlyCheckboxLabel);
     dayUseOnlyContainer.appendChild(dayUseOnlyCheckbox);
 
-    familyInfoContainer.appendChild(familyNameFieldContainerElement);
-    familyInfoContainer.appendChild(emailFieldContainerElement);
-    familyInfoContainer.appendChild(numPeopleFieldContainerElement);
+    familyInfoContainer.appendChild(familyNameFieldContainer);
+    familyInfoContainer.appendChild(emailFieldContainer);
+    familyInfoContainer.appendChild(numPeopleFieldContainer);
     familyInfoContainer.appendChild(stayInChaletContainer);
     familyInfoContainer.appendChild(stayInRvContainer);
     familyInfoContainer.appendChild(stayInTentContainer);

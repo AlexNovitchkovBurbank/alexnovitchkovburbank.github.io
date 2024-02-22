@@ -28,58 +28,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const stayInChaletCheckboxElement = document.querySelector(
+  const stayInChaletCheckboxContainer = document.querySelector(
     "#stay-in-chalet-checkbox"
   );
-  if (stayInChaletCheckboxElement !== null) {
-    stayInChaletCheckboxElement.addEventListener("change", () => {
+  if (stayInChaletCheckboxContainer !== null) {
+    stayInChaletCheckboxContainer.addEventListener("change", () => {
       onChaletCheckboxClickProcessor.Process();
     });
   }
 
-  const stayInRvCheckboxElement = document.querySelector(
+  const stayInRvCheckboxContainer = document.querySelector(
     "#stay-in-rv-checkbox"
   );
-  if (stayInRvCheckboxElement !== null) {
-    stayInRvCheckboxElement.addEventListener("change", () => {
+  if (stayInRvCheckboxContainer !== null) {
+    stayInRvCheckboxContainer.addEventListener("change", () => {
       onRvCheckboxClickProcessor.Process();
     });
   }
 
-  const stayInTentCheckboxElement = document.querySelector(
+  const stayInTentCheckboxContainer = document.querySelector(
     "#stay-in-tent-checkbox"
   );
-  if (stayInTentCheckboxElement !== null) {
-    stayInTentCheckboxElement.addEventListener("change", () => {
+  if (stayInTentCheckboxContainer !== null) {
+    stayInTentCheckboxContainer.addEventListener("change", () => {
       onTentCheckboxClickProcessor.Process();
     });
   }
 
-  const sleepOnGroundCheckboxElement = document.querySelector(
+  const sleepOnGroundCheckboxContainer = document.querySelector(
     "#sleep-on-ground-checkbox"
   );
-  if (sleepOnGroundCheckboxElement !== null) {
-    sleepOnGroundCheckboxElement.addEventListener("change", () => {
+  if (sleepOnGroundCheckboxContainer !== null) {
+    sleepOnGroundCheckboxContainer.addEventListener("change", () => {
       onSleepOnGroundCheckboxClickProcessor.Process();
     });
   }
 
-  const stayOvernightCheckboxElement = document.querySelector(
+  const stayOvernightCheckboxContainer = document.querySelector(
     "#stay-overnight-checkbox"
   );
-  if (stayOvernightCheckboxElement !== null) {
-    stayOvernightCheckboxElement.addEventListener("change", () => {
+  if (stayOvernightCheckboxContainer !== null) {
+    stayOvernightCheckboxContainer.addEventListener("change", () => {
       onStayOvernightCheckboxClickProcessor.Process();
     });
   }
 
-  const dayUseOnlyCheckboxElement = document.querySelector(
+  const dayUseOnlyCheckboxContainer = document.querySelector(
     "#day-use-only-checkbox"
   );
-  if (dayUseOnlyCheckboxElement !== null) {
-    stayOvernightCheckboxElement.addEventListener("change", () => {
+  if (dayUseOnlyCheckboxContainer !== null) {
+    dayUseOnlyCheckboxContainer.addEventListener("change", () => {
       onDayUseOnlyCheckboxClickProcessor.Process();
-    });
+    });E
   }
 
   const resetButton = document.querySelector("#reset-button");

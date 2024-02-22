@@ -1,9 +1,9 @@
 const dayUseOnlyNumberOfPeopleRemover = {
     Remove() {
       const stayInRvContainer = document.querySelector("#day-use-only-container");
-      const numberOfPeopleElement = stayInRvContainer.querySelector(".form-field-container");
+      const numberOfPeopleContainer = stayInRvContainer.querySelector(".field");
   
-      if (stayInRvContainer !== null && numberOfPeopleElement !== null) stayInRvContainer.removeChild(numberOfPeopleElement);
+      if (stayInRvContainer !== null && numberOfPeopleContainer !== null) stayInRvContainer.removeChild(numberOfPeopleContainer);
     }
   }
 

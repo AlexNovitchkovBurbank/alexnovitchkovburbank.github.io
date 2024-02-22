@@ -3,22 +3,22 @@ import stayInChaletNumberOfPeopleRemover from "../Removers/familyInfoStayInChale
 
 const onChaletCheckboxClickProcessor = {
   Process() {
-    const stayInChaletCheckboxElement = document.querySelector(
+    const stayInChaletCheckboxContainer = document.querySelector(
       "#stay-in-chalet-checkbox"
     );
 
     try {
-      if (stayInChaletCheckboxElement.checked) {
+      if (stayInChaletCheckboxContainer.checked) {
         const numPeopleInputName = "number-of-people-in-chalet";
         const numPeopleInputId = "num-people-in-chalet";
-        const formFieldNumPeopleContainerElement =
+        const formFieldNumPeopleContainer =
         NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const stayInChaletContainer = document.querySelector(
           "#stay-in-chalet-container"
         );
         stayInChaletContainer.appendChild(
-          formFieldNumPeopleContainerElement
+          formFieldNumPeopleContainer
         );
       } else stayInChaletNumberOfPeopleRemover.Remove();
     } catch (error) {

@@ -1,9 +1,9 @@
 const SleepOnGroundNumberOfPeopleRemover = {
     Remove() {
       const sleepOnGroundContainer = document.querySelector("#sleep-on-ground-container");
-      const numberOfPeopleElement = sleepOnGroundContainer.querySelector(".form-field-container");
+      const numberOfPeopleContainer = sleepOnGroundContainer.querySelector(".field");
   
-      if (sleepOnGroundContainer !== null && numberOfPeopleElement !== null) sleepOnGroundContainer.removeChild(numberOfPeopleElement);
+      if (sleepOnGroundContainer !== null && numberOfPeopleContainer !== null) sleepOnGroundContainer.removeChild(numberOfPeopleContainer);
     }
   }
 

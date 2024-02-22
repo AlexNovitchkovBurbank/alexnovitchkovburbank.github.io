@@ -3,7 +3,7 @@ const NumNightsContainerCreator = {
     const NumPeopleContainer =
       document.createElement("div");
     NumPeopleContainer.className =
-      "form-field-container";
+      "field";
     NumPeopleContainer.id = "num-nights-container";
     const NumPeopleLabel = document.createElement("label");
     NumPeopleLabel.textContent = "Number of nights:";

@@ -1,9 +1,9 @@
 const stayInTentNumberOfPeopleRemover = {
     Remove() {
       const stayInTentContainer = document.querySelector("#stay-in-tent-container");
-      const numberOfPeopleElement = stayInTentContainer.querySelector(".form-field-container");
+      const numberOfPeopleContainer = stayInTentContainer.querySelector(".field");
   
-      if (stayInTentContainer !== null && numberOfPeopleElement !== null) stayInTentContainer.removeChild(numberOfPeopleElement);
+      if (stayInTentContainer !== null && numberOfPeopleContainer !== null) stayInTentContainer.removeChild(numberOfPeopleContainer);
     }
   }
 

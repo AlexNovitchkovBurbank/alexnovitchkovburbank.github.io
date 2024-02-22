@@ -3,7 +3,7 @@ const NumPeopleContainerCreator = {
     const NumPeopleContainer =
       document.createElement("div");
     NumPeopleContainer.className =
-      "form-field-container";
+      "field";
     NumPeopleContainer.id = "num-people-container";
     const NumPeopleLabel = document.createElement("label");
     NumPeopleLabel.textContent = "Number of people:";

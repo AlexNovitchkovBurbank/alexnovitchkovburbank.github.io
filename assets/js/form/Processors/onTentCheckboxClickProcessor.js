@@ -3,23 +3,23 @@ import stayInTentNumberOfPeopleRemover from "../Removers/familyInfoStayInTentNum
 
 const onTentCheckboxClickProcessor = {
   Process() {
-    const stayInTentCheckboxElement = document.querySelector(
+    const stayInTentCheckboxContainer = document.querySelector(
       "#stay-in-tent-checkbox"
     );
 
     try {
-      if (stayInTentCheckboxElement.checked) {
+      if (stayInTentCheckboxContainer.checked) {
         const numPeopleInputName = "number-of-people-in-tent(s)";
         const numPeopleInputId = "num-people-in-tent";
 
-        const formFieldNumPeopleContainerElement =
+        const formFieldNumPeopleContainer =
           NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const stayInTentContainer = document.querySelector(
           "#stay-in-tent-container"
         );
         stayInTentContainer.appendChild(
-          formFieldNumPeopleContainerElement
+          formFieldNumPeopleContainer
         );
       } else stayInTentNumberOfPeopleRemover.Remove();
     } catch (error) {

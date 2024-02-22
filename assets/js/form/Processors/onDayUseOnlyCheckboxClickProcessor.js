@@ -3,26 +3,23 @@ import dayUseOnlyNumberOfPeopleRemover from "../Removers/familyInfoDayUseOnlyNum
 
 const onDayUseOnlyCheckboxClickProcessor = {
   Process() {
-    const dayUseOnlyCheckboxElement = document.querySelector(
+    const dayUseOnlyCheckboxContainer = document.querySelector(
       "#day-use-only-checkbox"
     );
 
     try {
-      if (dayUseOnlyCheckboxElement.checked) {
+      if (dayUseOnlyCheckboxContainer.checked) {
         const numPeopleInputName = "number-of-people-for-day-use-only";
         const numPeopleInputId = "num-people-stay-for-day-use";
 
-        const formFieldNumPeopleContainerElement =
+        const formFieldNumPeopleContainer =
         NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
         const dayUseOnlyContainer = document.querySelector(
           "#day-use-only-container"
         );
         dayUseOnlyContainer.appendChild(
-          formFieldNumPeopleContainerElement
-        );
-        dayUseOnlyContainer.appendChild(
-          formFieldNumNightsContainerElement
+          formFieldNumPeopleContainer
         );
       } else dayUseOnlyNumberOfPeopleRemover.Remove();
     } catch (error) {

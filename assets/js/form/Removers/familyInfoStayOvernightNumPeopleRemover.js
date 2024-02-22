@@ -1,10 +1,15 @@
 const stayOvernightNumberOfPeopleRemover = {
-    Remove() {
-      const stayInRvContainer = document.querySelector("#stay-overnight-container");
-      const numberOfPeopleElement = stayInRvContainer.querySelector(".form-field-container");
-  
-      if (stayInRvContainer !== null && numberOfPeopleElement !== null) stayInRvContainer.removeChild(numberOfPeopleElement);
-    }
-  }
+  Remove() {
+    const stayOvernightContainer = document.querySelector(
+      '#stay-overnight-container'
+    );
+    const fields = stayOvernightContainer.querySelectorAll('.field');
 
-  export default stayOvernightNumberOfPeopleRemover;
+    for (let i = 0; i < fields.length; i++) {
+      if (stayOvernightContainer !== null && fields[i] !== null)
+        stayOvernightContainer.removeChild(fields[i]);
+    }
+  },
+};
+
+export default stayOvernightNumberOfPeopleRemover;
