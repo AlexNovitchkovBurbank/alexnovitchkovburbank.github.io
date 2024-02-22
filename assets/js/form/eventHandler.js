@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (dayUseOnlyCheckboxContainer !== null) {
     dayUseOnlyCheckboxContainer.addEventListener("change", () => {
       onDayUseOnlyCheckboxClickProcessor.Process();
-    });E
+    });
   }
 
   const resetButton = document.querySelector("#reset-button");
