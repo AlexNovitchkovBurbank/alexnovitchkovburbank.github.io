@@ -15,6 +15,12 @@ const OnDayUseOnlyCheckboxClickProcessor = {
         const formFieldNumPeopleContainer =
         NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
 
+        const numNightsInputName = "number-of-nights";
+        const numNightsInputId = "num-nights";
+
+        const formFieldNumNightsContainer =
+        NumDayOnlyDaysContainerCreator.Create(numNightsInputId, numNightsInputName);
+
         const dayUseOnlyContainer = document.querySelector(
           "#day-use-only-container"
         );

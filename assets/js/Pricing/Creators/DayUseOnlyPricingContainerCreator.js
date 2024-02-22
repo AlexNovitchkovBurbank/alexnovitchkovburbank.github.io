@@ -3,7 +3,7 @@ import { dayUseOnlyPricesOver6People, dayUseOnlyBaseRate } from "../../DayUseOnl
 const DayUseOnlyPricingContainerCreator = {
   Create() {
     const mainDayUseOnlyPricingContainer = document.createElement("div");
-    mainDayUseOnlyPricingContainer.id = "day-ue-only-pricing-container";
+    mainDayUseOnlyPricingContainer.id = "day-use-only-pricing-container";
 
     const titleContainer = document.createElement("h2");
     titleContainer.textContent = "Day use only (meals are extra) pricing";

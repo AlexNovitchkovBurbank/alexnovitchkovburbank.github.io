@@ -54,6 +54,13 @@
   width: 60%;
 }
 
+#day-use-only-pricing-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
 #registration-form-button {
   justify-self: center;
 }
