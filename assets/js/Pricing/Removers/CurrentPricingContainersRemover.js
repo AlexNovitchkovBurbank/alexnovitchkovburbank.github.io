@@ -1,7 +1,7 @@
 const CurrentPricingContainersRemover = {
   Remove() {
     const pricingContainer = document.querySelector(
-      "#display-pricing-container"
+      "#main-pricing-container"
     );
 
     if (pricingContainer === null) throw new Error("Pricing container is null");

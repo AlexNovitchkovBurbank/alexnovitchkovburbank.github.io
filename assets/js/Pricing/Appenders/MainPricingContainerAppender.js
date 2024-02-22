@@ -1,6 +1,6 @@
 const MainPricingContainerAppender = {
     Append(container) {
-        const fiveDayPricingContainer = document.querySelector("#display-pricing-container");
+        const fiveDayPricingContainer = document.querySelector("#main-pricing-container");
 
         fiveDayPricingContainer.appendChild(container);
     }

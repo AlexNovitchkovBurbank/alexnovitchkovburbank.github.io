@@ -12,7 +12,7 @@ const ChaletPricingContainerCreator = {
     for (let i = 1; i <= 13; i++) {
       const descriptionPriceContainer = document.createElement("div");
       descriptionPriceContainer.className =
-        "description-price-container";
+        "description-price-entry";
       const descriptionContainer = document.createElement("p");
       const priceContainer = document.createElement("p");
 
