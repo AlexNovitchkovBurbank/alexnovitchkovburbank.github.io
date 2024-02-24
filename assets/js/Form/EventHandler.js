@@ -1,6 +1,5 @@
 import FamilyMemberRecordsProcessor from "./Processors/FamilyMemberRecordsProcessor.js";
 import FamilyInfoProcessor from "./Processors/FamilyInfoProcessor.js";
-import NumPeopleInputProcessor from "./Processors/NumPeopleInputProcessor.js";
 import OnChaletCheckboxClickProcessor from "./Processors/OnChaletCheckboxClickProcessor.js";
 import OnRvCheckboxClickProcessor from "./Processors/OnRvCheckboxClickProcessor.js";
 import OnTentCheckboxClickProcessor from "./Processors/OnTentCheckboxClickProcessor.js";
@@ -12,15 +11,14 @@ import ResetProcessor from "./Processors/ResetProcessor.js";
 document.addEventListener("DOMContentLoaded", () => {
   FamilyInfoProcessor.Process();
 
-  const numPeopleContainer = document.querySelector("#num-people-container");
-  if (numPeopleContainer !== null) {
+  const numPeopleFieldContainer = document.querySelector("#num-people-field-container");
+  if (numPeopleFieldContainer !== null) {
     const numPeopleInput =
-      numPeopleContainer.querySelector("#num-people-input");
+      numPeopleFieldContainer.querySelector("#num-people-input");
     if (numPeopleInput !== null) {
       numPeopleInput.addEventListener("keyup", () => {
         try {
           FamilyMemberRecordsProcessor.Process(numPeopleInput.value);
-          NumPeopleInputProcessor.Process();
         } catch (error) {
           alert(error.message);
         }
@@ -28,56 +26,56 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const stayInChaletCheckboxContainer = document.querySelector(
+  const stayInChaletCheckboxField = document.querySelector(
     "#stay-in-chalet-checkbox"
   );
-  if (stayInChaletCheckboxContainer !== null) {
-    stayInChaletCheckboxContainer.addEventListener("change", () => {
+  if (stayInChaletCheckboxField !== null) {
+    stayInChaletCheckboxField.addEventListener("change", () => {
       OnChaletCheckboxClickProcessor.Process();
     });
   }
 
-  const stayInRvCheckboxContainer = document.querySelector(
+  const stayInRvCheckboxField = document.querySelector(
     "#stay-in-rv-checkbox"
   );
-  if (stayInRvCheckboxContainer !== null) {
-    stayInRvCheckboxContainer.addEventListener("change", () => {
+  if (stayInRvCheckboxField !== null) {
+    stayInRvCheckboxField.addEventListener("change", () => {
       OnRvCheckboxClickProcessor.Process();
     });
   }
 
-  const stayInTentCheckboxContainer = document.querySelector(
+  const stayInTentCheckboxField = document.querySelector(
     "#stay-in-tent-checkbox"
   );
-  if (stayInTentCheckboxContainer !== null) {
-    stayInTentCheckboxContainer.addEventListener("change", () => {
+  if (stayInTentCheckboxField !== null) {
+    stayInTentCheckboxField.addEventListener("change", () => {
       OnTentCheckboxClickProcessor.Process();
     });
   }
 
-  const sleepOnGroundCheckboxContainer = document.querySelector(
+  const sleepOnGroundCheckboxField = document.querySelector(
     "#sleep-on-ground-checkbox"
   );
-  if (sleepOnGroundCheckboxContainer !== null) {
-    sleepOnGroundCheckboxContainer.addEventListener("change", () => {
+  if (sleepOnGroundCheckboxField !== null) {
+    sleepOnGroundCheckboxField.addEventListener("change", () => {
       OnSleepOnGroundCheckboxClickProcessor.Process();
     });
   }
 
-  const stayOvernightCheckboxContainer = document.querySelector(
+  const stayOvernightCheckboxField = document.querySelector(
     "#stay-overnight-checkbox"
   );
-  if (stayOvernightCheckboxContainer !== null) {
-    stayOvernightCheckboxContainer.addEventListener("change", () => {
+  if (stayOvernightCheckboxField !== null) {
+    stayOvernightCheckboxField.addEventListener("change", () => {
       OnStayOvernightCheckboxClickProcessor.Process();
     });
   }
 
-  const dayUseOnlyCheckboxContainer = document.querySelector(
+  const dayUseOnlyCheckboxField = document.querySelector(
     "#day-use-only-checkbox"
   );
-  if (dayUseOnlyCheckboxContainer !== null) {
-    dayUseOnlyCheckboxContainer.addEventListener("change", () => {
+  if (dayUseOnlyCheckboxField !== null) {
+    dayUseOnlyCheckboxField.addEventListener("change", () => {
       OnDayUseOnlyCheckboxClickProcessor.Process();
     });
   }

@@ -1,11 +1,12 @@
 const DayUseOnlyNumberOfPeopleRemover = {
   Remove() {
-    const dayUseOnlyContainer = document.querySelector("#day-use-only-container");
-    if (dayUseOnlyContainer !== null) {
-      const numberOfPeopleContainer = dayUseOnlyContainer.querySelector(".field");
+    const dayUseOnlyCheckboxContainer = document.querySelector("#day-use-only-checkbox-container");
+    if (dayUseOnlyCheckboxContainer !== null) {
+      const dayUseOnlyFields = dayUseOnlyCheckboxContainer.querySelectorAll(".field");
 
-      if (numberOfPeopleContainer !== null)
-        dayUseOnlyContainer.removeChild(numberOfPeopleContainer);
+      for (let i = 0; i < dayUseOnlyFields.length; i++) {
+          dayUseOnlyCheckboxContainer.removeChild(dayUseOnlyFields[i]);
+      }
     }
   },
 };

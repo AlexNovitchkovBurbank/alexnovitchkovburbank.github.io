@@ -1,5 +1,5 @@
 import CurrentFamilyMemberRecordsContainerRemover from "../Removers/CurrentFamilyMemberRecordsContainerRemover.js";
-import NumPeopleFieldErrorRemover from "../Removers/NumPeopleFieldErrorRemover.js";
+import NumPeopleInputErrorRemover from "../Removers/NumPeopleInputErrorRemover.js";
 import DayUseOnlyNumberOfPeopleRemover from "../Removers/DayUseOnlyNumPeopleRemover.js";
 import SleepOnGroundNumberOfPeopleRemover from "../Removers/SleepOnGroundNumPeopleRemover.js";
 import StayInChaletNumberOfPeopleRemover from "../Removers/StayInChaletNumPeopleRemover.js";
@@ -10,7 +10,7 @@ import StayOvernightNumberOfPeopleRemover from "../Removers/StayOvernightNumPeop
 const ResetProcessor = {
   Process() {
     const numPeopleInputId = "num-people-input";
-    NumPeopleFieldErrorRemover.Remove(numPeopleInputId);
+    NumPeopleInputErrorRemover.Remove(numPeopleInputId);
 
     StayInChaletNumberOfPeopleRemover.Remove();
     StayInRvNumberOfPeopleRemover.Remove();

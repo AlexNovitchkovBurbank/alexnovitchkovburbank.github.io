@@ -1,4 +1,4 @@
-import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
+import NumRVsFieldContainerForSleepInRVCheckboxCreator from "../Creators/NumRVsFieldContainerForSleepInRVCheckboxCreator.js";
 import StayInRvNumberOfPeopleRemover from "../Removers/StayInRvNumPeopleRemover.js";
 
 const OnRvCheckboxClickProcessor = {
@@ -9,16 +9,12 @@ const OnRvCheckboxClickProcessor = {
 
     try {
       if (stayInRvCheckboxContainer.checked) {
-        const numPeopleInputName = "number-of-people-in-rv";
-        const numPeopleInputId = "num-people-in-rv";
+        const numRVsFieldContainer = NumRVsFieldContainerForSleepInRVCheckboxCreator.Create();
 
-        const formFieldNumPeopleContainer =
-          NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
-
-        const stayInRvContainer = document.querySelector(
-          "#stay-in-rv-container"
+        const stayInRvCheckboxContainer = document.querySelector(
+          "#stay-in-rv-checkbox-container"
         );
-        stayInRvContainer.appendChild(formFieldNumPeopleContainer);
+        stayInRvCheckboxContainer.appendChild(numRVsFieldContainer);
       } else StayInRvNumberOfPeopleRemover.Remove();
     } catch (error) {
       alert(error.message);

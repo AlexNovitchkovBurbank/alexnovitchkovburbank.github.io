@@ -1,5 +1,4 @@
-import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
-import NumNightsContainerCreator from "../Creators/NumNightsContainerCreator.js";
+import NumNightsFieldContainerForOvernightStayCheckboxCreator from "../Creators/NumNightsFieldContainerForOvernightStayCheckboxCreator.js";
 import StayOvernightNumberOfPeopleRemover from "../Removers/StayOvernightNumPeopleRemover.js";
 
 const OnStayOvernightCheckboxClickProcessor = {
@@ -10,26 +9,13 @@ const OnStayOvernightCheckboxClickProcessor = {
 
     try {
       if (stayOvernightCheckboxContainer.checked) {
-        const numPeopleInputName = "number-of-overnight-stayers";
-        const numPeopleInputId = "num-people-stay-overnight";
+        const numNightsFieldContainer = NumNightsFieldContainerForOvernightStayCheckboxCreator.Create();
 
-        const formFieldNumPeopleContainer =
-        NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
-
-        const numNightsInputName = "number-of-nights";
-        const numNightsInputId = "num-nights";
-
-        const formFieldNumNightsContainer =
-        NumNightsContainerCreator.Create(numNightsInputId, numNightsInputName);
-
-        const stayOvernightContainer = document.querySelector(
-          "#stay-overnight-container"
+        const stayOvernightCheckboxContainer = document.querySelector(
+          "#stay-overnight-checkbox-container"
         );
-        stayOvernightContainer.appendChild(
-          formFieldNumPeopleContainer
-        );
-        stayOvernightContainer.appendChild(
-          formFieldNumNightsContainer
+        stayOvernightCheckboxContainer.appendChild(
+          numNightsFieldContainer
         );
       } else StayOvernightNumberOfPeopleRemover.Remove();
     } catch (error) {

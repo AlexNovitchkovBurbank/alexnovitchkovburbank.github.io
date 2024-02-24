@@ -15,12 +15,12 @@ form {
   margin-bottom: 20px;
 }
 
-.form-family-member-records-container {
+.member-records-container {
   display: flex;
   flex-direction: column;
 }
 
-.family-member-record-container {
+.member-record-container {
   margin-bottom: 12px;
 }
 

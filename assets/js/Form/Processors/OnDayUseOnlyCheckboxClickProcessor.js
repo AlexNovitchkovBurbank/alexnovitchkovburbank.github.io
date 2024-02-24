@@ -1,32 +1,26 @@
-import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
-import DayUseOnlyNumberOfPeopleRemover from "../Removers/DayUseOnlyNumPeopleRemover.js";
+import NumDaysFieldContainerForDayUseOnlyCheckboxCreator from '../Creators/NumDaysFieldContainerForDayUseOnlyCheckboxCreator.js';
+import NumPeopleFieldContainerForDayUseOnlyCheckboxCreator from '../Creators/NumPeopleFieldContainerForDayUseOnlyCheckboxCreator.js';
+import DayUseOnlyNumberOfPeopleRemover from '../Removers/DayUseOnlyNumPeopleRemover.js';
 
 const OnDayUseOnlyCheckboxClickProcessor = {
   Process() {
     const dayUseOnlyCheckboxContainer = document.querySelector(
-      "#day-use-only-checkbox"
+      '#day-use-only-checkbox'
     );
 
     try {
       if (dayUseOnlyCheckboxContainer.checked) {
-        const numPeopleInputName = "number-of-people-for-day-use-only";
-        const numPeopleInputId = "num-people-stay-for-day-use";
+        const numPeopleFieldContainerContainer =
+          NumPeopleFieldContainerForDayUseOnlyCheckboxCreator.Create();
 
-        const formFieldNumPeopleContainer =
-        NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
+        const numDaysFieldContainer =
+          NumDaysFieldContainerForDayUseOnlyCheckboxCreator.Create();
 
-        const numNightsInputName = "number-of-nights";
-        const numNightsInputId = "num-nights";
-
-        const formFieldNumNightsContainer =
-        NumDayOnlyDaysContainerCreator.Create(numNightsInputId, numNightsInputName);
-
-        const dayUseOnlyContainer = document.querySelector(
-          "#day-use-only-container"
+        const dayUseOnlyCheckboxContainer = document.querySelector(
+          '#day-use-only-checkbox-container'
         );
-        dayUseOnlyContainer.appendChild(
-          formFieldNumPeopleContainer
-        );
+        dayUseOnlyCheckboxContainer.appendChild(numPeopleFieldContainerContainer);
+        dayUseOnlyCheckboxContainer.appendChild(numDaysFieldContainer);
       } else DayUseOnlyNumberOfPeopleRemover.Remove();
     } catch (error) {
       alert(error.message);

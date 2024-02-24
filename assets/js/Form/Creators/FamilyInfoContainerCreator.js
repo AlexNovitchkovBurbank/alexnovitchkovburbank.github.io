@@ -1,4 +1,4 @@
-import NumPeopleContainerCreator from "./NumPeopleContainerCreator.js";
+import NumPeopleFieldContainerCreator from "./NumPeopleFieldContainerCreator.js";
 
 const FamilyInfoContainerCreator = {
   Create() {
@@ -11,11 +11,10 @@ const FamilyInfoContainerCreator = {
       "field";
     const familyNameLabel = document.createElement("label");
     familyNameLabel.textContent = "Family name:";
-    familyNameLabel.htmlFor = "family-name";
+    familyNameLabel.htmlFor = "family-name-input";
     const familyNameInput = document.createElement("input");
-    familyNameInput.type = "text";
     familyNameInput.name = "family-name";
-    familyNameInput.id = "family-name";
+    familyNameInput.id = "family-name-input";
     familyNameInput.required = true;
     familyNameFieldContainer.appendChild(familyNameLabel);
     familyNameFieldContainer.appendChild(familyNameInput);
@@ -25,88 +24,137 @@ const FamilyInfoContainerCreator = {
       "field";
     const emailLabel = document.createElement("label");
     emailLabel.textContent = "Email:";
-    emailLabel.htmlFor = "email";
+    emailLabel.htmlFor = "email-input";
     const emailInput = document.createElement("input");
-    emailInput.type = "email";
     emailInput.name = "email";
-    emailInput.id = "email";
+    emailInput.id = "email-input";
     emailInput.required = true;
     emailFieldContainer.appendChild(emailLabel);
     emailFieldContainer.appendChild(emailInput);
 
-    const nameForInput = "number-of-people";
-    const idForInput = "num-people-input";
-    const numPeopleFieldContainer = NumPeopleContainerCreator.Create(idForInput, nameForInput);
+    const numPeopleFieldContainerContainer = NumPeopleFieldContainerCreator.Create();
 
-    const stayInChaletContainer = document.createElement("div");
-    stayInChaletContainer.id = "stay-in-chalet-container";
+    const requestStaffAndVolunteerInformationCheckboxContainer = document.createElement("div");
+    const requestStaffAndVolunteerInformationLabel = document.createElement("label");
+    requestStaffAndVolunteerInformationLabel.textContent = "Request staff and volunteer information:";
+    requestStaffAndVolunteerInformationLabel.htmlFor = "requestStaffAndVolunteerInformationCheckboxInput";
+    const requestStaffAndVolunteerInformationInput = document.createElement("input");
+    requestStaffAndVolunteerInformationInput.name = "request-staff-and-volunteer-information";
+    requestStaffAndVolunteerInformationInput.id = "requestStaffAndVolunteerInformationCheckboxInput";
+    requestStaffAndVolunteerInformationInput.type = "checkbox";
+    requestStaffAndVolunteerInformationInput.required = true;
+    requestStaffAndVolunteerInformationCheckboxContainer.appendChild(requestStaffAndVolunteerInformationLabel);
+    requestStaffAndVolunteerInformationCheckboxContainer.appendChild(requestStaffAndVolunteerInformationInput);
+
+    const requestScholarshipFormCheckboxContainer = document.createElement("div");
+    const requestScholarshipFormLabel = document.createElement("label");
+    requestScholarshipFormLabel.textContent = "Request scholarship form:";
+    requestScholarshipFormLabel.htmlFor = "requestScholarshipFormCheckboxInput";
+    const requestScholarshipFormInput = document.createElement("input");
+    requestScholarshipFormInput.name = "request-scholarship-form";
+    requestScholarshipFormInput.id = "requestScholarshipFormCheckboxInput";
+    requestScholarshipFormInput.type = "checkbox";
+    requestScholarshipFormInput.required = true;
+    requestScholarshipFormCheckboxContainer.appendChild(requestScholarshipFormLabel);
+    requestScholarshipFormCheckboxContainer.appendChild(requestScholarshipFormInput);
+
+    const requestClergyDiscountCheckboxContainer = document.createElement("div");
+    const requestClergyDiscountCheckboxLabel = document.createElement("label");
+    requestClergyDiscountCheckboxLabel.textContent = "Request clergy discount:";
+    requestClergyDiscountCheckboxLabel.htmlFor = "requestClergyDiscountCheckboxInput";
+    const requestClergyDiscountCheckboxInput = document.createElement("input");
+    requestClergyDiscountCheckboxInput.name = "request-clergy-discount-form";
+    requestClergyDiscountCheckboxInput.id = "requestClergyDiscountCheckboxInput";
+    requestClergyDiscountCheckboxInput.type = "checkbox";
+    requestClergyDiscountCheckboxInput.required = true;
+    requestClergyDiscountCheckboxContainer.appendChild(requestClergyDiscountCheckboxLabel);
+    requestClergyDiscountCheckboxContainer.appendChild(requestClergyDiscountCheckboxInput);
+
+    const requestPaymentPlanInformationCheckboxContainer = document.createElement("div");
+    const requestPaymentPlanInformationCheckboxLabel = document.createElement("label");
+    requestPaymentPlanInformationCheckboxLabel.textContent = "Request payment plan information:";
+    requestPaymentPlanInformationCheckboxLabel.htmlFor = "requestPaymentPlanInformationCheckboxInput";
+    const requestPaymentPlanInformationCheckboxInput = document.createElement("input");
+    requestPaymentPlanInformationCheckboxInput.name = "request-clergy-discount-form";
+    requestPaymentPlanInformationCheckboxInput.id = "requestPaymentPlanInformationCheckboxInput";
+    requestPaymentPlanInformationCheckboxInput.type = "checkbox";
+    requestPaymentPlanInformationCheckboxInput.required = true;
+    requestPaymentPlanInformationCheckboxContainer.appendChild(requestPaymentPlanInformationCheckboxLabel);
+    requestPaymentPlanInformationCheckboxContainer.appendChild(requestPaymentPlanInformationCheckboxInput);
+
+    const stayInChaletCheckboxContainer = document.createElement("div");
+    stayInChaletCheckboxContainer.id = "stay-in-chalet-checkbox-container";
     const stayInChaletCheckboxLabel = document.createElement("label");
     stayInChaletCheckboxLabel.textContent = "We will stay in a chalet:";
     const stayInChaletCheckbox = document.createElement("input");
     stayInChaletCheckbox.type = "checkbox";
     stayInChaletCheckbox.id = "stay-in-chalet-checkbox";
-    stayInChaletContainer.appendChild(stayInChaletCheckboxLabel);
-    stayInChaletContainer.appendChild(stayInChaletCheckbox);
+    stayInChaletCheckboxContainer.appendChild(stayInChaletCheckboxLabel);
+    stayInChaletCheckboxContainer.appendChild(stayInChaletCheckbox);
 
-    const stayInRvContainer = document.createElement("div");
-    stayInRvContainer.id = "stay-in-rv-container";
+    const stayInRvCheckboxContainer = document.createElement("div");
+    stayInRvCheckboxContainer.id = "stay-in-rv-checkbox-container";
     const stayInRvCheckboxLabel = document.createElement("label");
     stayInRvCheckboxLabel.textContent = "We will stay in an RV:";
     const stayInRvCheckbox = document.createElement("input");
     stayInRvCheckbox.type = "checkbox";
     stayInRvCheckbox.id = "stay-in-rv-checkbox";
-    stayInRvContainer.appendChild(stayInRvCheckboxLabel);
-    stayInRvContainer.appendChild(stayInRvCheckbox);
+    stayInRvCheckboxContainer.appendChild(stayInRvCheckboxLabel);
+    stayInRvCheckboxContainer.appendChild(stayInRvCheckbox);
 
-    const stayInTentContainer = document.createElement("div");
-    stayInTentContainer.id = "stay-in-tent-container";
+    const stayInTentCheckboxContainer = document.createElement("div");
+    stayInTentCheckboxContainer.id = "stay-in-tent-checkbox-container";
     const stayInTentCheckboxLabel = document.createElement("label");
     stayInTentCheckboxLabel.textContent = "We will stay in tent(s):";
     const stayInTentCheckbox = document.createElement("input");
     stayInTentCheckbox.type = "checkbox";
     stayInTentCheckbox.id = "stay-in-tent-checkbox";
-    stayInTentContainer.appendChild(stayInTentCheckboxLabel);
-    stayInTentContainer.appendChild(stayInTentCheckbox);
+    stayInTentCheckboxContainer.appendChild(stayInTentCheckboxLabel);
+    stayInTentCheckboxContainer.appendChild(stayInTentCheckbox);
 
-    const sleepOnGroundContainer = document.createElement("div");
-    sleepOnGroundContainer.id = "sleep-on-ground-container";
+    const sleepOnGroundCheckboxContainer = document.createElement("div");
+    sleepOnGroundCheckboxContainer.id = "sleep-on-ground-checkbox-container";
     const sleepOnGroundCheckboxLabel = document.createElement("label");
     sleepOnGroundCheckboxLabel.textContent = "We will sleep on the ground:";
     const sleepOnGroundCheckbox = document.createElement("input");
     sleepOnGroundCheckbox.type = "checkbox";
     sleepOnGroundCheckbox.id = "sleep-on-ground-checkbox";
-    sleepOnGroundContainer.appendChild(sleepOnGroundCheckboxLabel);
-    sleepOnGroundContainer.appendChild(sleepOnGroundCheckbox);
+    sleepOnGroundCheckboxContainer.appendChild(sleepOnGroundCheckboxLabel);
+    sleepOnGroundCheckboxContainer.appendChild(sleepOnGroundCheckbox);
 
-    const stayOvernightContainer = document.createElement("div");
-    stayOvernightContainer.id = "stay-overnight-container";
+    const stayOvernightCheckboxContainer = document.createElement("div");
+    stayOvernightCheckboxContainer.id = "stay-overnight-checkbox-container";
     const stayOvernightCheckboxLabel = document.createElement("label");
     stayOvernightCheckboxLabel.textContent = "We will stay overnight:";
     const stayOvernightCheckbox = document.createElement("input");
     stayOvernightCheckbox.type = "checkbox";
     stayOvernightCheckbox.id = "stay-overnight-checkbox";
-    stayOvernightContainer.appendChild(stayOvernightCheckboxLabel);
-    stayOvernightContainer.appendChild(stayOvernightCheckbox);
+    stayOvernightCheckboxContainer.appendChild(stayOvernightCheckboxLabel);
+    stayOvernightCheckboxContainer.appendChild(stayOvernightCheckbox);
 
-    const dayUseOnlyContainer = document.createElement("div");
-    dayUseOnlyContainer.id = "day-use-only-container";
+    const dayUseOnlyCheckboxContainer = document.createElement("div");
+    dayUseOnlyCheckboxContainer.id = "day-use-only-checkbox-container";
     const dayUseOnlyCheckboxLabel = document.createElement("label");
     dayUseOnlyCheckboxLabel.textContent = "Day use only:";
     const dayUseOnlyCheckbox = document.createElement("input");
     dayUseOnlyCheckbox.type = "checkbox";
     dayUseOnlyCheckbox.id = "day-use-only-checkbox";
-    dayUseOnlyContainer.appendChild(dayUseOnlyCheckboxLabel);
-    dayUseOnlyContainer.appendChild(dayUseOnlyCheckbox);
+    dayUseOnlyCheckboxContainer.appendChild(dayUseOnlyCheckboxLabel);
+    dayUseOnlyCheckboxContainer.appendChild(dayUseOnlyCheckbox);
 
     familyInfoContainer.appendChild(familyNameFieldContainer);
     familyInfoContainer.appendChild(emailFieldContainer);
-    familyInfoContainer.appendChild(numPeopleFieldContainer);
-    familyInfoContainer.appendChild(stayInChaletContainer);
-    familyInfoContainer.appendChild(stayInRvContainer);
-    familyInfoContainer.appendChild(stayInTentContainer);
-    familyInfoContainer.appendChild(sleepOnGroundContainer);
-    familyInfoContainer.appendChild(stayOvernightContainer);
-    familyInfoContainer.appendChild(dayUseOnlyContainer);
+    familyInfoContainer.appendChild(numPeopleFieldContainerContainer);
+    familyInfoContainer.appendChild(requestStaffAndVolunteerInformationCheckboxContainer);
+    familyInfoContainer.appendChild(requestScholarshipFormCheckboxContainer);
+    familyInfoContainer.appendChild(requestClergyDiscountCheckboxContainer);
+    familyInfoContainer.appendChild(requestPaymentPlanInformationCheckboxContainer);
+    familyInfoContainer.appendChild(stayInChaletCheckboxContainer);
+    familyInfoContainer.appendChild(stayInRvCheckboxContainer);
+    familyInfoContainer.appendChild(stayInTentCheckboxContainer);
+    familyInfoContainer.appendChild(sleepOnGroundCheckboxContainer);
+    familyInfoContainer.appendChild(stayOvernightCheckboxContainer);
+    familyInfoContainer.appendChild(dayUseOnlyCheckboxContainer);
 
     return familyInfoContainer;
   },

@@ -1,15 +1,15 @@
 const StayInChaletNumberOfPeopleRemover = {
   Remove() {
-    const stayInChaletContainer = document.querySelector(
-      "#stay-in-chalet-container"
+    const stayInChaletCheckboxContainer = document.querySelector(
+      "#stay-in-chalet-checkbox-container"
     );
 
-    if (stayInChaletContainer !== null) {
+    if (stayInChaletCheckboxContainer !== null) {
       const numberOfPeopleContainer =
-        stayInChaletContainer.querySelector(".field");
+        stayInChaletCheckboxContainer.querySelector(".field");
 
       if (numberOfPeopleContainer !== null)
-        stayInChaletContainer.removeChild(numberOfPeopleContainer);
+        stayInChaletCheckboxContainer.removeChild(numberOfPeopleContainer);
     }
   },
 };

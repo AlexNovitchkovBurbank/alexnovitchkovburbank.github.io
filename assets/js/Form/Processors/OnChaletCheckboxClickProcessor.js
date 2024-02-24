@@ -1,4 +1,4 @@
-import NumPeopleContainerCreator from "../Creators/NumPeopleContainerCreator.js";
+import NumBedsFieldContainerForSleepInChaletCheckboxCreator from "../Creators/NumBedsFieldContainerForSleepInChaletCheckboxCreator.js";
 import StayInChaletNumberOfPeopleRemover from "../Removers/StayInChaletNumPeopleRemover.js";
 
 const OnChaletCheckboxClickProcessor = {
@@ -9,16 +9,12 @@ const OnChaletCheckboxClickProcessor = {
 
     try {
       if (stayInChaletCheckboxContainer.checked) {
-        const numPeopleInputName = "number-of-people-in-chalet";
-        const numPeopleInputId = "num-people-in-chalet";
-        const formFieldNumPeopleContainer =
-        NumPeopleContainerCreator.Create(numPeopleInputId, numPeopleInputName);
-
-        const stayInChaletContainer = document.querySelector(
-          "#stay-in-chalet-container"
+        const numBedsFieldContainer = NumBedsFieldContainerForSleepInChaletCheckboxCreator.Create();
+        const stayInChaletCheckboxContainer = document.querySelector(
+          "#stay-in-chalet-checkbox-container"
         );
-        stayInChaletContainer.appendChild(
-          formFieldNumPeopleContainer
+        stayInChaletCheckboxContainer.appendChild(
+          numBedsFieldContainer
         );
       } else StayInChaletNumberOfPeopleRemover.Remove();
     } catch (error) {

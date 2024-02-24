@@ -1,13 +1,13 @@
 const StayOvernightNumberOfPeopleRemover = {
   Remove() {
-    const stayOvernightContainer = document.querySelector(
-      "#stay-overnight-container"
+    const stayOvernightCheckboxContainer = document.querySelector(
+      "#stay-overnight-checkbox-container"
     );
-    if (stayOvernightContainer !== null) {
-      const fields = stayOvernightContainer.querySelectorAll(".field");
+    if (stayOvernightCheckboxContainer !== null) {
+      const fields = stayOvernightCheckboxContainer.querySelectorAll(".field");
 
       for (let i = 0; i < fields.length; i++) {
-        if (fields[i] !== null) stayOvernightContainer.removeChild(fields[i]);
+        stayOvernightCheckboxContainer.removeChild(fields[i]);
       }
     }
   },

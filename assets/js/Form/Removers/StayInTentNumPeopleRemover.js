@@ -1,14 +1,14 @@
 const StayInTentNumberOfPeopleRemover = {
   Remove() {
-    const stayInTentContainer = document.querySelector(
-      "#stay-in-tent-container"
+    const stayInTentCheckboxContainer = document.querySelector(
+      "#stay-in-tent-checkbox-container"
     );
-    if (stayInTentContainer !== null) {
+    if (stayInTentCheckboxContainer !== null) {
       const numberOfPeopleContainer =
-        stayInTentContainer.querySelector(".field");
+        stayInTentCheckboxContainer.querySelector(".field");
 
       if (numberOfPeopleContainer !== null)
-        stayInTentContainer.removeChild(numberOfPeopleContainer);
+        stayInTentCheckboxContainer.removeChild(numberOfPeopleContainer);
     }
   },
 };

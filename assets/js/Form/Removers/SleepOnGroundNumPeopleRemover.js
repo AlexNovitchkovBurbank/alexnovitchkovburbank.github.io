@@ -1,14 +1,14 @@
 const SleepOnGroundNumberOfPeopleRemover = {
   Remove() {
-    const sleepOnGroundContainer = document.querySelector(
-      "#sleep-on-ground-container"
+    const sleepOnGroundCheckboxContainer = document.querySelector(
+      "#sleep-on-ground-checkbox-container"
     );
-    if (sleepOnGroundContainer !== null) {
+    if (sleepOnGroundCheckboxContainer !== null) {
       const numberOfPeopleContainer =
-        sleepOnGroundContainer.querySelector(".field");
+        sleepOnGroundCheckboxContainer.querySelector(".field");
 
       if (numberOfPeopleContainer !== null)
-        sleepOnGroundContainer.removeChild(numberOfPeopleContainer);
+        sleepOnGroundCheckboxContainer.removeChild(numberOfPeopleContainer);
     }
   },
 };

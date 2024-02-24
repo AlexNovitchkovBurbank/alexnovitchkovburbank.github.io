@@ -1,11 +1,11 @@
 const StayInRvNumberOfPeopleRemover = {
   Remove() {
-    const stayInRvContainer = document.querySelector("#stay-in-rv-container");
-    if (stayInRvContainer !== null) {
-      const numberOfPeopleContainer = stayInRvContainer.querySelector(".field");
+    const stayInRvCheckboxContainer = document.querySelector("#stay-in-rv-checkbox-container");
+    if (stayInRvCheckboxContainer !== null) {
+      const numberOfPeopleContainer = stayInRvCheckboxContainer.querySelector(".field");
 
       if (numberOfPeopleContainer !== null)
-        stayInRvContainer.removeChild(numberOfPeopleContainer);
+        stayInRvCheckboxContainer.removeChild(numberOfPeopleContainer);
     }
   },
 };

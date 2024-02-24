@@ -1,5 +1,5 @@
-const NumPeopleFieldErrorCreator =  {
-    Create(numPeopleInputId) {
+const NumPeopleInputErrorDisplayer =  {
+    Display(numPeopleInputId) {
         const numPeopleInput = document.querySelector(`#${numPeopleInputId}`);
 
     if (numPeopleInput !== null)
@@ -7,4 +7,4 @@ const NumPeopleFieldErrorCreator =  {
     }
   }
 
-  export default NumPeopleFieldErrorCreator;
+  export default NumPeopleInputErrorDisplayer;
