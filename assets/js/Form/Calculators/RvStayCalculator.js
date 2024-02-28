@@ -1,28 +1,28 @@
-import { RVBaseRate, RVPricesOver6People } from "../../RVPrices";
+import { rvBaseRate, rvPricesOver6People } from "../../RvPrices";
 
-const RVStayCalculator = {
+const RvStayCalculator = {
     Calculate() {
-        const numRVsInput = document.querySelector("num-RVs-input-for-sleep-in-RV-checkbox");
-        const numPeopleInput = document.querySelector("num-people-input-for-sleep-in-RV-checkbox");
+        const numRvsInput = document.querySelector("num-rvs-input-for-sleep-in-rv-checkbox");
+        const numPeopleInput = document.querySelector("num-people-input-for-sleep-in-rv-checkbox");
 
-        if (numRVsInput === null)
-            throw new Error("Number of RVs does not exist for the RV container");
+        if (numRvsInput === null)
+            throw new Error("Number of RVs does not exist for the rv container");
 
         if (numPeopleInput === null)
-            throw new Error("Number of people does not exist for the RV container");
+            throw new Error("Number of people does not exist for the rv container");
 
         let total = 0.0;
 
         if (numPeopleInput.textContent >= 6) {
-            total = RVBaseRate + ((numPeopleInput.textContent - 6) * RVPricesOver6People);
+            total = rvBaseRate + rvPricesOver6People[numPeopleInput.textContent - 6 - 1];
         }
         else if (numPeopleInput.textContent === 0) {
             total = 0.0;
         }
         else {
-            total = RVBaseRate + (numPeopleInput.textContent * RVPricesOver6People);
+            total = rvBaseRate + rvPricesOver6People[numPeopleInput.textContent - 1];
         }
     }
 }
 
-export default RVStayCalculator;
+export default RvStayCalculator;

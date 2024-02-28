@@ -1,13 +1,13 @@
-import RVPricingContainerCreator from "../Creators/RVPricingContainerCreator.js";
+import RvPricingContainerCreator from "../Creators/RvPricingContainerCreator.js";
 import MainPricingContainerAppender from "../Appenders/MainPricingContainerAppender.js";
 import CurrentPricingContainersRemover from "../Removers/CurrentPricingContainersRemover.js";
 
-const RVPricingProcessor = {
+const RvPricingProcessor = {
     Process() {
         const mainRvPricingContainer = document.querySelector("#rv-pricing-container");
       if (mainRvPricingContainer !== null) CurrentPricingContainersRemover.Remove();
       else {
-        const container = RVPricingContainerCreator.Create();
+        const container = RvPricingContainerCreator.Create();
 
         CurrentPricingContainersRemover.Remove();
 
@@ -16,4 +16,4 @@ const RVPricingProcessor = {
     }
 }
 
-export default RVPricingProcessor;
+export default RvPricingProcessor;

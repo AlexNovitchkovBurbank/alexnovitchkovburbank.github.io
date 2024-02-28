@@ -14,13 +14,13 @@ const ChaletStayCalculator = {
         let total = 0.0;
 
         if (numPeopleInput.textContent >= 6) {
-            total = chaletBaseRate + ((numPeopleInput.textContent - 6) * chaletPricesOver6People);
+            total = chaletBaseRate + chaletPricesOver6People[numPeopleInput.textContent - 6 - 1];
         }
         else if (numPeopleInput.textContent === 0) {
             total = 0.0;
         }
         else {
-            total = chaletBaseRate + (numPeopleInput.textContent * chaletPricesOver6People);
+            total = chaletBaseRate + chaletPricesOver6People[numPeopleInput.textContent - 1];
         }
     }
 }
