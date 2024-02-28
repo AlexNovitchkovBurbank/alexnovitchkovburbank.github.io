@@ -32,7 +32,7 @@ const FamilyInfoContainerCreator = {
     emailFieldContainer.appendChild(emailLabel);
     emailFieldContainer.appendChild(emailInput);
 
-    const numPeopleFieldContainerContainer = NumPeopleFieldContainerCreator.Create();
+    const numPeopleFieldContainer = NumPeopleFieldContainerCreator.Create();
 
     const requestStaffAndVolunteerInformationCheckboxContainer = document.createElement("div");
     const requestStaffAndVolunteerInformationLabel = document.createElement("label");
@@ -144,7 +144,7 @@ const FamilyInfoContainerCreator = {
 
     familyInfoContainer.appendChild(familyNameFieldContainer);
     familyInfoContainer.appendChild(emailFieldContainer);
-    familyInfoContainer.appendChild(numPeopleFieldContainerContainer);
+    familyInfoContainer.appendChild(numPeopleFieldContainer);
     familyInfoContainer.appendChild(requestStaffAndVolunteerInformationCheckboxContainer);
     familyInfoContainer.appendChild(requestScholarshipFormCheckboxContainer);
     familyInfoContainer.appendChild(requestClergyDiscountCheckboxContainer);

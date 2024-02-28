@@ -10,7 +10,7 @@ const OnDayUseOnlyCheckboxClickProcessor = {
 
     try {
       if (dayUseOnlyCheckboxContainer.checked) {
-        const numPeopleFieldContainerContainer =
+        const numPeopleFieldContainer =
           NumPeopleFieldContainerForDayUseOnlyCheckboxCreator.Create();
 
         const numDaysFieldContainer =
@@ -19,7 +19,7 @@ const OnDayUseOnlyCheckboxClickProcessor = {
         const dayUseOnlyCheckboxContainer = document.querySelector(
           '#day-use-only-checkbox-container'
         );
-        dayUseOnlyCheckboxContainer.appendChild(numPeopleFieldContainerContainer);
+        dayUseOnlyCheckboxContainer.appendChild(numPeopleFieldContainer);
         dayUseOnlyCheckboxContainer.appendChild(numDaysFieldContainer);
       } else DayUseOnlyNumberOfPeopleRemover.Remove();
     } catch (error) {

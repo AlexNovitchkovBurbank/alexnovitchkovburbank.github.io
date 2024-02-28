@@ -3,7 +3,7 @@ import { rvBaseRate, rvPricesOver6People } from "../../RvPrices";
 const RvStayCalculator = {
     Calculate() {
         const numRvsInput = document.querySelector("num-rvs-input-for-sleep-in-rv-checkbox");
-        const numPeopleInput = document.querySelector("num-people-input-for-sleep-in-rv-checkbox");
+        const numPeopleInput = document.querySelector("num-people-input");
 
         if (numRvsInput === null)
             throw new Error("Number of RVs does not exist for the rv container");

@@ -3,7 +3,7 @@ import { chaletBaseRate, chaletPricesOver6People } from "../../ChaletPrices";
 const ChaletStayCalculator = {
     Calculate() {
         const numBedsInput = document.querySelector("num-beds-input-for-sleep-in-chalet-checkbox");
-        const numPeopleInput = document.querySelector("num-people-input-for-sleep-in-chalet-checkbox");
+        const numPeopleInput = document.querySelector("num-people-input");
 
         if (numBedsInput === null)
             throw new Error("Number of beds does not exist for the chalet container");
