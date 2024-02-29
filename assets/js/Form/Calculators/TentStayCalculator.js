@@ -2,14 +2,14 @@ import { tentBaseRate, tentPricesOver6People } from "../../TentPrices";
 
 const TentStayCalculator = {
     Calculate() {
-        const numTentsInput = document.querySelector("num-beds-input-for-sleep-in-tent-checkbox");
+        const numTentsInput = document.querySelector("num-tents-input-for-sleep-in-tent-checkbox");
         const numPeopleInput = document.querySelector("num-people-input");
 
-        if (numBedsInput === null)
-            throw new Error("Number of beds does not exist for the tent container");
+        if (numTentsInput === null)
+            throw new Error("Number of tents input does not exist for the tent container");
 
         if (numPeopleInput === null)
-            throw new Error("Number of people does not exist for the tent container");
+            throw new Error("Number of people input does not exist for the tent container");
 
         let total = 0.0;
 

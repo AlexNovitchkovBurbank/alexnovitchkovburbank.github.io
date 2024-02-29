@@ -1,4 +1,4 @@
-import DayUseOnlyCalculator from "../Calculators/DayUseOnlyStayCalculator"
+import DayUseOnlyCalculator from "../Calculators/DayUseOnlyCalculator"
 
 const CalculatePriceForDayUseOnlyProcessor = {
     Process() {
