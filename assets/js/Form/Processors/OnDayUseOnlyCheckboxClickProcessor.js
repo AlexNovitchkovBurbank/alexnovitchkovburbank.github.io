@@ -21,6 +21,7 @@ const OnDayUseOnlyCheckboxClickProcessor = {
         );
         dayUseOnlyCheckboxContainer.appendChild(numPeopleFieldContainer);
         dayUseOnlyCheckboxContainer.appendChild(numDaysFieldContainer);
+
       } else DayUseOnlyNumberOfPeopleRemover.Remove();
     } catch (error) {
       alert(error.message);

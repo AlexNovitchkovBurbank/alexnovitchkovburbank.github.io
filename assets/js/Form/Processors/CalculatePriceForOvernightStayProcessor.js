@@ -1,4 +1,5 @@
-import OvernightStayCalculator from "../Calculators/OvernightStayCalculator"
+import OvernightStayCalculator from "../Calculators/OvernightStayCalculator.js";
+import FormBodyAppender from '../Appenders/FormBodyAppender.js';
 
 const CalculatePriceForOvernightStayProcessor = {
     Process() {

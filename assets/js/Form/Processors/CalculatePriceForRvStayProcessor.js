@@ -1,4 +1,5 @@
-import RvStayCalculator from "../Calculators/RvStayCalculator"
+import RvStayCalculator from "../Calculators/RvStayCalculator.js";
+import FormBodyAppender from '../Appenders/FormBodyAppender.js';
 
 const CalculatePriceForRvStayProcessor = {
     Process() {

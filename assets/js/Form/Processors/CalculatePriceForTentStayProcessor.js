@@ -1,4 +1,5 @@
-import TentStayCalculator from "../Calculators/TentStayCalculator"
+import TentStayCalculator from "../Calculators/TentStayCalculator.js";
+import FormBodyAppender from '../Appenders/FormBodyAppender.js';
 
 const CalculatePriceForTentStayProcessor = {
     Process() {

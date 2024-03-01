@@ -7,6 +7,7 @@ import OnSleepOnGroundCheckboxClickProcessor from "./Processors/OnSleepOnGroundC
 import OnStayOvernightCheckboxClickProcessor from "./Processors/onOvernightCheckboxClickProcessor.js";
 import OnDayUseOnlyCheckboxClickProcessor from "./Processors/OnDayUseOnlyCheckboxClickProcessor.js";
 import ResetProcessor from "./Processors/ResetProcessor.js";
+import CalculatePriceForDayUseOnlyProcessor from "./Processors/CalculatePriceForDayUseOnlyProcessor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   FamilyInfoProcessor.Process();
@@ -77,6 +78,24 @@ document.addEventListener("DOMContentLoaded", () => {
   if (dayUseOnlyCheckboxField !== null) {
     dayUseOnlyCheckboxField.addEventListener("change", () => {
       OnDayUseOnlyCheckboxClickProcessor.Process();
+    });
+  }
+
+  const dayUseOnlyCheckboxNumPeopleField = document.querySelector(
+    "#num-people-input-for-day-use-only-checkbox"
+  );
+  if (dayUseOnlyCheckboxNumPeopleField !== null) {
+    dayUseOnlyCheckboxNumPeopleField.addEventListener("keyup", () => {
+      CalculatePriceForDayUseOnlyProcessor.Process();
+    });
+  }
+
+  const dayUseOnlyCheckboxNumDaysField = document.querySelector(
+    "#num-days-input-for-day-use-only-checkbox"
+  );
+  if (dayUseOnlyCheckboxNumDaysField !== null) {
+    dayUseOnlyCheckboxNumDaysField.addEventListener("keyup", () => {
+      CalculatePriceForDayUseOnlyProcessor.Process();
     });
   }
 
