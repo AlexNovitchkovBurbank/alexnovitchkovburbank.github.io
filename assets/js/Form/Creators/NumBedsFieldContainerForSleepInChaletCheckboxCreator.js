@@ -11,6 +11,7 @@ const NumBedsFieldContainerForSleepInChaletCheckboxCreator = {
     const input = document.createElement("input");
     input.name = "number-of-beds";
     input.id = "num-beds-input-for-sleep-in-chalet-checkbox";
+    input.type = "number";
     input.required = true;
     inputFieldContainer.appendChild(inputLabel);
     inputFieldContainer.appendChild(input);

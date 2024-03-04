@@ -2,8 +2,8 @@ import { dayUseOnlyBaseRate, dayUseOnlyPricesOver6People } from "../../DayUseOnl
 
 const DayUseOnlyCalculator = {
     Calculate() {
-        const numDaysInput = document.querySelector("num-days-input-for-day-use-only-checkbox");
-        const numPeopleInput = document.querySelector("num-people-input-for-day-use-only-checkbox");
+        const numDaysInput = document.querySelector("#num-days-input-for-day-use-only-checkbox");
+        const numPeopleInput = document.querySelector("#num-people-input-for-day-use-only-checkbox");
 
         if (numPeopleInput === null)
             throw new Error("Number of people input does not exist for the day use only container");

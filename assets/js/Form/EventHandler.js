@@ -5,14 +5,17 @@ import OnRvCheckboxClickProcessor from "./Processors/OnRvCheckboxClickProcessor.
 import OnTentCheckboxClickProcessor from "./Processors/OnTentCheckboxClickProcessor.js";
 import OnSleepOnGroundCheckboxClickProcessor from "./Processors/OnSleepOnGroundCheckboxClickProcessor.js";
 import OnStayOvernightCheckboxClickProcessor from "./Processors/onOvernightCheckboxClickProcessor.js";
-import OnDayUseOnlyCheckboxClickProcessor from "./Processors/OnDayUseOnlyCheckboxClickProcessor.js";
 import ResetProcessor from "./Processors/ResetProcessor.js";
+import OnDayUseOnlyCheckboxClickProcessor from "./Processors/OnDayUseOnlyCheckboxClickProcessor.js";
 import CalculatePriceForDayUseOnlyProcessor from "./Processors/CalculatePriceForDayUseOnlyProcessor.js";
+import StringToIntConverter from "./Converters/StringToIntConverter.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   FamilyInfoProcessor.Process();
 
-  const numPeopleFieldContainer = document.querySelector("#num-people-field-container");
+  const numPeopleFieldContainer = document.querySelector(
+    "#num-people-field-container"
+  );
   if (numPeopleFieldContainer !== null) {
     const numPeopleInput =
       numPeopleFieldContainer.querySelector("#num-people-input");
@@ -36,9 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const stayInRvCheckboxField = document.querySelector(
-    "#stay-in-rv-checkbox"
-  );
+  const stayInRvCheckboxField = document.querySelector("#stay-in-rv-checkbox");
   if (stayInRvCheckboxField !== null) {
     stayInRvCheckboxField.addEventListener("change", () => {
       OnRvCheckboxClickProcessor.Process();
@@ -72,35 +73,68 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const dayUseOnlyCheckboxField = document.querySelector(
-    "#day-use-only-checkbox"
-  );
-  if (dayUseOnlyCheckboxField !== null) {
-    dayUseOnlyCheckboxField.addEventListener("change", () => {
-      OnDayUseOnlyCheckboxClickProcessor.Process();
-    });
-  }
-
-  const dayUseOnlyCheckboxNumPeopleField = document.querySelector(
-    "#num-people-input-for-day-use-only-checkbox"
-  );
-  if (dayUseOnlyCheckboxNumPeopleField !== null) {
-    dayUseOnlyCheckboxNumPeopleField.addEventListener("keyup", () => {
-      CalculatePriceForDayUseOnlyProcessor.Process();
-    });
-  }
-
-  const dayUseOnlyCheckboxNumDaysField = document.querySelector(
-    "#num-days-input-for-day-use-only-checkbox"
-  );
-  if (dayUseOnlyCheckboxNumDaysField !== null) {
-    dayUseOnlyCheckboxNumDaysField.addEventListener("keyup", () => {
-      CalculatePriceForDayUseOnlyProcessor.Process();
-    });
-  }
+  daysOnlyCheckboxHandler();
 
   const resetButton = document.querySelector("#reset-button");
   resetButton.addEventListener("click", () => {
     ResetProcessor.Process();
   });
 });
+
+function daysOnlyCheckboxHandler() {
+  const dayUseOnlyCheckbox = document.querySelector(
+    "#day-use-only-checkbox"
+  );
+  if (dayUseOnlyCheckbox !== null) {
+    dayUseOnlyCheckbox.addEventListener("change", () => {
+      OnDayUseOnlyCheckboxClickProcessor.Process();
+
+      const dayUseOnlyNumPeopleFieldContainer = document.querySelector(
+        "#num-people-field-container-for-day-use-only-checkbox"
+      );
+      const dayUseOnlyNumDaysFieldContainer = document.querySelector(
+        "#num-days-field-container-for-day-use-only-checkbox"
+      );
+
+      if (
+        dayUseOnlyNumDaysFieldContainer !== null &&
+        dayUseOnlyNumPeopleFieldContainer !== null
+      ) {
+        const dayUseOnlyCheckboxNumPeopleInput = document.querySelector(
+          "#num-people-input-for-day-use-only-checkbox"
+        );
+        if (dayUseOnlyCheckboxNumPeopleInput !== null) {
+          dayUseOnlyCheckboxNumPeopleInput.addEventListener("keyup", () => {
+            const dayUseOnlyCheckboxNumDaysInput = document.querySelector(
+              "#num-days-input-for-day-use-only-checkbox"
+            );
+            
+            if (dayUseOnlyCheckboxNumDaysInput !== null) {
+              const dayUseOnlyCheckboxNumDaysInputText = StringToIntConverter.Convert(dayUseOnlyCheckboxNumDaysInput.value);
+              console.log("num days:" + dayUseOnlyCheckboxNumDaysInputText);
+              if (!isNaN(dayUseOnlyCheckboxNumDaysInputText))
+                CalculatePriceForDayUseOnlyProcessor.Process();
+            }
+          });
+        }
+
+        const dayUseOnlyCheckboxNumDaysInput = document.querySelector(
+          "#num-days-input-for-day-use-only-checkbox"
+        );
+        if (dayUseOnlyCheckboxNumDaysInput !== null) {
+          dayUseOnlyCheckboxNumDaysInput.addEventListener("keyup", () => {
+            const dayUseOnlyCheckboxNumPeopleInput = document.querySelector(
+              "#num-people-input-for-day-use-only-checkbox"
+            );
+            if (dayUseOnlyCheckboxNumPeopleInput !== null) {
+              console.log("NumPeople: " + dayUseOnlyCheckboxNumPeopleInput.value);
+              const dayUseOnlyCheckboxNumPeopleInputText = StringToIntConverter.Convert(dayUseOnlyCheckboxNumPeopleInput.value);
+              if (!isNaN(dayUseOnlyCheckboxNumPeopleInputText))
+                CalculatePriceForDayUseOnlyProcessor.Process();
+            }
+          });
+        }
+      }
+    });
+  }
+}
