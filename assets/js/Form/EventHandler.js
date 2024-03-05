@@ -111,7 +111,6 @@ function daysOnlyCheckboxHandler() {
             
             if (dayUseOnlyCheckboxNumDaysInput !== null) {
               const dayUseOnlyCheckboxNumDaysInputText = StringToIntConverter.Convert(dayUseOnlyCheckboxNumDaysInput.value);
-              console.log("num days:" + dayUseOnlyCheckboxNumDaysInputText);
               if (!isNaN(dayUseOnlyCheckboxNumDaysInputText))
                 CalculatePriceForDayUseOnlyProcessor.Process();
             }
@@ -127,7 +126,6 @@ function daysOnlyCheckboxHandler() {
               "#num-people-input-for-day-use-only-checkbox"
             );
             if (dayUseOnlyCheckboxNumPeopleInput !== null) {
-              console.log("NumPeople: " + dayUseOnlyCheckboxNumPeopleInput.value);
               const dayUseOnlyCheckboxNumPeopleInputText = StringToIntConverter.Convert(dayUseOnlyCheckboxNumPeopleInput.value);
               if (!isNaN(dayUseOnlyCheckboxNumPeopleInputText))
                 CalculatePriceForDayUseOnlyProcessor.Process();
