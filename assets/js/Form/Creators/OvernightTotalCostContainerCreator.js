@@ -1,4 +1,4 @@
-const OvernightStayTotalCostContainerCreator = {
+const OvernightTotalCostContainerCreator = {
   Create(cost) {
     const paragraphFieldContainer = document.createElement("div");
     paragraphFieldContainer.className = "text-field";
@@ -11,4 +11,4 @@ const OvernightStayTotalCostContainerCreator = {
   },
 };
 
-export default OvernightStayTotalCostContainerCreator;
+export default OvernightTotalCostContainerCreator;

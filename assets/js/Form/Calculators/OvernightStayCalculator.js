@@ -1,7 +1,7 @@
-import { dayUseOnlyPerDayBaseRate, dayUseOnlyPricesOver6People } from "../../DayUseOnlyPrices.js";
+import { OvernightPerDayBaseRate, OvernightPricesOver6People } from "../../OvernightPrices.js";
 import StringToIntConverter from "../Converters/StringToIntConverter.js";
 
-const DayUseOnlyCalculator = {
+const OvernightCalculator = {
     Calculate() {
         const numDaysInput = document.querySelector("#num-days-input-for-day-use-only-checkbox");
         const numPeopleInput = document.querySelector("#num-people-input-for-day-use-only-checkbox");
@@ -21,17 +21,17 @@ const DayUseOnlyCalculator = {
             total = NaN;
         }
         if (numPeopleInputValueAsNum >= 6) {
-            total = (dayUseOnlyPerDayBaseRate + dayUseOnlyPricesOver6People[numPeopleInputValueAsNum - 6 - 1]) * numDaysInputValueAsNum;
+            total = (OvernightPerDayBaseRate + OvernightPricesOver6People[numPeopleInputValueAsNum - 6 - 1]) * numDaysInputValueAsNum;
         }
         else if (numPeopleInputValueAsNum === 0 || numDaysInputValueAsNum === 0) {
             total = 0.0;
         }
         else {
-            total = dayUseOnlyPerDayBaseRate * numDaysInputValueAsNum;
+            total = OvernightPerDayBaseRate * numDaysInputValueAsNum;
         }
 
         return total;
     }
 }
 
-export default DayUseOnlyCalculator;
+export default OvernightCalculator;

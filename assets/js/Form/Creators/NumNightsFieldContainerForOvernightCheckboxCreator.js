@@ -1,4 +1,4 @@
-const NumNightsFieldContainerForOvernightStayCheckboxCreator = {
+const NumNightsFieldContainerForOvernightCheckboxCreator = {
   Create() {
     const inputFieldContainer =
       document.createElement("div");
@@ -19,4 +19,4 @@ const NumNightsFieldContainerForOvernightStayCheckboxCreator = {
   },
 };
 
-export default NumNightsFieldContainerForOvernightStayCheckboxCreator;
+export default NumNightsFieldContainerForOvernightCheckboxCreator;

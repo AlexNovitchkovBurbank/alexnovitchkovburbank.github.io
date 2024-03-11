@@ -1,4 +1,4 @@
-import NumNightsFieldContainerForOvernightStayCheckboxCreator from "../Creators/NumNightsFieldContainerForOvernightStayCheckboxCreator.js";
+import NumNightsFieldContainerForOvernightCheckboxCreator from "../Creators/NumNightsFieldContainerForOvernightCheckboxCreator.js";
 import StayOvernightNumberOfPeopleRemover from "../Removers/StayOvernightNumPeopleRemover.js";
 
 const OnStayOvernightCheckboxClickProcessor = {
@@ -9,7 +9,7 @@ const OnStayOvernightCheckboxClickProcessor = {
 
     try {
       if (stayOvernightCheckboxContainer.checked) {
-        const numNightsFieldContainer = NumNightsFieldContainerForOvernightStayCheckboxCreator.Create();
+        const numNightsFieldContainer = NumNightsFieldContainerForOvernightCheckboxCreator.Create();
 
         const stayOvernightCheckboxContainer = document.querySelector(
           "#stay-overnight-checkbox-container"
