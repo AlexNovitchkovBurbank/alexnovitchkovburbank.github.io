@@ -1,4 +1,4 @@
-const rvPricesOver6People = [
+const numRvsPrices = [
   185.00,
   240.00,
   280.00,
@@ -16,4 +16,4 @@ const rvPricesOver6People = [
 
   const rvBaseRate = 100;
 
-  export {rvPricesOver6People, rvBaseRate};
+  export {rvBaseRate, numRvsPrices};

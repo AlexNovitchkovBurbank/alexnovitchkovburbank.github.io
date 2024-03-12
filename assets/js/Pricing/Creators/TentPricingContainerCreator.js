@@ -1,4 +1,4 @@
-import {tentPricesOver6People, tentBaseRate} from "../../TentPrices.js";
+import {numTentsPrices, tentBaseRate} from "../../TentPrices.js";
 
 const TentPricingContainerCreator = {
   Create() {
@@ -18,7 +18,7 @@ const TentPricingContainerCreator = {
 
       if (i === 1) descriptionContainer.textContent = `${i} person over 6`;
       else descriptionContainer.textContent = `${i} people over 6`;
-      priceContainer.textContent = tentPricesOver6People[i - 1];
+      priceContainer.textContent = numTentsPrices[i - 1];
 
       descriptionPriceContainer.appendChild(descriptionContainer);
       descriptionPriceContainer.appendChild(priceContainer);

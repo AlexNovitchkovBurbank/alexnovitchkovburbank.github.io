@@ -1,4 +1,4 @@
-const tentPricesOver6People = [
+const numTentsPrices = [
   120.00,
   175.00,
   215.00,
@@ -14,6 +14,22 @@ const tentPricesOver6People = [
   615.00,
   ];
 
+  const numDaysPrices = [
+    30.00,
+    60.00,
+    90.00,
+    120.00,
+    150.00,
+    180.00,
+    210.00,
+    240.00,
+    270.00,
+    300.00,
+    330.00,
+    360.00,
+    390.00,
+    ];
+
   const tentBaseRate = 100;
 
-  export {tentPricesOver6People, tentBaseRate};
+  export {numTentsPrices, tentBaseRate};
