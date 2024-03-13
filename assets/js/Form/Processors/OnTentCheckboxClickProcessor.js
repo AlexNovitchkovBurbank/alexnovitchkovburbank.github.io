@@ -1,18 +1,18 @@
-import NumTentsFieldContainerForSleepIntentCheckboxCreator from "../Creators/NumTentsFieldContainerForSleepInTentCheckboxCreator.js";
+import NumTentsFieldContainerForTentCheckboxCreator from "../Creators/NumTentsFieldContainerForTentCheckboxCreator.js";
 import StayInTentNumberOfPeopleRemover from "../Removers/StayInTentNumPeopleRemover.js";
 
 const OnTentCheckboxClickProcessor = {
   Process() {
     const stayInTentCheckboxContainer = document.querySelector(
-      "#stay-in-tent-checkbox"
+      "#tent-checkbox"
     );
 
     try {
       if (stayInTentCheckboxContainer.checked) {
-        const numTentsFieldContainer = NumTentsFieldContainerForSleepIntentCheckboxCreator.Create();
+        const numTentsFieldContainer = NumTentsFieldContainerForTentCheckboxCreator.Create();
 
         const stayInTentCheckboxContainer = document.querySelector(
-          "#stay-in-tent-checkbox-container"
+          "#tent-checkbox-container"
         );
         stayInTentCheckboxContainer.appendChild(
           numTentsFieldContainer

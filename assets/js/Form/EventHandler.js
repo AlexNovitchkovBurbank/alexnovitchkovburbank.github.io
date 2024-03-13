@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const stayInChaletCheckboxField = document.querySelector(
-    "#stay-in-chalet-checkbox"
+    "#chalet-checkbox"
   );
   if (stayInChaletCheckboxField !== null) {
     stayInChaletCheckboxField.addEventListener("change", () => {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const stayInTentCheckboxField = document.querySelector(
-    "#stay-in-tent-checkbox"
+    "#tent-checkbox"
   );
   if (stayInTentCheckboxField !== null) {
     stayInTentCheckboxField.addEventListener("change", () => {

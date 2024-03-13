@@ -83,12 +83,12 @@ const FamilyInfoContainerCreator = {
     requestPaymentPlanInformationCheckboxContainer.appendChild(requestPaymentPlanInformationCheckboxInput);
 
     const stayInChaletCheckboxContainer = document.createElement("div");
-    stayInChaletCheckboxContainer.id = "stay-in-chalet-checkbox-container";
+    stayInChaletCheckboxContainer.id = "chalet-checkbox-container";
     const stayInChaletCheckboxLabel = document.createElement("label");
     stayInChaletCheckboxLabel.textContent = "We will stay in a chalet:";
     const stayInChaletCheckbox = document.createElement("input");
     stayInChaletCheckbox.type = "checkbox";
-    stayInChaletCheckbox.id = "stay-in-chalet-checkbox";
+    stayInChaletCheckbox.id = "chalet-checkbox";
     stayInChaletCheckboxContainer.appendChild(stayInChaletCheckboxLabel);
     stayInChaletCheckboxContainer.appendChild(stayInChaletCheckbox);
 
@@ -103,12 +103,12 @@ const FamilyInfoContainerCreator = {
     stayInRvCheckboxContainer.appendChild(stayInRvCheckbox);
 
     const stayInTentCheckboxContainer = document.createElement("div");
-    stayInTentCheckboxContainer.id = "stay-in-tent-checkbox-container";
+    stayInTentCheckboxContainer.id = "tent-checkbox-container";
     const stayInTentCheckboxLabel = document.createElement("label");
     stayInTentCheckboxLabel.textContent = "We will stay in tent(s):";
     const stayInTentCheckbox = document.createElement("input");
     stayInTentCheckbox.type = "checkbox";
-    stayInTentCheckbox.id = "stay-in-tent-checkbox";
+    stayInTentCheckbox.id = "tent-checkbox";
     stayInTentCheckboxContainer.appendChild(stayInTentCheckboxLabel);
     stayInTentCheckboxContainer.appendChild(stayInTentCheckbox);
 

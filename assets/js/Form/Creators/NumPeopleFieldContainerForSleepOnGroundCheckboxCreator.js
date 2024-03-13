@@ -4,7 +4,7 @@ const NumPeopleFieldContainerForSleepOnGroundCheckboxCreator = {
       document.createElement("div");
     inputFieldContainer.className =
       "field";
-    inputFieldContainer.id = "num-people-field-container-stay-in-chalet-checkbox";
+    inputFieldContainer.id = "num-people-field-container-chalet-checkbox";
     const inputLabel = document.createElement("label");
     inputLabel.textContent = "Number of people:";
     inputLabel.htmlFor = "num-people-input-for-sleep-on-ground-checkbox";

@@ -1,4 +1,4 @@
-import { dayUseOnlyPerDayBaseRate, dayUseOnlyPricesOver6People } from "../../DayUseOnlyPrices.js";
+import { dayUseOnlyBaseRate, dayUseOnlyPricesOver6People } from "../../DayUseOnlyPrices.js";
 import StringToIntConverter from "../Converters/StringToIntConverter.js";
 
 const DayUseOnlyCalculator = {
@@ -10,7 +10,7 @@ const DayUseOnlyCalculator = {
             throw new Error("Number of people input does not exist for the day use only container");
 
         if (numDaysInput === null)
-            throw new Error("Number of days input container does not exist for the day use only container");
+            throw new Error("Number of days input does not exist for the day use only container");
 
         const numDaysInputValueAsNum = StringToIntConverter.Convert(numDaysInput.value);
         const numPeopleInputValueAsNum = StringToIntConverter.Convert(numPeopleInput.value);
@@ -21,13 +21,13 @@ const DayUseOnlyCalculator = {
             total = NaN;
         }
         if (numPeopleInputValueAsNum >= 6) {
-            total = (dayUseOnlyPerDayBaseRate + dayUseOnlyPricesOver6People[numPeopleInputValueAsNum - 6 - 1]) * numDaysInputValueAsNum;
+            total = (dayUseOnlyBaseRate + dayUseOnlyPricesOver6People[numPeopleInputValueAsNum - 6 - 1]) * numDaysInputValueAsNum;
         }
         else if (numPeopleInputValueAsNum === 0 || numDaysInputValueAsNum === 0) {
             total = 0.0;
         }
         else {
-            total = dayUseOnlyPerDayBaseRate * numDaysInputValueAsNum;
+            total = dayUseOnlyBaseRate * numDaysInputValueAsNum;
         }
 
         return total;

@@ -1,4 +1,4 @@
-import NumRvsFieldContainerForSleepInRvCheckboxCreator from "../Creators/NumRvsFieldContainerForSleepInRvCheckboxCreator.js";
+import NumRvsFieldContainerForRvCheckboxCreator from "../Creators/NumRvsFieldContainerForRvCheckboxCreator.js";
 import StayInRvNumberOfPeopleRemover from "../Removers/StayInRvNumPeopleRemover.js";
 
 const OnRvCheckboxClickProcessor = {
@@ -9,7 +9,7 @@ const OnRvCheckboxClickProcessor = {
 
     try {
       if (stayInRvCheckboxContainer.checked) {
-        const numRvsFieldContainer = NumRvsFieldContainerForSleepInRvCheckboxCreator.Create();
+        const numRvsFieldContainer = NumRvsFieldContainerForRvCheckboxCreator.Create();
 
         const stayInRvCheckboxContainer = document.querySelector(
           "#stay-in-rv-checkbox-container"

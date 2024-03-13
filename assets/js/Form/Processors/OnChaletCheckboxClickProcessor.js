@@ -1,17 +1,17 @@
-import NumBedsFieldContainerForSleepInChaletCheckboxCreator from "../Creators/NumBedsFieldContainerForSleepInChaletCheckboxCreator.js";
+import NumBedsFieldContainerForChaletCheckboxCreator from "../Creators/NumBedsFieldContainerForChaletCheckboxCreator.js";
 import StayInChaletNumberOfPeopleRemover from "../Removers/StayInChaletNumPeopleRemover.js";
 
 const OnChaletCheckboxClickProcessor = {
   Process() {
     const stayInChaletCheckboxContainer = document.querySelector(
-      "#stay-in-chalet-checkbox"
+      "#chalet-checkbox"
     );
 
     try {
       if (stayInChaletCheckboxContainer.checked) {
-        const numBedsFieldContainer = NumBedsFieldContainerForSleepInChaletCheckboxCreator.Create();
+        const numBedsFieldContainer = NumBedsFieldContainerForChaletCheckboxCreator.Create();
         const stayInChaletCheckboxContainer = document.querySelector(
-          "#stay-in-chalet-checkbox-container"
+          "#chalet-checkbox-container"
         );
         stayInChaletCheckboxContainer.appendChild(
           numBedsFieldContainer

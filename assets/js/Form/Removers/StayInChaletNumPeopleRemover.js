@@ -1,7 +1,7 @@
 const StayInChaletNumberOfPeopleRemover = {
   Remove() {
     const stayInChaletCheckboxContainer = document.querySelector(
-      "#stay-in-chalet-checkbox-container"
+      "#chalet-checkbox-container"
     );
 
     if (stayInChaletCheckboxContainer !== null) {

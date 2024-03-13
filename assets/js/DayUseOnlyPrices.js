@@ -14,6 +14,6 @@ const dayUseOnlyPricesOver6People = [
   200.00,
   ];
 
-  const dayUseOnlyPerDayBaseRate = 100;
+  const dayUseOnlyBaseRate = 100;
 
-  export {dayUseOnlyPricesOver6People, dayUseOnlyPerDayBaseRate};
+  export {dayUseOnlyPricesOver6People, dayUseOnlyBaseRate};

@@ -1,16 +1,16 @@
-const NumBedsFieldContainerForSleepInChaletCheckboxCreator = {
+const NumBedsFieldContainerForChaletCheckboxCreator = {
   Create() {
     const inputFieldContainer =
       document.createElement("div");
     inputFieldContainer.className =
       "field";
-    inputFieldContainer.id = "num-beds-field-stay-in-chalet-checkbox";
+    inputFieldContainer.id = "num-beds-field-chalet-checkbox";
     const inputLabel = document.createElement("label");
     inputLabel.textContent = "Number of beds:";
-    inputLabel.htmlFor = "num-beds-input-for-sleep-in-chalet-checkbox";
+    inputLabel.htmlFor = "num-beds-input-for-chalet-checkbox";
     const input = document.createElement("input");
     input.name = "number-of-beds";
-    input.id = "num-beds-input-for-sleep-in-chalet-checkbox";
+    input.id = "num-beds-input-for-chalet-checkbox";
     input.type = "number";
     input.required = true;
     inputFieldContainer.appendChild(inputLabel);
@@ -20,4 +20,4 @@ const NumBedsFieldContainerForSleepInChaletCheckboxCreator = {
   },
 };
 
-export default NumBedsFieldContainerForSleepInChaletCheckboxCreator;
+export default NumBedsFieldContainerForChaletCheckboxCreator;

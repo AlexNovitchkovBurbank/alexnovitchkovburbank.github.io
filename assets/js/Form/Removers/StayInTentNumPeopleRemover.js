@@ -1,7 +1,7 @@
 const StayInTentNumberOfPeopleRemover = {
   Remove() {
     const stayInTentCheckboxContainer = document.querySelector(
-      "#stay-in-tent-checkbox-container"
+      "#tent-checkbox-container"
     );
     if (stayInTentCheckboxContainer !== null) {
       const numberOfPeopleContainer =

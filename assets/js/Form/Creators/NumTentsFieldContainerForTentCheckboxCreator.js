@@ -1,16 +1,16 @@
-const NumTentsFieldContainerForSleepIntentCheckboxCreator = {
+const NumTentsFieldContainerForTentCheckboxCreator = {
   Create() {
     const inputFieldContainer =
       document.createElement("div");
     inputFieldContainer.className =
       "field";
-    inputFieldContainer.id = "num-tents-field-for-sleep-in-tent-checkbox";
+    inputFieldContainer.id = "num-tents-field-for-tent-checkbox";
     const inputLabel = document.createElement("label");
     inputLabel.textContent = "Number of tents:";
-    inputLabel.htmlFor = "num-tents-input-for-sleep-in-tent-checkbox";
+    inputLabel.htmlFor = "num-tents-input-for-tent-checkbox";
     const input = document.createElement("input");
     input.name = "number-of-tents";
-    input.id = "num-tents-input-for-sleep-in-tent-checkbox";
+    input.id = "num-tents-input-for-tent-checkbox";
     input.required = true;
     inputFieldContainer.appendChild(inputLabel);
     inputFieldContainer.appendChild(input);
@@ -19,4 +19,4 @@ const NumTentsFieldContainerForSleepIntentCheckboxCreator = {
   },
 };
 
-export default NumTentsFieldContainerForSleepIntentCheckboxCreator;
+export default NumTentsFieldContainerForTentCheckboxCreator;
