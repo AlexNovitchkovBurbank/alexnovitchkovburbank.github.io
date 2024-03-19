@@ -1,4 +1,4 @@
-import { overnightPricesOver6People, overnightBaseRate } from "../../overnightPrices.js";
+import { overnightPricesOver6People, overnightBaseRate } from "../../OvernightPrices.js";
 
 const overnightPricingContainerCreator = {
   Create() {
