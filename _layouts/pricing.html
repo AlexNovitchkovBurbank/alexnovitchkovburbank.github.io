@@ -2,37 +2,41 @@
 layout: default
 ---
 
-<script type="module" src="../assets/pricings/chalet/eventHandler.js"></script>
-<script type="module" src="../assets/pricings/rv/eventHandler.js"></script>
-<script type="module" src="../assets/pricings/tents/eventHandler.js"></script>
-<script
-  type="module"
-  src="../assets/pricings/overnight/eventHandler.js"
-></script>
+<script type="module" src="../assets/js/pricing/EventHandler.js"></script>
+<link rel="stylesheet" type="text/css" href="../assets/css/pricing.css" />
 
-<div id="containers-side-by-side">
+<div id="not-individual-meals-pricing-types-side-by-side">
   <div class="pricing-type-section">
     <div>5 days options</div>
     <div class="pricing-buttons-section">
       <button id="chalet-pricing-button">Chalet</button>
-      <button id="rv-pricing-button">Rv</button>
-      <button id="tents-pricing-button">Tent</button>
+      <button id="rv-pricing-button">RV</button>
+      <button id="tent-pricing-button">Tent</button>
     </div>
   </div>
   <div class="pricing-type-section">
     <div>Overnight with meals options</div>
     <div class="pricing-buttons-section">
       <button id="overnight-pricing-button">Overnight</button>
+      <button id="day-use-only-pricing-button">Day use only</button>
     </div>
   </div>
 </div>
-<div id="display-pricing-container"></div>
+<div class="pricing-type-section">
+  <div>Individual meal pricing</div>
+  <div id="individual-meal-pricing-section">
+    <button id="individual-meal-pricing-button">Individual meals</button>
+  </div>
+</div>
+<br />
+<br />
+<div id="main-pricing-container"></div>
 <div id="registration-form-button-section">
-<div>Registration form</div>
-<button
-  onclick="window.open('/form/index.html', '_blank')"
-  id="registration-form-button"
->
-  Registration Form
-</button>
+  <div>Registration form</div>
+  <button
+    onclick="window.open('/Form/index.html', '_blank')"
+    id="registration-form-button"
+  >
+    Registration Form
+  </button>
 </div>
