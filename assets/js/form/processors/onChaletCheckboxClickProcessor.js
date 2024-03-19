@@ -1,7 +1,7 @@
-import numBedsFieldContainerForChaletCheckboxCreator from "../../form/Creators/numBedsFieldContainerForChaletCheckboxCreator.js";
-import numNightsFieldContainerForChaletCheckboxCreator from "../../form/Creators/numNightsFieldContainerForChaletCheckboxCreator.js";
-import numPeopleFieldContainerForChaletCheckboxCreator from "../../form/Creators/numPeopleFieldContainerForChaletCheckboxCreator.js";
-import chaletCheckboxFieldsRemover from "../Removers/chaletCheckboxFieldsRemover.js";
+import numBedsFieldContainerForChaletCheckboxCreator from "../../form/creators/numBedsFieldContainerForChaletCheckboxCreator.js";
+import numNightsFieldContainerForChaletCheckboxCreator from "../../form/creators/numNightsFieldContainerForChaletCheckboxCreator.js";
+import numPeopleFieldContainerForChaletCheckboxCreator from "../../form/creators/numPeopleFieldContainerForChaletCheckboxCreator.js";
+import chaletCheckboxFieldsRemover from "../removers/chaletCheckboxFieldsRemover.js";
 
 const onChaletCheckboxClickProcessor = {
   Process() {

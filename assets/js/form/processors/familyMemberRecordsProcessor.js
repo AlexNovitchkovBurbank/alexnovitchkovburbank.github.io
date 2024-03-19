@@ -1,9 +1,9 @@
-import numPeopleInputValidator from "../Validators/numPeopleInputValidator.js";
-import numPeopleInputErrorRemover from "../Removers/numPeopleInputErrorRemover.js";
-import currentFamilyMemberRecordsContainerRemover from '../Removers/currentFamilyMemberRecordsContainerRemover.js';
-import stringToIntConverter from '../../form/Converters/stringToIntConverter.js';
-import removeCurrentFamilyRecordsContainerValidator from '../Validators/removeCurrentFamilyRecordsContainerValidator.js';
-import memberRecordsContainerCreator from '../../form/Creators/memberRecordsContainerCreator.js';
+import numPeopleInputValidator from "../validators/numPeopleInputValidator.js";
+import numPeopleInputErrorRemover from "../removers/numPeopleInputErrorRemover.js";
+import currentFamilyMemberRecordsContainerRemover from '../removers/currentFamilyMemberRecordsContainerRemover.js';
+import stringToIntConverter from '../../form/converters/stringToIntConverter.js';
+import removeCurrentFamilyRecordsContainerValidator from '../validators/removeCurrentFamilyRecordsContainerValidator.js';
+import memberRecordsContainerCreator from '../../form/creators/memberRecordsContainerCreator.js';
 import formBodyAppender from '../appenders/formBodyAppender.js';
 import NumPeopleInputErrorDisplayer from "../displayers/numPeopleErrorDisplayer.js";
 

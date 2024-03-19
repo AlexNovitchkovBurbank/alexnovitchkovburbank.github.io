@@ -12,7 +12,7 @@ import calculatePriceForRvProcessor from "./processors/calculatePriceForRvProces
 import calculatePriceForTentProcessor from "./processors/calculatePriceForTentProcessor.js";
 import calculatePriceForDayUseOnlyProcessor from "./processors/calculatePriceForDayUseOnlyProcessor.js";
 import calculateOvernightPriceProcessor from "./processors/calculateOvernightPriceProcessor.js";
-import stringToIntConverter from "./Converters/stringToIntConverter.js";
+import stringToIntConverter from "./converters/stringToIntConverter.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   familyInfoProcessor.Process();

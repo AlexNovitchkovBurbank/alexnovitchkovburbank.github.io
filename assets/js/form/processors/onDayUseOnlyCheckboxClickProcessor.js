@@ -1,6 +1,6 @@
-import numDaysFieldContainerForDayUseOnlyCheckboxCreator from "../../form/Creators/numDaysFieldContainerForDayUseOnlyCheckboxCreator.js";
-import numPeopleFieldContainerForDayUseOnlyCheckboxCreator from "../../form/Creators/numPeopleFieldContainerForDayUseOnlyCheckboxCreator.js";
-import dayUseOnlyCheckboxFieldsRemover from "../Removers/dayUseOnlyCheckboxFieldsRemover.js";
+import numDaysFieldContainerForDayUseOnlyCheckboxCreator from "../../form/creators/numDaysFieldContainerForDayUseOnlyCheckboxCreator.js";
+import numPeopleFieldContainerForDayUseOnlyCheckboxCreator from "../../form/creators/numPeopleFieldContainerForDayUseOnlyCheckboxCreator.js";
+import dayUseOnlyCheckboxFieldsRemover from "../removers/dayUseOnlyCheckboxFieldsRemover.js";
 
 const onDayUseOnlyCheckboxClickProcessor = {
   Process() {

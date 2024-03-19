@@ -1,5 +1,5 @@
 import { dayUseOnlyBaseRate, dayUseOnlyPricesOver6People } from "../../dayUseOnlyPrices.js";
-import stringToIntConverter from "../Converters/stringToIntConverter.js";
+import stringToIntConverter from "../converters/stringToIntConverter.js";
 
 const dayUseOnlyCalculator = {
     Calculate() {

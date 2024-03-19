@@ -1,6 +1,6 @@
-import individualMealPricingContainerCreator from "../Creators/individualMealPricingContainerCreator.js";
-import mainPricingContainerAppender from "../Appenders/mainPricingContainerAppender.js";
-import CurrentPricingContainersRemover from "../Removers/CurrentPricingContainersRemover.js";
+import individualMealPricingContainerCreator from "../creators/individualMealPricingContainerCreator.js";
+import mainPricingContainerAppender from "../appenders/mainPricingContainerAppender.js";
+import CurrentPricingContainersRemover from "../removers/CurrentPricingContainersRemover.js";
 
 const individualMealPricingProcessor = {
   Process() {

@@ -1,6 +1,6 @@
-import tentPricingContainerCreator from "../Creators/tentPricingContainerCreator.js";
-import mainPricingContainerAppender from "../Appenders/mainPricingContainerAppender.js";
-import CurrentPricingContainersRemover from "../Removers/CurrentPricingContainersRemover.js";
+import tentPricingContainerCreator from "../creators/tentPricingContainerCreator.js";
+import mainPricingContainerAppender from "../appenders/mainPricingContainerAppender.js";
+import CurrentPricingContainersRemover from "../removers/CurrentPricingContainersRemover.js";
 
 const tentPricingProcessor = {
     Process() {

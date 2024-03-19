@@ -1,6 +1,6 @@
-import dayUseOnlyCalculator from "../../form/Calculators/dayUseOnlyCalculator.js";
-import dayUseOnlyCostContainerCreator from "../../form/Creators/dayUseOnlyCostContainerCreator.js";
-import formBodyAppender from '../../form/Appenders/formBodyAppender.js';
+import dayUseOnlyCalculator from "../../form/calculators/dayUseOnlyCalculator.js";
+import dayUseOnlyCostContainerCreator from "../../form/creators/dayUseOnlyCostContainerCreator.js";
+import formBodyAppender from '../../form/appenders/formBodyAppender.js';
 
 const calculatePriceForDayUseOnlyProcessor = {
     Process() {

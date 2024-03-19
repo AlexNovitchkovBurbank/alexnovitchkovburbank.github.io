@@ -2,7 +2,7 @@ import {
   chaletBaseRate,
   numPeopleOver6InChaletFor5NightsPrices,
 } from "../../chaletPrices.js";
-import stringToIntConverter from "../Converters/stringToIntConverter.js";
+import stringToIntConverter from "../converters/stringToIntConverter.js";
 
 const chaletCalculator = {
   Calculate() {

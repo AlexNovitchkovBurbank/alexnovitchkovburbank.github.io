@@ -1,5 +1,5 @@
 import { rvBaseRate, numPeopleOver6InRvFor5NightsPrices } from "../../rvPrices.js";
-import stringToIntConverter from "../Converters/stringToIntConverter.js";
+import stringToIntConverter from "../converters/stringToIntConverter.js";
 
 const rvCalculator = {
   Calculate() {

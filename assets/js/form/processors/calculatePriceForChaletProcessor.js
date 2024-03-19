@@ -1,6 +1,6 @@
-import chaletCalculator from "../../form/Calculators/chaletCalculator.js";
+import chaletCalculator from "../../form/calculators/chaletCalculator.js";
 import chaletCostContainerCreator from "../creators/chaletCostContainerCreator.js";
-import formBodyAppender from '../../form/Appenders/formBodyAppender.js';
+import formBodyAppender from '../../form/appenders/formBodyAppender.js';
 
 const calculatePriceForChaletProcessor = {
     Process() {

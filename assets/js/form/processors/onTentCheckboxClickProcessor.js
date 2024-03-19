@@ -1,7 +1,7 @@
-import numNightsFieldContainerForTentCheckboxCreator from "../../form/Creators/numNightsFieldContainerForTentCheckboxCreator.js";
-import numTentsFieldContainerForTentCheckboxCreator from "../../form/Creators/numTentsFieldContainerForTentCheckboxCreator.js";
-import numPeopleFieldContainerForTentCheckboxCreator from "../../form/Creators/numPeopleFieldContainerForTentCheckboxCreator.js";
-import tentCheckboxFieldsRemover from "../Removers/tentCheckboxFieldsRemover.js";
+import numNightsFieldContainerForTentCheckboxCreator from "../../form/creators/numNightsFieldContainerForTentCheckboxCreator.js";
+import numTentsFieldContainerForTentCheckboxCreator from "../../form/creators/numTentsFieldContainerForTentCheckboxCreator.js";
+import numPeopleFieldContainerForTentCheckboxCreator from "../../form/creators/numPeopleFieldContainerForTentCheckboxCreator.js";
+import tentCheckboxFieldsRemover from "../removers/tentCheckboxFieldsRemover.js";
 
 const onTentCheckboxClickProcessor = {
   Process() {

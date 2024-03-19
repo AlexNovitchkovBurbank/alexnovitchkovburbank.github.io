@@ -1,6 +1,6 @@
-import overnightCalculator from "../../form/Calculators/overnightCalculator.js";
-import overnightCostContainerCreator from "../../form/Creators/overnightCostContainerCreator.js";
-import formBodyAppender from '../../form/Appenders/formBodyAppender.js';
+import overnightCalculator from "../../form/calculators/overnightCalculator.js";
+import overnightCostContainerCreator from "../../form/creators/overnightCostContainerCreator.js";
+import formBodyAppender from '../../form/appenders/formBodyAppender.js';
 
 const calculateOvernightPriceProcessor = {
     Process() {
