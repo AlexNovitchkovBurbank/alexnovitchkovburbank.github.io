@@ -1,15 +1,15 @@
 import tentPricingContainerCreator from "../Creators/tentPricingContainerCreator.js";
 import mainPricingContainerAppender from "../Appenders/mainPricingContainerAppender.js";
-import currentPricingContainersRemover from "../Removers/currentPricingContainersRemover.js";
+import CurrentPricingContainersRemover from "../Removers/CurrentPricingContainersRemover.js";
 
 const tentPricingProcessor = {
     Process() {
         const maInTentPricingContainer = document.querySelector("#tent-pricing-container");
-      if (maInTentPricingContainer !== null) currentPricingContainersRemover.Remove();
+      if (maInTentPricingContainer !== null) CurrentPricingContainersRemover.Remove();
       else {
         const container = tentPricingContainerCreator.Create();
 
-        currentPricingContainersRemover.Remove();
+        CurrentPricingContainersRemover.Remove();
 
         mainPricingContainerAppender.Append(container);
       }

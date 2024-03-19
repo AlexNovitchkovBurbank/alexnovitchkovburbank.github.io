@@ -1,6 +1,6 @@
-import { dayUseOnlyPricesOver6People, dayUseOnlyBaseRate } from "../../DayUseOnlyPrices.js";
+import { dayUseOnlyPricesOver6People, dayUseOnlyBaseRate } from "../../dayUseOnlyPrices.js";
 
-const DayUseOnlyPricingContainerCreator = {
+const dayUseOnlyPricingContainerCreator = {
   Create() {
     const mainDayUseOnlyPricingContainer = document.createElement("div");
     mainDayUseOnlyPricingContainer.id = "day-use-only-pricing-container";
@@ -29,4 +29,4 @@ const DayUseOnlyPricingContainerCreator = {
   },
 };
 
-export default DayUseOnlyPricingContainerCreator;
+export default dayUseOnlyPricingContainerCreator;

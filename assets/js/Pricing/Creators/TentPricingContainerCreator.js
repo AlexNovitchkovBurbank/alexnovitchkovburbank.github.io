@@ -1,6 +1,6 @@
-import {numPeopleOver6InTentFor5NightsPrices, tentBaseRate} from "../../TentPrices.js";
+import {numPeopleOver6InTentFor5NightsPrices, tentBaseRate} from "../../tentPrices.js";
 
-const TentPricingContainerCreator = {
+const tentPricingContainerCreator = {
   Create() {
     const maInTentPricingContainer = document.createElement("div");
     maInTentPricingContainer.id = "tent-pricing-container";
@@ -29,4 +29,4 @@ const TentPricingContainerCreator = {
   },
 };
 
-export default TentPricingContainerCreator;
+export default tentPricingContainerCreator;
