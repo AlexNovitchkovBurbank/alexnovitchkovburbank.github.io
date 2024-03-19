@@ -1,4 +1,4 @@
-const CurrentPricingContainersRemover = {
+const currentPricingContainersRemover = {
   Remove() {
     const pricingContainer = document.querySelector(
       "#main-pricing-container"
@@ -15,4 +15,4 @@ const CurrentPricingContainersRemover = {
   },
 };
 
-export default CurrentPricingContainersRemover;
+export default currentPricingContainersRemover;

@@ -1,4 +1,4 @@
-const IndividualMealPricingContainerCreator = {
+const individualMealPricingContainerCreator = {
   Create() {
     const mainIndividualMealPricingContainer = document.createElement("div");
     mainIndividualMealPricingContainer.id = "individual-meal-pricing-container";
@@ -28,4 +28,4 @@ const IndividualMealPricingContainerCreator = {
   },
 };
 
-export default IndividualMealPricingContainerCreator;
+export default individualMealPricingContainerCreator;

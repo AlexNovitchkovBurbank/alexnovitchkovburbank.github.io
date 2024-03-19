@@ -1,4 +1,4 @@
-import { tentBaseRate, numPeopleOver6InTentFor5NightsPrices } from "../../TentPrices.js";
+import { tentBaseRate, numPeopleOver6InTentFor5NightsPrices } from "../../tentPrices.js";
 import stringToIntConverter from "../Converters/stringToIntConverter.js";
 
 const tentCalculator = {

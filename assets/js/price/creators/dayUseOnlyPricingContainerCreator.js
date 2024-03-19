@@ -1,13 +1,13 @@
-import {numPeopleOver6InRvFor5NightsPrices, rvBaseRate} from "../../rvPrices.js";
+import { dayUseOnlyPricesOver6People, dayUseOnlyBaseRate } from "../../DayUseOnlyPrices.js";
 
-const rvPricingContainerCreator = {
+const dayUseOnlyPricingContainerCreator = {
   Create() {
-    const mainRvPricingContainer = document.createElement("div");
-    mainRvPricingContainer.id = "rv-pricing-container";
+    const mainDayUseOnlyPricingContainer = document.createElement("div");
+    mainDayUseOnlyPricingContainer.id = "day-use-only-pricing-container";
 
     const titleContainer = document.createElement("h2");
-    titleContainer.textContent = "5 day RV pricing";
-    mainRvPricingContainer.appendChild(titleContainer);
+    titleContainer.textContent = "Day use only (meals are extra) pricing";
+    mainDayUseOnlyPricingContainer.appendChild(titleContainer);
 
     for (let i = 1; i <= 13; i++) {
       const descriptionPriceContainer = document.createElement("div");
@@ -18,15 +18,15 @@ const rvPricingContainerCreator = {
 
       if (i === 1) descriptionContainer.textContent = `${i} person over 6`;
       else descriptionContainer.textContent = `${i} people over 6`;
-      priceContainer.textContent = `$${numPeopleOver6InRvFor5NightsPrices[i - 1]}`;
+      priceContainer.textContent = `$${dayUseOnlyPricesOver6People[i - 1]}`;
 
       descriptionPriceContainer.appendChild(descriptionContainer);
       descriptionPriceContainer.appendChild(priceContainer);
-      mainRvPricingContainer.appendChild(descriptionPriceContainer);
+      mainDayUseOnlyPricingContainer.appendChild(descriptionPriceContainer);
     }
 
-    return mainRvPricingContainer;
+    return mainDayUseOnlyPricingContainer;
   },
 };
 
-export default rvPricingContainerCreator;
+export default dayUseOnlyPricingContainerCreator;

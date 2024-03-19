@@ -1,6 +1,6 @@
-import { overnightPricesOver6People, overnightBaseRate } from "../../OvernightPrices.js";
+import { overnightPricesOver6People, overnightBaseRate } from "../../overnightPrices.js";
 
-const OvernightPricingContainerCreator = {
+const overnightPricingContainerCreator = {
   Create() {
     const mainOvernightPricingContainer = document.createElement("div");
     mainOvernightPricingContainer.id = "overnight-pricing-container";
@@ -29,4 +29,4 @@ const OvernightPricingContainerCreator = {
   },
 };
 
-export default OvernightPricingContainerCreator;
+export default overnightPricingContainerCreator;

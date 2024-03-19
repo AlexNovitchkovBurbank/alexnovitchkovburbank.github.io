@@ -1,4 +1,4 @@
-import { dayUseOnlyBaseRate, dayUseOnlyPricesOver6People } from "../../DayUseOnlyPrices.js";
+import { dayUseOnlyBaseRate, dayUseOnlyPricesOver6People } from "../../dayUseOnlyPrices.js";
 import stringToIntConverter from "../Converters/stringToIntConverter.js";
 
 const dayUseOnlyCalculator = {

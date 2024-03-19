@@ -1,50 +1,50 @@
-import ChaletPricingProcessor from "./Processors/ChaletPricingProcessor.js";
-import RvPricingProcessor from "./Processors/RvPricingProcessor.js";
-import TentPricingProcessor from "./Processors/TentPricingProcessor.js";
-import OvernightPricingProcessor from "./Processors/OvernightPricingProcessor.js";
-import DayUseOnlyPricingProcessor from "./Processors/DayUseOnlyPricingProcessor.js";
-import IndividualMealPricingProcessor from "./Processors/IndividualMealPricingProcessor.js";
+import chaletPricingProcessor from "./Processors/chaletPricingProcessor.js";
+import rvPricingProcessor from "./Processors/rvPricingProcessor.js";
+import tentPricingProcessor from "./Processors/tentPricingProcessor.js";
+import overnightPricingProcessor from "./Processors/overnightPricingProcessor.js";
+import dayUseOnlyPricingProcessor from "./Processors/dayUseOnlyPricingProcessor.js";
+import individualMealPricingProcessor from "./Processors/individualMealPricingProcessor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const chaletPricingButton = document.querySelector("#chalet-pricing-button");
   if (chaletPricingButton !== null) {
     chaletPricingButton.addEventListener("click", () => {
-      ChaletPricingProcessor.Process();
+      chaletPricingProcessor.Process();
     });
   }
 
   const rvPricingButton = document.querySelector("#rv-pricing-button");
   if (rvPricingButton !== null) {
     rvPricingButton.addEventListener("click", () => {
-      RvPricingProcessor.Process();
+      rvPricingProcessor.Process();
     });
   }
 
   const tentPricingButton = document.querySelector("#tent-pricing-button");
   if (tentPricingButton !== null) {
     tentPricingButton.addEventListener("click", () => {
-      TentPricingProcessor.Process();
+      tentPricingProcessor.Process();
     });
   }
 
   const overnightPricingButton = document.querySelector("#overnight-pricing-button");
   if (overnightPricingButton !== null) {
     overnightPricingButton.addEventListener("click", () => {
-      OvernightPricingProcessor.Process();
+      overnightPricingProcessor.Process();
     });
   }
 
   const dayUseOnlyPricingButton = document.querySelector("#day-use-only-pricing-button");
   if (dayUseOnlyPricingButton !== null) {
     dayUseOnlyPricingButton.addEventListener("click", () => {
-      DayUseOnlyPricingProcessor.Process();
+      dayUseOnlyPricingProcessor.Process();
     });
   }
 
   const individualMealsPricingButton = document.querySelector("#individual-meal-pricing-button");
   if (individualMealsPricingButton !== null) {
     individualMealsPricingButton.addEventListener("click", () => {
-      IndividualMealPricingProcessor.Process();
+      individualMealPricingProcessor.Process();
     });
   }
 });

@@ -1,4 +1,4 @@
-import { rvBaseRate, numPeopleOver6InRvFor5NightsPrices } from "../../RvPrices.js";
+import { rvBaseRate, numPeopleOver6InRvFor5NightsPrices } from "../../rvPrices.js";
 import stringToIntConverter from "../Converters/stringToIntConverter.js";
 
 const rvCalculator = {
