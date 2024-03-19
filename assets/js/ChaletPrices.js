@@ -1,4 +1,4 @@
-const chaletPricesOver6People = [
+const numPeopleOver6InChaletFor5NightsPrices = [
     137.00,
     265.00,
     365.00,
@@ -16,4 +16,4 @@ const chaletPricesOver6People = [
 
   const chaletBaseRate = 100;
 
-  export {chaletPricesOver6People, chaletBaseRate};
+  export {chaletBaseRate, numPeopleOver6InChaletFor5NightsPrices};

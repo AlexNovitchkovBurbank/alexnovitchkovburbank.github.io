@@ -20,11 +20,8 @@ const DayUseOnlyCalculator = {
         if (isNaN(numPeopleInputValueAsNum) || isNaN(numDaysInputValueAsNum)) {
             total = NaN;
         }
-        if (numPeopleInputValueAsNum >= 6) {
-            total = (dayUseOnlyBaseRate + dayUseOnlyPricesOver6People[numPeopleInputValueAsNum - 6 - 1]) * numDaysInputValueAsNum;
-        }
-        else if (numPeopleInputValueAsNum === 0 || numDaysInputValueAsNum === 0) {
-            total = 0.0;
+        if (numPeopleInputValueAsNum >= 6 && numPeopleInputValueAsNum <= 13) {
+            total = (dayUseOnlyBaseRate + dayUseOnlyPricesOver6People[(numPeopleInputValueAsNum + 1) - 6]) * numDaysInputValueAsNum;
         }
         else {
             total = dayUseOnlyBaseRate * numDaysInputValueAsNum;

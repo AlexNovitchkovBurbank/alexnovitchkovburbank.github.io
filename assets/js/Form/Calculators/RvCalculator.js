@@ -1,37 +1,64 @@
-import { rvBaseRate, numRvsPrices } from "../../RvPrices.js";
+import { rvBaseRate, numPeopleOver6InRvFor5NightsPrices } from "../../RvPrices.js";
 import StringToIntConverter from "../Converters/StringToIntConverter.js";
 
 const RvCalculator = {
-    Calculate() {
-        const numNightsInput = document.querySelector("#num-nights-input-for-rv-checkbox");
-        const numRvsInput = document.querySelector("#num-rvs-input-for-rv-checkbox");
+  Calculate() {
+    const numNightsInput = document.querySelector(
+      "#num-nights-input-for-rv-checkbox"
+    );
+    const numRvsInput = document.querySelector(
+      "#num-rvs-input-for-rv-checkbox"
+    );
+    const numPeopleInput = document.querySelector(
+      "#num-people-input-for-rv-checkbox"
+    );
 
-        if (numRvsInput === null)
-            throw new Error("Number of rvs input does not exist for the rv stay container");
+    if (numRvsInput === null)
+      throw new Error(
+        "Number of rvs input does not exist for the rv stay container"
+      );
 
-        if (numNightsInput === null)
-            throw new Error("Number of Nights input does not exist for the rv stay container");
+    if (numNightsInput === null)
+      throw new Error(
+        "Number of nights input does not exist for the rv stay container"
+      );
 
-        const numNightsInputValueAsNum = StringToIntConverter.Convert(numNightsInput.value);
-        const numRvsInputValueAsNum = StringToIntConverter.Convert(numRvsInput.value);
+    if (numPeopleInput === null)
+      throw new Error(
+        "Number of people input does not exist for the rv stay container"
+      );
 
-        let total = 0.0;
+    let numNightsInputValueAsNum = StringToIntConverter.Convert(
+      numNightsInput.value
+    );
+    let numRvsInputValueAsNum = StringToIntConverter.Convert(numRvsInput.value);
+    let numPeopleInputValueAsNum = StringToIntConverter.Convert(
+      numPeopleInput.value
+    );
 
-        if (isNaN(numRvsInputValueAsNum) || isNaN(numNightsInputValueAsNum)) {
-            total = NaN;
-        }
-        if (numRvsInputValueAsNum >= 6) {
-            total = (tentBaseRate + numRvsPrices[numRvsInputValueAsNum - 1]) * numNightsInputValueAsNum;
-        }
-        else if (numRvsInputValueAsNum === 0 || numNightsInputValueAsNum === 0) {
-            total = 0.0;
-        }
-        else {
-            total = rvBaseRate * numNightsInputValueAsNum;
-        }
+    let total = 0.0;
 
-        return total;
+    if (
+      isNaN(numNightsInputValueAsNum) ||
+      isNaN(numPeopleInputValueAsNum) ||
+      isNaN(numRvsInputValueAsNum)
+    ) {
+      total = NaN;
+    } else {
+      if (numPeopleInputValueAsNum >= 6 && numPeopleInputValueAsNum <= 13) {
+        total =
+          (rvBaseRate + numPeopleOver6InRvFor5NightsPrices[(numPeopleInputValueAsNum + 1) - 6]) *
+          numRvsInputValueAsNum *
+          numNightsInputValueAsNum;
+      } else if (numPeopleInputValueAsNum > 0 && numPeopleInputValueAsNum < 6) {
+        total = rvBaseRate * numRvsInputValueAsNum * numNightsInputValueAsNum;
+      } else {
+        total = NaN;
+      }
     }
-}
+
+    return total;
+  },
+};
 
 export default RvCalculator;

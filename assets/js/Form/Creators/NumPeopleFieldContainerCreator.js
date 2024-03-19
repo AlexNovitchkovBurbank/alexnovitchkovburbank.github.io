@@ -3,7 +3,7 @@ const NumPeopleFieldContainerCreator = {
       const inputFieldContainer =
         document.createElement("div");
         inputFieldContainer.className =
-        "field";
+        "field-container";
       inputFieldContainer.id = "num-people-field-container";
       const inputLabel = document.createElement("label");
       inputLabel.textContent = "Number of people:";
@@ -11,7 +11,6 @@ const NumPeopleFieldContainerCreator = {
       const input = document.createElement("input");
       input.name = "number-of-people";
       input.id = "num-people-input";
-      input.type = "number";
       input.required = true;
       inputFieldContainer.appendChild(inputLabel);
       inputFieldContainer.appendChild(input);

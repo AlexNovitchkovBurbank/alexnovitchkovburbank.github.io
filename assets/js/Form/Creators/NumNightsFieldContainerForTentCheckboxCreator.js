@@ -1,10 +1,10 @@
-const NumTentsFieldContainerForTentCheckboxCreator = {
+const NumNightsFieldContainerForTentCheckboxCreator = {
   Create() {
     const inputFieldContainer =
       document.createElement("div");
     inputFieldContainer.className =
-      "field";
-    inputFieldContainer.id = "num-nights-field-for-tent-checkbox";
+      "field-container";
+    inputFieldContainer.id = "num-nights-field-container-for-tent-checkbox";
     const inputLabel = document.createElement("label");
     inputLabel.textContent = "Number of nights:";
     inputLabel.htmlFor = "num-nights-input-for-tent-checkbox";
@@ -19,4 +19,4 @@ const NumTentsFieldContainerForTentCheckboxCreator = {
   },
 };
 
-export default NumTentsFieldContainerForTentCheckboxCreator;
+export default NumNightsFieldContainerForTentCheckboxCreator;

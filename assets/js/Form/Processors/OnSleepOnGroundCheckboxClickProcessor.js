@@ -1,5 +1,6 @@
 import NumPeopleFieldContainerForSleepOnGroundCheckboxCreator from "../Creators/NumPeopleFieldContainerForSleepOnGroundCheckboxCreator.js";
-import SleepOnGroundNumberOfPeopleRemover from "../Removers/SleepOnGroundNumPeopleRemover.js";
+import NumNightsFieldContainerForSleepOnGroundCheckboxCreator from "../Creators/NumNightsFieldContainerForSleepOnGroundCheckboxCreator.js";
+import SleepOnGroundCheckboxFieldsRemover from "../Removers/SleepOnGroundCheckboxFieldsRemover.js";
 
 const OnSleepOnGroundCheckboxClickProcessor = {
   Process() {
@@ -9,14 +10,20 @@ const OnSleepOnGroundCheckboxClickProcessor = {
 
     try {
       if (sleepOnGroundCheckboxContainer.checked) {
-        const sleepOnGroundFieldContainer = NumPeopleFieldContainerForSleepOnGroundCheckboxCreator.Create();
+        const numPeopleSleepOnGroundFieldContainer = NumPeopleFieldContainerForSleepOnGroundCheckboxCreator.Create();
+        const numNightsSleepOnGroundFieldContainer = NumNightsFieldContainerForSleepOnGroundCheckboxCreator.Create();
+
         const sleepOnGroundCheckboxContainer = document.querySelector(
           "#sleep-on-ground-checkbox-container"
         );
+
         sleepOnGroundCheckboxContainer.appendChild(
-          sleepOnGroundFieldContainer
+          numPeopleSleepOnGroundFieldContainer
         );
-      } else SleepOnGroundNumberOfPeopleRemover.Remove();
+        sleepOnGroundCheckboxContainer.appendChild(
+          numNightsSleepOnGroundFieldContainer
+        );
+      } else SleepOnGroundCheckboxFieldsRemover.Remove();
     } catch (error) {
       alert(error.message);
     }

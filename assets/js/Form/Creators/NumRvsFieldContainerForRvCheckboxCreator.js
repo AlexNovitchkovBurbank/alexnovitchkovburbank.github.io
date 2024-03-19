@@ -3,8 +3,8 @@ const NumRvsFieldContainerForRvCheckboxCreator = {
     const inputFieldContainer =
       document.createElement("div");
     inputFieldContainer.className =
-      "field";
-    inputFieldContainer.id = "num-rvs-field-for-rv-checkbox";
+      "field-container";
+    inputFieldContainer.id = "num-rvs-field-container-for-rv-checkbox";
     const inputLabel = document.createElement("label");
     inputLabel.textContent = "Number of RVs:";
     inputLabel.htmlFor = "num-rvs-input-for-rv-checkbox";

@@ -3,8 +3,8 @@ const NumTentsFieldContainerForTentCheckboxCreator = {
     const inputFieldContainer =
       document.createElement("div");
     inputFieldContainer.className =
-      "field";
-    inputFieldContainer.id = "num-tents-field-for-tent-checkbox";
+      "field-container";
+    inputFieldContainer.id = "num-tents-field-container-for-tent-checkbox";
     const inputLabel = document.createElement("label");
     inputLabel.textContent = "Number of tents:";
     inputLabel.htmlFor = "num-tents-input-for-tent-checkbox";

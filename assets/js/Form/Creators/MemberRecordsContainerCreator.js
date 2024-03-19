@@ -28,7 +28,7 @@ const createMemberRecordContainer =
 
     const firstNameFieldContainer = document.createElement("div");
     firstNameFieldContainer.className =
-      "field";
+      "field-container";
     const firstNameLabel =
       document.createElement("label");
     firstNameLabel.textContent = `Family member ${i.toLocaleString()} first name:`;
@@ -50,7 +50,7 @@ const createMemberRecordContainer =
 
     const ageFieldContainer = document.createElement("div");
     ageFieldContainer.className =
-      "field";
+      "field-container";
     const ageLabel = document.createElement("label");
     ageLabel.textContent = `Family member ${i.toLocaleString()} age:`;
     ageLabel.htmlFor = `Person${i.toLocaleString()}AgeInput`;
@@ -66,7 +66,7 @@ const createMemberRecordContainer =
     const relationshipFieldContainer =
       document.createElement("div");
     relationshipFieldContainer.className =
-      "field";
+      "field-container";
     const relationshipLabel =
       document.createElement("label");
       relationshipLabel.textContent = `Family member ${i.toLocaleString()} relationship:`;

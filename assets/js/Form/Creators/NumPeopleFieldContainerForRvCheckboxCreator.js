@@ -1,22 +1,22 @@
-const NumPeopleFieldContainerForDayUseOnlyCheckboxCreator = {
+const NumPeopleFieldContainerCreator = {
     Create() {
       const inputFieldContainer =
         document.createElement("div");
-      inputFieldContainer.className =
+        inputFieldContainer.className =
         "field-container";
-      inputFieldContainer.id = "num-people-field-container-for-day-use-only-checkbox";
+      inputFieldContainer.id = "num-people-field-container-for-rv-checkbox";
       const inputLabel = document.createElement("label");
       inputLabel.textContent = "Number of people:";
-      inputLabel.htmlFor = "num-people-input-for-day-use-only-checkbox";
+      inputLabel.htmlFor = "num-people-input-for-rv-checkbox";
       const input = document.createElement("input");
-      input.name = "number-of-people-for-day-use-only";
-      input.id = "num-people-input-for-day-use-only-checkbox";
+      input.name = "number-of-people";
+      input.id = "num-people-input-for-rv-checkbox";
       input.required = true;
       inputFieldContainer.appendChild(inputLabel);
       inputFieldContainer.appendChild(input);
-
+  
       return inputFieldContainer;
     },
   };
   
-  export default NumPeopleFieldContainerForDayUseOnlyCheckboxCreator;
+  export default NumPeopleFieldContainerCreator;

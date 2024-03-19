@@ -24,7 +24,7 @@ form {
   margin-bottom: 12px;
 }
 
-.field {
+.field-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

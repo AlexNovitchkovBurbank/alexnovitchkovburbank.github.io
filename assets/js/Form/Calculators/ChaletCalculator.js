@@ -1,37 +1,70 @@
-import { dayUseOnlyBaseRate, dayUseOnlyPricesOver6People } from "../../DayUseOnlyPrices.js";
+import {
+  chaletBaseRate,
+  numPeopleOver6InChaletFor5NightsPrices,
+} from "../../ChaletPrices.js";
 import StringToIntConverter from "../Converters/StringToIntConverter.js";
 
-const DayUseOnlyCalculator = {
-    Calculate() {
-        const numDaysInput = document.querySelector("#num-nights-input-for-chalet-checkbox");
-        const numPeopleInput = document.querySelector("#num-beds-input-for-chalet-checkbox");
+const ChaletCalculator = {
+  Calculate() {
+    const numNightsInput = document.querySelector(
+      "#num-nights-input-for-chalet-checkbox"
+    );
+    const numPeopleInput = document.querySelector(
+      "#num-people-input-for-chalet-checkbox"
+    );
+    const numBedsInput = document.querySelector(
+      "#num-beds-input-for-chalet-checkbox"
+    );
 
-        if (numPeopleInput === null)
-            throw new Error("Number of people input does not exist for the chalet container");
+    if (numBedsInput === null)
+      throw new Error(
+        "Number of beds input does not exist for the chalet container"
+      );
 
-        if (numDaysInput === null)
-            throw new Error("Number of days input does not exist for the chalet container");
+    if (numPeopleInput === null)
+      throw new Error(
+        "Number of people input does not exist for the chalet container"
+      );
 
-        const numDaysInputValueAsNum = StringToIntConverter.Convert(numDaysInput.value);
-        const numPeopleInputValueAsNum = StringToIntConverter.Convert(numPeopleInput.value);
+    if (numNightsInput === null)
+      throw new Error(
+        "Number of nights input does not exist for the chalet container"
+      );
 
-        let total = 0.0;
+    let numNightsInputValueAsNum = StringToIntConverter.Convert(
+      numNightsInput.value
+    );
+    let numPeopleInputValueAsNum = StringToIntConverter.Convert(
+      numPeopleInput.value
+    );
+    let numBedsInputValueAsNum = StringToIntConverter.Convert(
+      numBedsInput.value
+    );
 
-        if (isNaN(numPeopleInputValueAsNum) || isNaN(numDaysInputValueAsNum)) {
-            total = NaN;
-        }
-        if (numPeopleInputValueAsNum >= 6) {
-            total = (dayUseOnlyBaseRate + dayUseOnlyPricesOver6People[numPeopleInputValueAsNum - 6 - 1]) * numDaysInputValueAsNum;
-        }
-        else if (numPeopleInputValueAsNum === 0 || numDaysInputValueAsNum === 0) {
-            total = 0.0;
-        }
-        else {
-            total = dayUseOnlyBaseRate * numDaysInputValueAsNum;
-        }
+    let total = 0.0;
 
-        return total;
+    if (
+      isNaN(numNightsInputValueAsNum) ||
+      isNaN(numPeopleInputValueAsNum) ||
+      isNaN(numBedsInputValueAsNum)
+    ) {
+      total = NaN;
+    } else {
+      if (numPeopleInputValueAsNum >= 6 && numPeopleInputValueAsNum <= 13) {
+        total =
+          (chaletBaseRate + numPeopleOver6InChaletFor5NightsPrices[(numPeopleInputValueAsNum + 1) - 6]) *
+          numBedsInputValueAsNum *
+          numNightsInputValueAsNum;
+      } else if (numPeopleInputValueAsNum > 0 && numPeopleInputValueAsNum < 6) {
+        total =
+          chaletBaseRate * numBedsInputValueAsNum * numNightsInputValueAsNum;
+      } else {
+        total = NaN;
+      }
     }
-}
 
-export default DayUseOnlyCalculator;
+    return total;
+  },
+};
+
+export default ChaletCalculator;

@@ -1,23 +1,29 @@
 import NumNightsFieldContainerForOvernightCheckboxCreator from "../Creators/NumNightsFieldContainerForOvernightCheckboxCreator.js";
-import StayOvernightNumberOfPeopleRemover from "../Removers/StayOvernightNumPeopleRemover.js";
+import NumPeopleFieldContainerForOvernightCheckboxCreator from "../Creators/NumPeopleFieldContainerForOvernightCheckboxCreator.js";
+import OvernightCheckboxFieldsRemover from "../Removers/OvernightCheckboxFieldsRemover.js";
 
 const OnStayOvernightCheckboxClickProcessor = {
   Process() {
     const stayOvernightCheckboxContainer = document.querySelector(
-      "#stay-overnight-checkbox"
+      "#overnight-checkbox"
     );
 
     try {
       if (stayOvernightCheckboxContainer.checked) {
+        const numPeopleFieldContainer = NumPeopleFieldContainerForOvernightCheckboxCreator.Create();
         const numNightsFieldContainer = NumNightsFieldContainerForOvernightCheckboxCreator.Create();
 
         const stayOvernightCheckboxContainer = document.querySelector(
-          "#stay-overnight-checkbox-container"
+          "#overnight-checkbox-container"
+        );
+        
+        stayOvernightCheckboxContainer.appendChild(
+          numPeopleFieldContainer
         );
         stayOvernightCheckboxContainer.appendChild(
           numNightsFieldContainer
         );
-      } else StayOvernightNumberOfPeopleRemover.Remove();
+      } else OvernightCheckboxFieldsRemover.Remove();
     } catch (error) {
       alert(error.message);
     }

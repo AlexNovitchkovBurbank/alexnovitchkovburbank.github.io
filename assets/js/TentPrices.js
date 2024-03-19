@@ -1,4 +1,4 @@
-const numTentsPrices = [
+const numPeopleOver6InTentFor5NightsPrices = [
   120.00,
   175.00,
   215.00,
@@ -32,4 +32,4 @@ const numTentsPrices = [
 
   const tentBaseRate = 100;
 
-  export {numTentsPrices, tentBaseRate};
+  export {numPeopleOver6InTentFor5NightsPrices, tentBaseRate};
