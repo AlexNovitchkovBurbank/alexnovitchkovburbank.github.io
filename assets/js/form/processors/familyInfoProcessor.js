@@ -1,4 +1,4 @@
-import familyInfoContainerCreator from '../../form/Creators/familyInfoContainerCreator.js';
+import familyInfoContainerCreator from '../../form/creators/familyInfoContainerCreator.js';
 import formBodyAppender from '../appenders/formBodyAppender.js';
 
 const familyInfoProcessor = {

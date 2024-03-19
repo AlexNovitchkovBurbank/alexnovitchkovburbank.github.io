@@ -1,6 +1,6 @@
-import dayUseOnlyPricingContainerCreator from "../Creators/dayUseOnlyPricingContainerCreator.js";
-import mainPricingContainerAppender from "../Appenders/mainPricingContainerAppender.js";
-import CurrentPricingContainersRemover from "../Removers/CurrentPricingContainersRemover.js";
+import dayUseOnlyPricingContainerCreator from "../creators/dayUseOnlyPricingContainerCreator.js";
+import mainPricingContainerAppender from "../appenders/mainPricingContainerAppender.js";
+import CurrentPricingContainersRemover from "../removers/CurrentPricingContainersRemover.js";
 
 const dayUseOnlyPricingProcessor = {
     Process() {

@@ -1,7 +1,7 @@
-import numNightsFieldContainerForRvCheckboxCreator from "../../form/Creators/numNightsFieldContainerForRvCheckboxCreator.js";
-import numRvsFieldContainerForRvCheckboxCreator from "../../form/Creators/numRvsFieldContainerForRvCheckboxCreator.js";
-import numPeopleFieldContainerForRvCheckboxCreator from "../../form/Creators/numPeopleFieldContainerForRvCheckboxCreator.js";
-import rvCheckboxFieldsRemover from "../Removers/rvCheckboxFieldsRemover.js";
+import numNightsFieldContainerForRvCheckboxCreator from "../../form/creators/numNightsFieldContainerForRvCheckboxCreator.js";
+import numRvsFieldContainerForRvCheckboxCreator from "../../form/creators/numRvsFieldContainerForRvCheckboxCreator.js";
+import numPeopleFieldContainerForRvCheckboxCreator from "../../form/creators/numPeopleFieldContainerForRvCheckboxCreator.js";
+import rvCheckboxFieldsRemover from "../removers/rvCheckboxFieldsRemover.js";
 
 const onRvCheckboxClickProcessor = {
   Process() {

@@ -1,6 +1,6 @@
-import overnightPricingContainerCreator from "../Creators/overnightPricingContainerCreator.js";
-import mainPricingContainerAppender from "../Appenders/mainPricingContainerAppender.js";
-import CurrentPricingContainersRemover from "../Removers/CurrentPricingContainersRemover.js";
+import overnightPricingContainerCreator from "../creators/overnightPricingContainerCreator.js";
+import mainPricingContainerAppender from "../appenders/mainPricingContainerAppender.js";
+import CurrentPricingContainersRemover from "../removers/CurrentPricingContainersRemover.js";
 
 const overnightPricingProcessor = {
     Process() {

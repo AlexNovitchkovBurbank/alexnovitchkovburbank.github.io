@@ -1,6 +1,6 @@
-import chaletPricingContainerCreator from "../Creators/chaletPricingContainerCreator.js";
-import mainPricingContainerAppender from "../Appenders/mainPricingContainerAppender.js";
-import CurrentPricingContainersRemover from "../Removers/CurrentPricingContainersRemover.js";
+import chaletPricingContainerCreator from "../creators/chaletPricingContainerCreator.js";
+import mainPricingContainerAppender from "../appenders/mainPricingContainerAppender.js";
+import CurrentPricingContainersRemover from "../removers/CurrentPricingContainersRemover.js";
 
 const chaletPricingProcessor = {
   Process() {

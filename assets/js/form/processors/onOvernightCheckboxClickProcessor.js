@@ -1,6 +1,6 @@
-import numNightsFieldContainerForOvernightCheckboxCreator from "../../form/Creators/numNightsFieldContainerForOvernightCheckboxCreator.js";
-import numPeopleFieldContainerForOvernightCheckboxCreator from "../../form/Creators/numPeopleFieldContainerForOvernightCheckboxCreator.js";
-import overnightCheckboxFieldsRemover from "../Removers/overnightCheckboxFieldsRemover.js";
+import numNightsFieldContainerForOvernightCheckboxCreator from "../../form/creators/numNightsFieldContainerForOvernightCheckboxCreator.js";
+import numPeopleFieldContainerForOvernightCheckboxCreator from "../../form/creators/numPeopleFieldContainerForOvernightCheckboxCreator.js";
+import overnightCheckboxFieldsRemover from "../removers/overnightCheckboxFieldsRemover.js";
 
 const OnStayOvernightCheckboxClickProcessor = {
   Process() {

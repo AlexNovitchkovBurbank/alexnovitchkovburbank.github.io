@@ -1,6 +1,6 @@
-import rvCalculator from "../../form/Calculators/rvCalculator.js";
-import rvCostContainerCreator from "../../form/Creators/rvCostContainerCreator.js";
-import formBodyAppender from '../../form/Appenders/formBodyAppender.js';
+import rvCalculator from "../../form/calculators/rvCalculator.js";
+import rvCostContainerCreator from "../../form/creators/rvCostContainerCreator.js";
+import formBodyAppender from '../../form/appenders/formBodyAppender.js';
 
 const calculatePriceForRvProcessor = {
     Process() {

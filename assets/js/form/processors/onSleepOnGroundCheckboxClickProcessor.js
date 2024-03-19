@@ -1,6 +1,6 @@
-import numPeopleFieldContainerForSleepOnGroundCheckboxCreator from "../../form/Creators/numPeopleFieldContainerForSleepOnGroundCheckboxCreator.js";
-import numNightsFieldContainerForSleepOnGroundCheckboxCreator from "../../form/Creators/numNightsFieldContainerForSleepOnGroundCheckboxCreator.js";
-import sleepOnGroundCheckboxFieldsRemover from "../Removers/sleepOnGroundCheckboxFieldsRemover.js";
+import numPeopleFieldContainerForSleepOnGroundCheckboxCreator from "../../form/creators/numPeopleFieldContainerForSleepOnGroundCheckboxCreator.js";
+import numNightsFieldContainerForSleepOnGroundCheckboxCreator from "../../form/creators/numNightsFieldContainerForSleepOnGroundCheckboxCreator.js";
+import sleepOnGroundCheckboxFieldsRemover from "../removers/sleepOnGroundCheckboxFieldsRemover.js";
 
 const onSleepOnGroundCheckboxClickProcessor = {
   Process() {

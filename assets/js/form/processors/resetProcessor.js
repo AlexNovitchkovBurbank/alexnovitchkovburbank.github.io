@@ -1,11 +1,11 @@
-import currentFamilyMemberRecordsContainerRemover from "../Removers/currentFamilyMemberRecordsContainerRemover.js";
-import numPeopleInputErrorRemover from "../Removers/numPeopleInputErrorRemover.js";
-import DayUseOnlyNumberOfPeopleRemover from "../Removers/dayUseOnlyCheckboxFieldsRemover.js";
-import sleepOnGroundCheckboxFieldsRemover from "../Removers/sleepOnGroundCheckboxFieldsRemover.js";
-import chaletCheckboxFieldsRemover from "../Removers/chaletCheckboxFieldsRemover.js";
-import rvCheckboxFieldsRemover from "../Removers/rvCheckboxFieldsRemover.js";
-import tentCheckboxFieldsRemover from "../Removers/tentCheckboxFieldsRemover.js";
-import overnightCheckboxFieldsRemover from "../Removers/overnightCheckboxFieldsRemover.js";
+import currentFamilyMemberRecordsContainerRemover from "../removers/currentFamilyMemberRecordsContainerRemover.js";
+import numPeopleInputErrorRemover from "../removers/numPeopleInputErrorRemover.js";
+import DayUseOnlyNumberOfPeopleRemover from "../removers/dayUseOnlyCheckboxFieldsRemover.js";
+import sleepOnGroundCheckboxFieldsRemover from "../removers/sleepOnGroundCheckboxFieldsRemover.js";
+import chaletCheckboxFieldsRemover from "../removers/chaletCheckboxFieldsRemover.js";
+import rvCheckboxFieldsRemover from "../removers/rvCheckboxFieldsRemover.js";
+import tentCheckboxFieldsRemover from "../removers/tentCheckboxFieldsRemover.js";
+import overnightCheckboxFieldsRemover from "../removers/overnightCheckboxFieldsRemover.js";
 
 const resetProcessor = {
   Process() {

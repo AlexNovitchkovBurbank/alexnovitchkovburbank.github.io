@@ -1,6 +1,6 @@
-import tentCalculator from "../../form/Calculators/tentCalculator.js";
-import tentCostContainerCreator from "../../form/Creators/tentCostContainerCreator.js";
-import formBodyAppender from '../../form/Appenders/formBodyAppender.js';
+import tentCalculator from "../../form/calculators/tentCalculator.js";
+import tentCostContainerCreator from "../../form/creators/tentCostContainerCreator.js";
+import formBodyAppender from '../../form/appenders/formBodyAppender.js';
 
 const calculatePriceForTentProcessor = {
     Process() {

@@ -1,5 +1,5 @@
 import { overnightPricesOver6People, overnightBaseRate } from "../../overnightPrices.js";
-import stringToIntConverter from "../Converters/stringToIntConverter.js";
+import stringToIntConverter from "../converters/stringToIntConverter.js";
 
 const overnightCalculator = {
     Calculate() {
