@@ -1,9 +1,9 @@
-import chaletPricingProcessor from "./Processors/chaletPricingProcessor.js";
-import rvPricingProcessor from "./Processors/rvPricingProcessor.js";
-import tentPricingProcessor from "./Processors/tentPricingProcessor.js";
-import overnightPricingProcessor from "./Processors/overnightPricingProcessor.js";
-import dayUseOnlyPricingProcessor from "./Processors/dayUseOnlyPricingProcessor.js";
-import individualMealPricingProcessor from "./Processors/individualMealPricingProcessor.js";
+import chaletPricingProcessor from "./processors/chaletPricingProcessor.js";
+import rvPricingProcessor from "./processors/rvPricingProcessor.js";
+import tentPricingProcessor from "./processors/tentPricingProcessor.js";
+import overnightPricingProcessor from "./processors/overnightPricingProcessor.js";
+import dayUseOnlyPricingProcessor from "./processors/dayUseOnlyPricingProcessor.js";
+import individualMealPricingProcessor from "./processors/individualMealPricingProcessor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const chaletPricingButton = document.querySelector("#chalet-pricing-button");
