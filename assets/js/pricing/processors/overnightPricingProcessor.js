@@ -1,15 +1,15 @@
 import overnightPricingContainerCreator from "../creators/overnightPricingContainerCreator.js";
 import mainPricingContainerAppender from "../appenders/mainPricingContainerAppender.js";
-import CurrentPricingContainersRemover from "../removers/CurrentPricingContainersRemover.js";
+import currentPricingContainersRemover from "../removers/currentPricingContainersRemover.js";
 
 const overnightPricingProcessor = {
     Process() {
         const mainOvernightPricingContainer = document.querySelector("#overnight-pricing-container");
-      if (mainOvernightPricingContainer !== null) CurrentPricingContainersRemover.Remove();
+      if (mainOvernightPricingContainer !== null) currentPricingContainersRemover.Remove();
       else {
         const container = overnightPricingContainerCreator.Create();
 
-        CurrentPricingContainersRemover.Remove();
+        currentPricingContainersRemover.Remove();
 
         mainPricingContainerAppender.Append(container);
       }

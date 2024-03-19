@@ -1,4 +1,4 @@
-import {numPeopleOver6InTentFor5NightsPrices, tentBaseRate} from "../../TentPrices.js";
+import {numPeopleOver6InTentFor5NightsPrices, tentBaseRate} from "../../tentPrices.js";
 
 const tentPricingContainerCreator = {
   Create() {

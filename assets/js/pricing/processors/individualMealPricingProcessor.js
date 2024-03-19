@@ -1,6 +1,6 @@
 import individualMealPricingContainerCreator from "../creators/individualMealPricingContainerCreator.js";
 import mainPricingContainerAppender from "../appenders/mainPricingContainerAppender.js";
-import CurrentPricingContainersRemover from "../removers/CurrentPricingContainersRemover.js";
+import currentPricingContainersRemover from "../removers/currentPricingContainersRemover.js";
 
 const individualMealPricingProcessor = {
   Process() {
@@ -8,11 +8,11 @@ const individualMealPricingProcessor = {
       "#individual-meal-pricing-container"
     );
     if (mainIndividualMealPricingContainer !== null)
-      CurrentPricingContainersRemover.Remove();
+      currentPricingContainersRemover.Remove();
     else {
       const container = individualMealPricingContainerCreator.Create();
 
-      CurrentPricingContainersRemover.Remove();
+      currentPricingContainersRemover.Remove();
 
       mainPricingContainerAppender.Append(container);
     }

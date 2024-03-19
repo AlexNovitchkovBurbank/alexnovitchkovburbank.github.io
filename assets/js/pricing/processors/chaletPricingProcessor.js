@@ -1,6 +1,6 @@
 import chaletPricingContainerCreator from "../creators/chaletPricingContainerCreator.js";
 import mainPricingContainerAppender from "../appenders/mainPricingContainerAppender.js";
-import CurrentPricingContainersRemover from "../removers/CurrentPricingContainersRemover.js";
+import currentPricingContainersRemover from "../removers/currentPricingContainersRemover.js";
 
 const chaletPricingProcessor = {
   Process() {
@@ -8,11 +8,11 @@ const chaletPricingProcessor = {
       "#chalet-pricing-container"
     );
     if (mainChaletPricingContainer !== null)
-      CurrentPricingContainersRemover.Remove();
+      currentPricingContainersRemover.Remove();
     else {
       const container = chaletPricingContainerCreator.Create();
 
-      CurrentPricingContainersRemover.Remove();
+      currentPricingContainersRemover.Remove();
 
       mainPricingContainerAppender.Append(container);
     }
