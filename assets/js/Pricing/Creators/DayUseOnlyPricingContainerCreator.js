@@ -1,4 +1,4 @@
-import { dayUseOnlyPricesOver6People, dayUseOnlyBaseRate } from "../../dayUseOnlyPrices.js";
+import { dayUseOnlyPricesOver6People, dayUseOnlyBaseRate } from "../../DayUseOnlyPrices.js";
 
 const dayUseOnlyPricingContainerCreator = {
   Create() {

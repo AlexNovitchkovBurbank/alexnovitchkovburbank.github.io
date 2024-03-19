@@ -1,4 +1,4 @@
-import {numPeopleOver6InRvFor5NightsPrices, rvBaseRate} from "../../rvPrices.js";
+import {numPeopleOver6InRvFor5NightsPrices, rvBaseRate} from "../../RvPrices.js";
 
 const rvPricingContainerCreator = {
   Create() {
