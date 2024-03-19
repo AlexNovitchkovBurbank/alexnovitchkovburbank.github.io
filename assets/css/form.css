@@ -41,3 +41,65 @@ form {
 .input-error {
     border: 1px solid red;
   }
+
+#first-meal-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#first-meal-container-text {
+  text-align: center;
+  margin-bottom: -2%;
+}
+
+#first-meal-container-with-fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#first-meal-day-field-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#first-meal-meal-field-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#last-meal-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#last-meal-container-text {
+  text-align: center;
+  margin-bottom: -2%;
+}
+
+#last-meal-container-with-fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#last-meal-day-field-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#last-meal-meal-field-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.selector {
+  background-color: lightblue;
+  color: black;
+  border-radius: 10%;
+}

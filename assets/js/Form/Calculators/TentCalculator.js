@@ -47,12 +47,12 @@ const TentCalculator = {
     ) {
       total = NaN;
     } else {
-      if (numPeopleInputValueAsNum >= 6 && numPeopleInputValueAsNum <= 13) {
+      if (numPeopleInputValueAsNum > 6 && numPeopleInputValueAsNum <= 13) {
         total =
-          tentBaseRate + (numPeopleOver6InTentFor5NightsPrices[(numPeopleInputValueAsNum + 1) - 6]) *
+          tentBaseRate + (numPeopleOver6InTentFor5NightsPrices[(numPeopleInputValueAsNum - 1) - 6]) *
           numTentsInputValueAsNum *
           numNightsInputValueAsNum;
-      } else if (numPeopleInputValueAsNum > 0 && numPeopleInputValueAsNum < 6) {
+      } else if (numPeopleInputValueAsNum > 0 && numPeopleInputValueAsNum <= 6) {
         total = tentBaseRate * numTentsInputValueAsNum * numNightsInputValueAsNum;
       } else {
         total = NaN;

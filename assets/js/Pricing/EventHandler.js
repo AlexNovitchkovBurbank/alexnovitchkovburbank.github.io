@@ -3,6 +3,7 @@ import RvPricingProcessor from "./Processors/RvPricingProcessor.js";
 import TentPricingProcessor from "./Processors/TentPricingProcessor.js";
 import OvernightPricingProcessor from "./Processors/OvernightPricingProcessor.js";
 import DayUseOnlyPricingProcessor from "./Processors/DayUseOnlyPricingProcessor.js";
+import IndividualMealPricingProcessor from "./Processors/IndividualMealPricingProcessor.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const chaletPricingButton = document.querySelector("#chalet-pricing-button");
@@ -37,6 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (dayUseOnlyPricingButton !== null) {
     dayUseOnlyPricingButton.addEventListener("click", () => {
       DayUseOnlyPricingProcessor.Process();
+    });
+  }
+
+  const individualMealsPricingButton = document.querySelector("#individual-meal-pricing-button");
+  if (individualMealsPricingButton !== null) {
+    individualMealsPricingButton.addEventListener("click", () => {
+      IndividualMealPricingProcessor.Process();
     });
   }
 });

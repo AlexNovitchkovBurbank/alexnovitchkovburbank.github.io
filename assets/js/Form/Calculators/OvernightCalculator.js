@@ -25,10 +25,10 @@ const OvernightCalculator = {
             total = NaN;
         }
         else {
-            if (numPeopleInputValueAsNum >= 6 && numPeopleInputValueAsNum <= 13) {
-                total = (overnightBaseRate + overnightPricesOver6People[(numPeopleInputValueAsNum + 1) - 6]) * numNightsInputValueAsNum;
+            if (numPeopleInputValueAsNum > 6 && numPeopleInputValueAsNum <= 13) {
+                total = (overnightBaseRate + overnightPricesOver6People[(numPeopleInputValueAsNum - 1) - 6]) * numNightsInputValueAsNum;
             }
-            else if (numPeopleInputValueAsNum < 6 && numPeopleInputValueAsNum >= 0) {
+            else if (numPeopleInputValueAsNum <= 6 && numPeopleInputValueAsNum > 0) {
                 total = overnightBaseRate * numNightsInputValueAsNum;
             }
             else

@@ -50,12 +50,12 @@ const ChaletCalculator = {
     ) {
       total = NaN;
     } else {
-      if (numPeopleInputValueAsNum >= 6 && numPeopleInputValueAsNum <= 13) {
+      if (numPeopleInputValueAsNum > 6 && numPeopleInputValueAsNum <= 13) {
         total =
-          (chaletBaseRate + numPeopleOver6InChaletFor5NightsPrices[(numPeopleInputValueAsNum + 1) - 6]) *
+          (chaletBaseRate + numPeopleOver6InChaletFor5NightsPrices[(numPeopleInputValueAsNum - 1) - 6]) *
           numBedsInputValueAsNum *
           numNightsInputValueAsNum;
-      } else if (numPeopleInputValueAsNum > 0 && numPeopleInputValueAsNum < 6) {
+      } else if (numPeopleInputValueAsNum > 0 && numPeopleInputValueAsNum <= 6) {
         total =
           chaletBaseRate * numBedsInputValueAsNum * numNightsInputValueAsNum;
       } else {

@@ -45,12 +45,12 @@ const RvCalculator = {
     ) {
       total = NaN;
     } else {
-      if (numPeopleInputValueAsNum >= 6 && numPeopleInputValueAsNum <= 13) {
+      if (numPeopleInputValueAsNum > 6 && numPeopleInputValueAsNum <= 13) {
         total =
-          (rvBaseRate + numPeopleOver6InRvFor5NightsPrices[(numPeopleInputValueAsNum + 1) - 6]) *
+          (rvBaseRate + numPeopleOver6InRvFor5NightsPrices[(numPeopleInputValueAsNum - 1) - 6]) *
           numRvsInputValueAsNum *
           numNightsInputValueAsNum;
-      } else if (numPeopleInputValueAsNum > 0 && numPeopleInputValueAsNum < 6) {
+      } else if (numPeopleInputValueAsNum > 0 && numPeopleInputValueAsNum <= 6) {
         total = rvBaseRate * numRvsInputValueAsNum * numNightsInputValueAsNum;
       } else {
         total = NaN;

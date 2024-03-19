@@ -18,7 +18,7 @@ const TentPricingContainerCreator = {
 
       if (i === 1) descriptionContainer.textContent = `${i} person over 6`;
       else descriptionContainer.textContent = `${i} people over 6`;
-      priceContainer.textContent = numPeopleOver6InTentFor5NightsPrices[i - 1];
+      priceContainer.textContent = `$${numPeopleOver6InTentFor5NightsPrices[i - 1]}`;
 
       descriptionPriceContainer.appendChild(descriptionContainer);
       descriptionPriceContainer.appendChild(priceContainer);

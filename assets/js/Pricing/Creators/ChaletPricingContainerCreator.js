@@ -1,4 +1,4 @@
-import {chaletPricesOver6People, chaletBaseRate} from "../../ChaletPrices.js";
+import {numPeopleOver6InChaletFor5NightsPrices, chaletBaseRate} from "../../ChaletPrices.js";
 
 const ChaletPricingContainerCreator = {
   Create() {
@@ -18,7 +18,7 @@ const ChaletPricingContainerCreator = {
 
       if (i === 1) descriptionContainer.textContent = `${i} person over 6`;
       else descriptionContainer.textContent = `${i} people over 6`;
-      priceContainer.textContent = chaletPricesOver6People[i - 1];
+      priceContainer.textContent = `$${numPeopleOver6InChaletFor5NightsPrices[i - 1]}`;
 
       descriptionPriceContainer.appendChild(descriptionContainer);
       descriptionPriceContainer.appendChild(priceContainer);

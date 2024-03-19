@@ -160,23 +160,100 @@ const FamilyInfoContainerCreator = {
     dayUseOnlyCheckboxFieldContainer.appendChild(dayUseOnlyCheckbox);
     dayUseOnlyCheckboxContainer.appendChild(dayUseOnlyCheckboxFieldContainer);
 
-    const firstMealOption1 = document.createElement("option");
-    firstMealOption1.text = "Breakfast";
-    const firstMealOption2 = document.createElement("option");
-    firstMealOption2.text = "Lunch";
-    const firstMealOption3 = document.createElement("option");
-    firstMealOption3.text = "Dinner";
-    const firstMealContainer = document.createElement("div");
-    const firstMealDayFieldContainer = document.createElement("div");
-    const firstMealMealFieldContainer = document.createElement("div");
-    const firstMealMealLabel = document.createElement("label");
-    firstMealMealLabel.textContent = "First meal";
-    const firstMealMealSelector = document.createElement("select");
-    firstMealMealSelector.add(firstMealOption1);
-    firstMealMealSelector.add(firstMealOption2);
-    firstMealMealSelector.add(firstMealOption3);
-    const lastMealContainer = document.createElement("div");
+    const days = ["Sunday", "Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday"];
+    const meals = ["Breakfast", "Lunch", "Dinner"];
 
+    const firstMealContainer = document.createElement("div");
+    firstMealContainer.id = "first-meal-container";
+    const firstMealContainerText = document.createElement("p");
+    firstMealContainerText.textContent = "First meal";
+    firstMealContainerText.id = "first-meal-container-text";
+    const firstMealContainerWithFields = document.createElement("div");
+    firstMealContainerWithFields.id = "first-meal-container-with-fields";
+    const firstMealDayFieldContainer = document.createElement("div");
+    firstMealDayFieldContainer.id = "first-meal-day-field-container";
+    const firstMealDayLabel = document.createElement("label");
+    firstMealDayLabel.textContent = "day";
+    firstMealDayLabel.htmlFor = "first-meal-day-selector";
+    const firstMealDaySelector = document.createElement("select");
+    firstMealDaySelector.required = true;
+    firstMealDaySelector.name = "day-of-first-meal";
+    firstMealDaySelector.className = "selector";
+    firstMealDaySelector.id = "first-meal-day-selector";
+    for (let i = 0; i < 7; i++) {
+      const dayOption = document.createElement("option");
+      dayOption.text = days[i];
+      firstMealDaySelector.add(dayOption);
+    }
+    firstMealDayFieldContainer.appendChild(firstMealDayLabel);
+    firstMealDayFieldContainer.appendChild(firstMealDaySelector);
+    const firstMealMealFieldContainer = document.createElement("div");
+    firstMealMealFieldContainer.id = "first-meal-meal-field-container";
+    const firstMealMealLabel = document.createElement("label");
+    firstMealMealLabel.textContent = "meal";
+    firstMealMealLabel.htmlFor = "first-meal-meal-selector";
+    const firstMealMealSelector = document.createElement("select");
+    firstMealMealSelector.required = true;
+    firstMealMealSelector.name = "first-meal";
+    firstMealMealSelector.className = "selector";
+    firstMealMealSelector.id = "first-meal-meal-selector";
+    for (let i = 0; i < 3; i++) {
+      const dayOption = document.createElement("option");
+      dayOption.text = meals[i];
+      firstMealMealSelector.add(dayOption);
+    }
+    firstMealMealFieldContainer.appendChild(firstMealMealLabel);
+    firstMealMealFieldContainer.appendChild(firstMealMealSelector);
+    firstMealContainerWithFields.appendChild(firstMealDayFieldContainer);
+    firstMealContainerWithFields.appendChild(firstMealMealFieldContainer);
+    firstMealContainer.appendChild(firstMealContainerText);
+    firstMealContainer.appendChild(firstMealContainerWithFields);
+
+    const lastMealContainer = document.createElement("div");
+    lastMealContainer.id = "last-meal-container";
+    const lastMealContainerText = document.createElement("p");
+    lastMealContainerText.id = "last-meal-container-text";
+    lastMealContainerText.textContent = "Last meal";
+    const lastMealContainerWithFields = document.createElement("div");
+    lastMealContainerWithFields.id = "last-meal-container-with-fields";
+    const lastMealDayFieldContainer = document.createElement("div");
+    lastMealDayFieldContainer.id = "last-meal-day-field-container";
+    const lastMealDayLabel = document.createElement("label");
+    lastMealDayLabel.textContent = "day";
+    lastMealDayLabel.htmlFor = "last-meal-day-selector";
+    const lastMealDaySelector = document.createElement("select");
+    lastMealDaySelector.required = true;
+    lastMealDaySelector.name = "day-of-last-meal";
+    lastMealDaySelector.className = "selector";
+    lastMealDaySelector.id = "last-meal-day-selector";
+    for (let i = 0; i < 7; i++) {
+      const dayOption = document.createElement("option");
+      dayOption.text = days[i];
+      lastMealDaySelector.add(dayOption);
+    }
+    lastMealDayFieldContainer.appendChild(lastMealDayLabel);
+    lastMealDayFieldContainer.appendChild(lastMealDaySelector);
+    const lastMealMealFieldContainer = document.createElement("div");
+    lastMealMealFieldContainer.id = "last-meal-meal-field-container";
+    const lastMealMealLabel = document.createElement("label");
+    lastMealMealLabel.textContent = "meal";
+    lastMealDayLabel.htmlFor = "last-meal-meal-selector";
+    const lastMealMealSelector = document.createElement("select");
+    lastMealMealSelector.required = true;
+    lastMealMealSelector.name = "last-meal";
+    lastMealMealSelector.className = "selector";
+    lastMealMealSelector.id = "last-meal-meal-selector";
+    for (let i = 0; i < 3; i++) {
+      const dayOption = document.createElement("option");
+      dayOption.text = meals[i];
+      lastMealMealSelector.add(dayOption);
+    }
+    lastMealMealFieldContainer.appendChild(lastMealMealLabel);
+    lastMealMealFieldContainer.appendChild(lastMealMealSelector);
+    lastMealContainerWithFields.appendChild(lastMealDayFieldContainer);
+    lastMealContainerWithFields.appendChild(lastMealMealFieldContainer);
+    lastMealContainer.appendChild(lastMealContainerText);
+    lastMealContainer.appendChild(lastMealContainerWithFields);
 
     
     familyInfoContainer.appendChild(familyNameFieldContainer);
@@ -192,6 +269,8 @@ const FamilyInfoContainerCreator = {
     familyInfoContainer.appendChild(sleepOnGroundCheckboxContainer);
     familyInfoContainer.appendChild(stayOvernightCheckboxContainer);
     familyInfoContainer.appendChild(dayUseOnlyCheckboxContainer);
+    familyInfoContainer.appendChild(firstMealContainer);
+    familyInfoContainer.appendChild(lastMealContainer);
 
     return familyInfoContainer;
   },

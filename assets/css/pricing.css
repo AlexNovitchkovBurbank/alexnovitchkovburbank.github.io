@@ -1,8 +1,14 @@
-#pricing-types-side-by-side {
+#not-individual-meals-pricing-types-side-by-side {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 20px;
+}
+
+#individual-meal-pricing-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .pricing-type-section {
@@ -55,6 +61,13 @@
 }
 
 #day-use-only-pricing-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+#individual-meal-pricing-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
