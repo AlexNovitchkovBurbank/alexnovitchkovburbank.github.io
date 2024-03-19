@@ -59,7 +59,7 @@ const ChaletCalculator = {
         total =
           chaletBaseRate * numBedsInputValueAsNum * numNightsInputValueAsNum;
       } else {
-        total = NaN;
+        total = NaN; 
       }
     }
 
