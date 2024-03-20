@@ -1,4 +1,4 @@
-const numPeopleFieldContainerCreator = {
+const mainNumPeopleFieldContainerCreator = {
     Create() {
       const inputFieldContainer =
         document.createElement("div");
@@ -19,4 +19,4 @@ const numPeopleFieldContainerCreator = {
     },
   };
   
-  export default numPeopleFieldContainerCreator;
+  export default mainNumPeopleFieldContainerCreator;

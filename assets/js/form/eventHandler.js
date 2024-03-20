@@ -13,6 +13,11 @@ import calculatePriceForTentProcessor from "./processors/calculatePriceForTentPr
 import calculatePriceForDayUseOnlyProcessor from "./processors/calculatePriceForDayUseOnlyProcessor.js";
 import calculateOvernightPriceProcessor from "./processors/calculateOvernightPriceProcessor.js";
 import stringToIntConverter from "./converters/stringToIntConverter.js";
+import chaletCostContainerRemover from "./removers/chaletCostContainerRemover.js";
+import rvCostContainerRemover from "./removers/rvCostContainerRemover.js";
+import tentCostContainerRemover from "./removers/tentCostContainerRemover.js";
+import dayUseOnlyCostContainerRemover from "./removers/dayUseOnlyCostContainerRemover.js";
+import overnightCostContainerRemover from "./removers/overnightCostContainerRemover.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   familyInfoProcessor.Process();
@@ -101,6 +106,7 @@ function chaletCheckboxHandler() {
               !isNaN(chaletCheckboxNumNightsText)
             )
               calculatePriceForChaletProcessor.Process();
+            else chaletCostContainerRemover.Remove();
           });
         }
 
@@ -134,6 +140,7 @@ function chaletCheckboxHandler() {
               !isNaN(chaletCheckboxNumBedsInputText)
             )
               calculatePriceForChaletProcessor.Process();
+            else chaletCostContainerRemover.Remove();
           });
         }
 
@@ -166,6 +173,7 @@ function chaletCheckboxHandler() {
               !isNaN(chaletCheckboxNumNightsText)
             )
               calculatePriceForChaletProcessor.Process();
+            else chaletCostContainerRemover.Remove();
           });
         }
       }
@@ -219,6 +227,7 @@ function rvCheckboxHandler() {
               !isNaN(rvCheckboxNumNightsText)
             )
               calculatePriceForRvProcessor.Process();
+            else rvCostContainerRemover.Remove();
           });
         }
 
@@ -253,6 +262,7 @@ function rvCheckboxHandler() {
               !isNaN(rvCheckboxNumRvsInputText)
             )
               calculatePriceForRvProcessor.Process();
+            else rvCostContainerRemover.Remove();
           });
         }
 
@@ -286,6 +296,7 @@ function rvCheckboxHandler() {
               !isNaN(rvCheckboxNumNightsText)
             )
               calculatePriceForRvProcessor.Process();
+            else rvCostContainerRemover.Remove();
           });
         }
       }
@@ -339,6 +350,7 @@ function tentCheckboxHandler() {
               !isNaN(tentCheckboxNumNightsText)
             )
               calculatePriceForTentProcessor.Process();
+            else tentCostContainerRemover.Remove();
           });
         }
 
@@ -373,6 +385,7 @@ function tentCheckboxHandler() {
               !isNaN(tentCheckboxNumTentsInputText)
             )
               calculatePriceForTentProcessor.Process();
+            else tentCostContainerRemover.Remove();
           });
         }
 
@@ -406,6 +419,7 @@ function tentCheckboxHandler() {
               !isNaN(tentCheckboxNumNightsText)
             )
               calculatePriceForTentProcessor.Process();
+            else tentCostContainerRemover.Remove();
           });
         }
       }
@@ -414,9 +428,7 @@ function tentCheckboxHandler() {
 }
 
 function dayUseOnlyCheckboxHandler() {
-  const dayUseOnlyCheckbox = document.querySelector(
-    "#day-use-only-checkbox"
-  );
+  const dayUseOnlyCheckbox = document.querySelector("#day-use-only-checkbox");
 
   if (dayUseOnlyCheckbox !== null) {
     dayUseOnlyCheckbox.addEventListener("change", () => {
@@ -446,6 +458,7 @@ function dayUseOnlyCheckboxHandler() {
             !isNaN(dayUseOnlyCheckboxNumNightsText)
           )
             calculatePriceForDayUseOnlyProcessor.Process();
+          else dayUseOnlyCostContainerRemover.Remove();
         });
       }
 
@@ -472,6 +485,7 @@ function dayUseOnlyCheckboxHandler() {
             !isNaN(dayUseOnlyCheckboxNumNightsText)
           )
             calculatePriceForDayUseOnlyProcessor.Process();
+          else dayUseOnlyCostContainerRemover.Remove();
         });
       }
     });
@@ -507,6 +521,7 @@ function overnightCheckboxHandler() {
             !isNaN(overnightCheckboxNumNightsText)
           )
             calculateOvernightPriceProcessor.Process();
+          else overnightCostContainerRemover.Remove();
         });
       }
 
@@ -531,6 +546,7 @@ function overnightCheckboxHandler() {
             !isNaN(overnightCheckboxNumNightsText)
           )
             calculateOvernightPriceProcessor.Process();
+          else overnightCostContainerRemover.Remove();
         });
       }
     });

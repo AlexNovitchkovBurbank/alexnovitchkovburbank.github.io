@@ -1,4 +1,4 @@
-import numPeopleFieldContainerCreator from "./numPeopleFieldContainerCreator.js";
+import mainNumPeopleFieldContainerCreator from "./mainNumPeopleFieldContainerCreator.js";
 
 const familyInfoContainerCreator = {
   Create() {
@@ -88,7 +88,7 @@ const familyInfoContainerCreator = {
     churchCityFieldContainer.appendChild(churchCityLabel);
     churchCityFieldContainer.appendChild(churchCityInput);
 
-    const numPeopleFieldContainer = numPeopleFieldContainerCreator.Create();
+    const numPeopleFieldContainer = mainNumPeopleFieldContainerCreator.Create();
 
     const requestStaffAndVolunteerInformationCheckboxContainer = document.createElement("div");
     const requestStaffAndVolunteerInformationLabel = document.createElement("label");
