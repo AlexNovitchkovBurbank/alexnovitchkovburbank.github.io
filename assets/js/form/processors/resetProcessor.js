@@ -6,6 +6,11 @@ import chaletCheckboxFieldsRemover from "../removers/chaletCheckboxFieldsRemover
 import rvCheckboxFieldsRemover from "../removers/rvCheckboxFieldsRemover.js";
 import tentCheckboxFieldsRemover from "../removers/tentCheckboxFieldsRemover.js";
 import overnightCheckboxFieldsRemover from "../removers/overnightCheckboxFieldsRemover.js";
+import chaletCostContainerRemover from "../removers/chaletCostContainerRemover.js";
+import rvCostContainerRemover from "../removers/rvCostContainerRemover.js";
+import tentCostContainerRemover from "../removers/tentCostContainerRemover.js";
+import overnightCostContainerRemover from "../removers/overnightCostContainerRemover.js";
+import dayUseOnlyCostContainerRemover from "../removers/dayUseOnlyCostContainerRemover.js";
 
 const resetProcessor = {
   Process() {
@@ -19,6 +24,11 @@ const resetProcessor = {
     overnightCheckboxFieldsRemover.Remove();
     DayUseOnlyNumberOfPeopleRemover.Remove();
     currentFamilyMemberRecordsContainerRemover.Remove();
+    chaletCostContainerRemover.Remove();
+    rvCostContainerRemover.Remove();
+    tentCostContainerRemover.Remove();
+    overnightCostContainerRemover.Remove();
+    dayUseOnlyCostContainerRemover.Remove();
   },
 };
 

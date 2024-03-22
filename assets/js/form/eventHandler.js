@@ -108,6 +108,8 @@ function chaletCheckboxHandler() {
               !isNaN(chaletCheckboxNumNightsText)
             )
               chaletInputValuesProcessor.Process();
+            // else if (isNaN(chaletCheckboxNumPeopleInputText))
+            //   // subtract the previous known value for num people from the num people accounted for
             else chaletCostContainerRemover.Remove();
           });
         }

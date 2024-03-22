@@ -5,7 +5,7 @@ const updatedNumPeopleAccountedForStorer = {
         if (numPeopleAccountedForInput === null)
             throw new Error("num people accounted form input field is null");
 
-        numPeopleAccountedForInput.textContent = updatedNumPeopleAccountedFor;
+        numPeopleAccountedForInput.value = updatedNumPeopleAccountedFor;
     }
 }
 
