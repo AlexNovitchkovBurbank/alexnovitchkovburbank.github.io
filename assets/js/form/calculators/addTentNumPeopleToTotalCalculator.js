@@ -22,7 +22,7 @@ const addTentNumPeopleToTotalCalculator = {
             if (isNaN(numPeopleAccountedFor))
                 throw new Error("The number of people accounted for is not a number");
 
-            if (!isNaN(tentNumPeople) && tentNumPeople < 0) {
+            if (!isNaN(tentNumPeople) && tentNumPeople >= 0) {
                 return numPeopleAccountedFor + tentNumPeople;
             }
 

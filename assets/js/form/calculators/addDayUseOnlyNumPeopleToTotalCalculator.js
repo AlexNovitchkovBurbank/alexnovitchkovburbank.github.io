@@ -22,7 +22,7 @@ const addDayUseOnlyNumPeopleToTotalCalculator = {
             if (isNaN(numPeopleAccountedFor))
                 throw new Error("The number of people accounted for is not a number");
 
-            if (!isNaN(dayUseOnlyNumPeople) && dayUseOnlyNumPeople < 0) {
+            if (!isNaN(dayUseOnlyNumPeople) && dayUseOnlyNumPeople >= 0) {
                 return numPeopleAccountedFor + dayUseOnlyNumPeople;
             }
 

@@ -22,7 +22,7 @@ const addRvNumPeopleToTotalCalculator = {
             if (isNaN(numPeopleAccountedFor))
                 throw new Error("The number of people accounted for is not a number");
 
-            if (!isNaN(rvNumPeople) && rvNumPeople < 0) {
+            if (!isNaN(rvNumPeople) && rvNumPeople >= 0) {
                 return numPeopleAccountedFor + rvNumPeople;
             }
 
