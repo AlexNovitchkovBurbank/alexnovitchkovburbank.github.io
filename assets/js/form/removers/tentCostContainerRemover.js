@@ -7,10 +7,8 @@ const tentCostContainerRemover = {
 
         const tentCost = formBody.querySelector("#tent-cost");
 
-        if (tentCost === null)
-            throw new Error("There is no tent cost container to remove");
-
-        formBody.removeChild(tentCost);
+        if (tentCost !== null)
+            formBody.removeChild(tentCost);
     }
 }
 

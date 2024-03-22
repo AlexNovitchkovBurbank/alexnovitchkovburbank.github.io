@@ -7,10 +7,8 @@ const overnightCostContainerRemover = {
 
         const overnightCost = formBody.querySelector("#overnight-cost");
 
-        if (overnightCost === null)
-            throw new Error("There is no overnight cost container to remove");
-
-        formBody.removeChild(overnightCost);
+        if (overnightCost !== null)
+            formBody.removeChild(overnightCost);
     }
 }
 

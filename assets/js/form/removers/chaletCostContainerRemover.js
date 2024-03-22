@@ -7,10 +7,8 @@ const chaletCostContainerRemover = {
 
         const chaletCost = formBody.querySelector("#chalet-cost");
 
-        if (chaletCost === null)
-            throw new Error("There is no chalet cost container to remove");
-
-        formBody.removeChild(chaletCost);
+        if (chaletCost !== null)
+            formBody.removeChild(chaletCost);
     }
 }
 

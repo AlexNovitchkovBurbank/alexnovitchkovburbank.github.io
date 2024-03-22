@@ -7,10 +7,8 @@ const dayUseOnlyCostContainerRemover = {
 
         const dayUseOnlyCost = formBody.querySelector("#day-use-only-cost");
 
-        if (dayUseOnlyCost === null)
-            throw new Error("There is no dayUseOnly cost container to remove");
-
-        formBody.removeChild(dayUseOnlyCost);
+        if (dayUseOnlyCost !== null)
+            formBody.removeChild(dayUseOnlyCost);
     }
 }
 

@@ -11,6 +11,7 @@ import rvCostContainerRemover from "../removers/rvCostContainerRemover.js";
 import tentCostContainerRemover from "../removers/tentCostContainerRemover.js";
 import overnightCostContainerRemover from "../removers/overnightCostContainerRemover.js";
 import dayUseOnlyCostContainerRemover from "../removers/dayUseOnlyCostContainerRemover.js";
+import setInitialValueForNumPeopleAccountedForInputProcessor from "./setInitialValueForNumPeopleAccountedForInputProcessor.js";
 
 const resetProcessor = {
   Process() {
@@ -29,6 +30,7 @@ const resetProcessor = {
     tentCostContainerRemover.Remove();
     overnightCostContainerRemover.Remove();
     dayUseOnlyCostContainerRemover.Remove();
+    setInitialValueForNumPeopleAccountedForInputProcessor.Process();
   },
 };
 
