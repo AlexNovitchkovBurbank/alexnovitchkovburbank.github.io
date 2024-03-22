@@ -1,7 +1,7 @@
 import { rvBaseRate, numPeopleOver6InRvFor5NightsPrices } from "../../rvPrices.js";
 import stringToIntConverter from "../converters/stringToIntConverter.js";
 
-const rvCalculator = {
+const rvCpstCalculator = {
   Calculate() {
     const numNightsInput = document.querySelector(
       "#num-nights-input-for-rv-checkbox"
@@ -15,17 +15,17 @@ const rvCalculator = {
 
     if (numRvsInput === null)
       throw new Error(
-        "Number of rvs input does not exist for the rv stay container"
+        "Number of rvs input field does not exist for the rv stay container"
       );
 
     if (numNightsInput === null)
       throw new Error(
-        "Number of nights input does not exist for the rv stay container"
+        "Number of nights input field does not exist for the rv stay container"
       );
 
     if (numPeopleInput === null)
       throw new Error(
-        "Number of people input does not exist for the rv stay container"
+        "Number of people input field does not exist for the rv stay container"
       );
 
     let numNightsInputValueAsNum = stringToIntConverter.Convert(
@@ -61,4 +61,4 @@ const rvCalculator = {
   },
 };
 
-export default rvCalculator;
+export default rvCpstCalculator;

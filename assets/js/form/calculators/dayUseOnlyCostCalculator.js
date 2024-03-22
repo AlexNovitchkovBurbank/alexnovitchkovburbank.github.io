@@ -1,16 +1,16 @@
 import { dayUseOnlyBaseRate, dayUseOnlyPricesOver6People } from "../../dayUseOnlyPrices.js";
 import stringToIntConverter from "../converters/stringToIntConverter.js";
 
-const dayUseOnlyCalculator = {
+const dayUseOnlyCostCalculator = {
     Calculate() {
         const numDaysInput = document.querySelector("#num-days-input-for-day-use-only-checkbox");
         const numPeopleInput = document.querySelector("#num-people-input-for-day-use-only-checkbox");
 
         if (numPeopleInput === null)
-            throw new Error("Number of people input does not exist for the day use only container");
+            throw new Error("Number of people input field does not exist for the day use only container");
 
         if (numDaysInput === null)
-            throw new Error("Number of days input does not exist for the day use only container");
+            throw new Error("Number of days input field does not exist for the day use only container");
 
         const numDaysInputValueAsNum = stringToIntConverter.Convert(numDaysInput.value);
         const numPeopleInputValueAsNum = stringToIntConverter.Convert(numPeopleInput.value);
@@ -33,4 +33,4 @@ const dayUseOnlyCalculator = {
     }
 }
 
-export default dayUseOnlyCalculator;
+export default dayUseOnlyCostCalculator;

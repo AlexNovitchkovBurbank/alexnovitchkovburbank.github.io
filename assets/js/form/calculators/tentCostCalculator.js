@@ -1,7 +1,7 @@
 import { tentBaseRate, numPeopleOver6InTentFor5NightsPrices } from "../../tentPrices.js";
 import stringToIntConverter from "../converters/stringToIntConverter.js";
 
-const tentCalculator = {
+const tentCostCalculator = {
   Calculate() {
     const numNightsInput = document.querySelector(
       "#num-nights-input-for-tent-checkbox"
@@ -15,17 +15,17 @@ const tentCalculator = {
 
     if (numTentsInput === null)
       throw new Error(
-        "Number of tents input does not exist for the tent container"
+        "Number of tents input field does not exist for the tent container"
       );
 
     if (numNightsInput === null)
       throw new Error(
-        "Number of nights input does not exist for the tent container"
+        "Number of nights input field does not exist for the tent container"
       );
 
     if (numPeopleInput === null)
       throw new Error(
-        "Number of people input does not exist for the tent container"
+        "Number of people input field does not exist for the tent container"
       );
 
     let numNightsInputValueAsNum = stringToIntConverter.Convert(
@@ -63,4 +63,4 @@ const tentCalculator = {
   },
 };
 
-export default tentCalculator;
+export default tentCostCalculator;

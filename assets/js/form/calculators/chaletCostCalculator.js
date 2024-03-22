@@ -4,7 +4,7 @@ import {
 } from "../../chaletPrices.js";
 import stringToIntConverter from "../converters/stringToIntConverter.js";
 
-const chaletCalculator = {
+const chaletCostCalculator = {
   Calculate() {
     const numNightsInput = document.querySelector(
       "#num-nights-input-for-chalet-checkbox"
@@ -18,17 +18,17 @@ const chaletCalculator = {
 
     if (numBedsInput === null)
       throw new Error(
-        "Number of beds input does not exist for the chalet container"
+        "Number of beds input field does not exist for the chalet container"
       );
 
     if (numPeopleInput === null)
       throw new Error(
-        "Number of people input does not exist for the chalet container"
+        "Number of people input field does not exist for the chalet container"
       );
 
     if (numNightsInput === null)
       throw new Error(
-        "Number of nights input does not exist for the chalet container"
+        "Number of nights input field does not exist for the chalet container"
       );
 
     let numNightsInputValueAsNum = stringToIntConverter.Convert(
@@ -67,4 +67,4 @@ const chaletCalculator = {
   },
 };
 
-export default chaletCalculator;
+export default chaletCostCalculator;

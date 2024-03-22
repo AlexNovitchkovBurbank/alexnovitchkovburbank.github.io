@@ -1,16 +1,16 @@
 import { overnightPricesOver6People, overnightBaseRate } from "../../overnightPrices.js";
 import stringToIntConverter from "../converters/stringToIntConverter.js";
 
-const overnightCalculator = {
+const overnightCostCalculator = {
     Calculate() {
         const numNightsInput = document.querySelector("#num-nights-input-for-overnight-checkbox");
         const numPeopleInput = document.querySelector("#num-people-input-for-overnight-checkbox");
 
         if (numPeopleInput === null)
-            throw new Error("Number of people input does not exist for the overnight container");
+            throw new Error("Number of people input field does not exist for the overnight container");
 
         if (numNightsInput === null)
-            throw new Error("Number of nights input does not exist for the overnight container");
+            throw new Error("Number of nights input field does not exist for the overnight container");
 
         let numNightsInputValueAsNum = stringToIntConverter.Convert(numNightsInput.value);
         let numPeopleInputValueAsNum = stringToIntConverter.Convert(numPeopleInput.value);
@@ -39,4 +39,4 @@ const overnightCalculator = {
     }
 }
 
-export default overnightCalculator;
+export default overnightCostCalculator;
