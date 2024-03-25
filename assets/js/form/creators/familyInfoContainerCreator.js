@@ -13,7 +13,7 @@ const familyInfoContainerCreator = {
     familyNameLabel.textContent = "Family name:";
     familyNameLabel.htmlFor = "family-name-input";
     const familyNameInput = document.createElement("input");
-    familyNameInput.name = "family-name";
+    familyNameInput.name = "family name";
     familyNameInput.id = "family-name-input";
     familyNameInput.required = true;
     familyNameFieldContainer.appendChild(familyNameLabel);
@@ -27,7 +27,7 @@ const familyInfoContainerCreator = {
     firstNameLabel.textContent = "First name:";
     firstNameLabel.htmlFor = "first-name-input";
     const firstNameInput = document.createElement("input");
-    firstNameInput.name = "first-name";
+    firstNameInput.name = "first name";
     firstNameInput.id = "first-name-input";
     firstNameInput.required = true;
     firstNameFieldContainer.appendChild(firstNameLabel);
@@ -41,7 +41,7 @@ const familyInfoContainerCreator = {
     mobilePhoneNumberLabel.textContent = "Mobile phone number:";
     mobilePhoneNumberLabel.htmlFor = "mobile-phone-number-input";
     const mobilePhoneNumberInput = document.createElement("input");
-    mobilePhoneNumberInput.name = "mobile-phone-number";
+    mobilePhoneNumberInput.name = "mobile phone number";
     mobilePhoneNumberInput.id = "mobile-phone-number-input";
     mobilePhoneNumberInput.required = true;
     mobilePhoneNumberFieldContainer.appendChild(mobilePhoneNumberLabel);
@@ -56,6 +56,7 @@ const familyInfoContainerCreator = {
     const emailInput = document.createElement("input");
     emailInput.name = "email";
     emailInput.id = "email-input";
+    emailInput.type = "email";
     emailInput.required = true;
     emailFieldContainer.appendChild(emailLabel);
     emailFieldContainer.appendChild(emailInput);
@@ -68,7 +69,7 @@ const familyInfoContainerCreator = {
     churchNameLabel.textContent = "Church name:";
     churchNameLabel.htmlFor = "church-name-input";
     const churchNameInput = document.createElement("input");
-    churchNameInput.name = "church-name";
+    churchNameInput.name = "church name";
     churchNameInput.id = "church-name-input";
     churchNameInput.required = true;
     churchNameFieldContainer.appendChild(churchNameLabel);
@@ -82,7 +83,7 @@ const familyInfoContainerCreator = {
     churchCityLabel.textContent = "Church city:";
     churchCityLabel.htmlFor = "church-city-input";
     const churchCityInput = document.createElement("input");
-    churchCityInput.name = "church-city";
+    churchCityInput.name = "church city";
     churchCityInput.id = "church-city-input";
     churchCityInput.required = true;
     churchCityFieldContainer.appendChild(churchCityLabel);
@@ -95,10 +96,9 @@ const familyInfoContainerCreator = {
     requestStaffAndVolunteerInformationLabel.textContent = "Request staff and volunteer information:";
     requestStaffAndVolunteerInformationLabel.htmlFor = "requestStaffAndVolunteerInformationCheckboxInput";
     const requestStaffAndVolunteerInformationInput = document.createElement("input");
-    requestStaffAndVolunteerInformationInput.name = "request-staff-and-volunteer-information";
+    requestStaffAndVolunteerInformationInput.name = "request staff and volunteer information";
     requestStaffAndVolunteerInformationInput.id = "requestStaffAndVolunteerInformationCheckboxInput";
     requestStaffAndVolunteerInformationInput.type = "checkbox";
-    requestStaffAndVolunteerInformationInput.required = true;
     requestStaffAndVolunteerInformationCheckboxContainer.appendChild(requestStaffAndVolunteerInformationLabel);
     requestStaffAndVolunteerInformationCheckboxContainer.appendChild(requestStaffAndVolunteerInformationInput);
 
@@ -107,10 +107,9 @@ const familyInfoContainerCreator = {
     requestScholarshipFormLabel.textContent = "Request scholarship form:";
     requestScholarshipFormLabel.htmlFor = "requestScholarshipFormCheckboxInput";
     const requestScholarshipFormInput = document.createElement("input");
-    requestScholarshipFormInput.name = "request-scholarship-form";
+    requestScholarshipFormInput.name = "request scholarship form";
     requestScholarshipFormInput.id = "requestScholarshipFormCheckboxInput";
     requestScholarshipFormInput.type = "checkbox";
-    requestScholarshipFormInput.required = true;
     requestScholarshipFormCheckboxContainer.appendChild(requestScholarshipFormLabel);
     requestScholarshipFormCheckboxContainer.appendChild(requestScholarshipFormInput);
 
@@ -119,10 +118,9 @@ const familyInfoContainerCreator = {
     requestClergyDiscountCheckboxLabel.textContent = "Request clergy discount:";
     requestClergyDiscountCheckboxLabel.htmlFor = "requestClergyDiscountCheckboxInput";
     const requestClergyDiscountCheckboxInput = document.createElement("input");
-    requestClergyDiscountCheckboxInput.name = "request-clergy-discount-form";
+    requestClergyDiscountCheckboxInput.name = "request clergy discount form";
     requestClergyDiscountCheckboxInput.id = "requestClergyDiscountCheckboxInput";
     requestClergyDiscountCheckboxInput.type = "checkbox";
-    requestClergyDiscountCheckboxInput.required = true;
     requestClergyDiscountCheckboxContainer.appendChild(requestClergyDiscountCheckboxLabel);
     requestClergyDiscountCheckboxContainer.appendChild(requestClergyDiscountCheckboxInput);
 
@@ -131,10 +129,9 @@ const familyInfoContainerCreator = {
     requestPaymentPlanInformationCheckboxLabel.textContent = "Request payment plan information:";
     requestPaymentPlanInformationCheckboxLabel.htmlFor = "requestPaymentPlanInformationCheckboxInput";
     const requestPaymentPlanInformationCheckboxInput = document.createElement("input");
-    requestPaymentPlanInformationCheckboxInput.name = "request-clergy-discount-form";
+    requestPaymentPlanInformationCheckboxInput.name = "request clergy discount form";
     requestPaymentPlanInformationCheckboxInput.id = "requestPaymentPlanInformationCheckboxInput";
     requestPaymentPlanInformationCheckboxInput.type = "checkbox";
-    requestPaymentPlanInformationCheckboxInput.required = true;
     requestPaymentPlanInformationCheckboxContainer.appendChild(requestPaymentPlanInformationCheckboxLabel);
     requestPaymentPlanInformationCheckboxContainer.appendChild(requestPaymentPlanInformationCheckboxInput);
 
@@ -233,7 +230,7 @@ const familyInfoContainerCreator = {
     firstMealDayLabel.htmlFor = "first-meal-day-selector";
     const firstMealDaySelector = document.createElement("select");
     firstMealDaySelector.required = true;
-    firstMealDaySelector.name = "day-of-first-meal";
+    firstMealDaySelector.name = "day of first meal";
     firstMealDaySelector.className = "selector";
     firstMealDaySelector.id = "first-meal-day-selector";
     for (let i = 0; i < 7; i++) {
@@ -250,7 +247,7 @@ const familyInfoContainerCreator = {
     firstMealMealLabel.htmlFor = "first-meal-meal-selector";
     const firstMealMealSelector = document.createElement("select");
     firstMealMealSelector.required = true;
-    firstMealMealSelector.name = "first-meal";
+    firstMealMealSelector.name = "first meal";
     firstMealMealSelector.className = "selector";
     firstMealMealSelector.id = "first-meal-meal-selector";
     for (let i = 0; i < 3; i++) {
@@ -279,7 +276,7 @@ const familyInfoContainerCreator = {
     lastMealDayLabel.htmlFor = "last-meal-day-selector";
     const lastMealDaySelector = document.createElement("select");
     lastMealDaySelector.required = true;
-    lastMealDaySelector.name = "day-of-last-meal";
+    lastMealDaySelector.name = "day of last meal";
     lastMealDaySelector.className = "selector";
     lastMealDaySelector.id = "last-meal-day-selector";
     for (let i = 0; i < 7; i++) {
@@ -296,7 +293,7 @@ const familyInfoContainerCreator = {
     lastMealDayLabel.htmlFor = "last-meal-meal-selector";
     const lastMealMealSelector = document.createElement("select");
     lastMealMealSelector.required = true;
-    lastMealMealSelector.name = "last-meal";
+    lastMealMealSelector.name = "last meal";
     lastMealMealSelector.className = "selector";
     lastMealMealSelector.id = "last-meal-meal-selector";
     for (let i = 0; i < 3; i++) {

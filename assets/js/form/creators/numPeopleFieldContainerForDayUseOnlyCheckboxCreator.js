@@ -9,7 +9,7 @@ const numPeopleFieldContainerForDayUseOnlyCheckboxCreator = {
       inputLabel.textContent = "Number of people:";
       inputLabel.htmlFor = "num-people-input-for-day-use-only-checkbox";
       const input = document.createElement("input");
-      input.name = "number-of-people-for-day-use-only";
+      input.name = "number of people for day use only";
       input.id = "num-people-input-for-day-use-only-checkbox";
       input.required = true;
       inputFieldContainer.appendChild(inputLabel);

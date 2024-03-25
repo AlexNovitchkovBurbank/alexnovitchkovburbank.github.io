@@ -9,7 +9,7 @@ const numPeopleFieldContainerForOvernightCheckboxCreator = {
     inputLabel.textContent = "Number of people:";
     inputLabel.htmlFor = "num-people-input-for-overnight-checkbox";
     const input = document.createElement("input");
-    input.name = "number-of-people-for-overnight";
+    input.name = "number of people for overnight stay";
     input.id = "num-people-input-for-overnight-checkbox";
     input.required = true;
     inputFieldContainer.appendChild(inputLabel);

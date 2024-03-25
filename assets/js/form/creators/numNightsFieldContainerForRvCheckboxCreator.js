@@ -9,7 +9,7 @@ const numNightsFieldContainerForRvCheckboxCreator = {
     inputLabel.textContent = "Number of nights:";
     inputLabel.htmlFor = "num-nights-input-for-rv-checkbox";
     const input = document.createElement("input");
-    input.name = "number-of-nights-for-rv";
+    input.name = "number of nights for rv stay";
     input.id = "num-nights-input-for-rv-checkbox";
     input.required = true;
     inputFieldContainer.appendChild(inputLabel);

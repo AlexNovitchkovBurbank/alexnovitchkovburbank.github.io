@@ -7,8 +7,8 @@ const chaletCostContainerCreator = {
     label.textContent = "Chalet cost:";
     label.htmlFor = "chalet-cost";
     const input = document.createElement("input");
-    input.name = "chalet-total-cost";
-    input.value = cost;
+    input.name = "chalet stay cost";
+    input.value = `$${cost}`;
     input.readOnly = true;
     input.id = "chalet-cost";
     costFieldContainer.appendChild(label);

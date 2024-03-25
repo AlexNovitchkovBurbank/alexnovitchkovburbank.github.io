@@ -93,6 +93,7 @@ const createMemberRecordContainer =
       const isClergyCheckboxContainer = document.createElement("input");
       isClergyCheckboxContainer.type = "checkbox";
       isClergyCheckboxContainer.id = "is-clergy-checkbox";
+      isClergyCheckboxContainer.name = "clergy";
       isClergyFieldContainer.appendChild(isClergyLabelContainer);
       isClergyFieldContainer.appendChild(isClergyCheckboxContainer);
 
@@ -103,6 +104,7 @@ const createMemberRecordContainer =
       const isVolunteerCheckboxContainer = document.createElement("input");
       isVolunteerCheckboxContainer.type = "checkbox";
       isVolunteerCheckboxContainer.id = "is-volunteer-checkbox";
+      isVolunteerCheckboxContainer.name = "volunteer";
       isVolunteerFieldContainer.appendChild(isVolunteerLabelContainer);
       isVolunteerFieldContainer.appendChild(isVolunteerCheckboxContainer);
 
@@ -113,6 +115,7 @@ const createMemberRecordContainer =
       const isStaffCheckboxContainer = document.createElement("input");
       isStaffCheckboxContainer.type = "checkbox";
       isStaffCheckboxContainer.id = "is-staff-checkbox";
+      isStaffCheckboxContainer.name = "staff";
       isStaffFieldContainer.appendChild(isStaffLabelContainer);
       isStaffFieldContainer.appendChild(isStaffCheckboxContainer);
 

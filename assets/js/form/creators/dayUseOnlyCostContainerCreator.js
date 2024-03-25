@@ -7,8 +7,8 @@ const dayUseOnlyCostContainerCreator = {
     label.textContent = "Day use only cost:";
     label.htmlFor = "day-use-only-cost";
     const input = document.createElement("input");
-    input.name = "day-use-only-total-cost";
-    input.value = cost;
+    input.name = "day use only cost";
+    input.value = `$${cost}`;
     input.readOnly = true;
     input.id = "day-use-only-cost";
     costFieldContainer.appendChild(label);

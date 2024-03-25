@@ -7,8 +7,8 @@ const overnightCostContainerCreator = {
     label.textContent = "Overnight cost:";
     label.htmlFor = "overnight-cost";
     const input = document.createElement("input");
-    input.name = "overnight-total-cost";
-    input.value = cost;
+    input.name = "overnight stay cost";
+    input.value = `$${cost}`;
     input.readOnly = true;
     input.id = "overnight-cost";
     costFieldContainer.appendChild(label);

@@ -7,8 +7,8 @@ const tentCostContainerCreator = {
     label.textContent = "Tent cost:";
     label.htmlFor = "tent-cost";
     const input = document.createElement("input");
-    input.name = "tent-total-cost";
-    input.value = cost;
+    input.name = "tent stay cost";
+    input.value = `$${cost}`;
     input.readOnly = true;
     input.id = "tent-cost";
     costFieldContainer.appendChild(label);

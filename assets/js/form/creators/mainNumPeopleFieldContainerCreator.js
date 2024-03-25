@@ -9,7 +9,7 @@ const mainNumPeopleFieldContainerCreator = {
       inputLabel.textContent = "Number of people:";
       inputLabel.htmlFor = "num-people-input";
       const input = document.createElement("input");
-      input.name = "number-of-people";
+      input.name = "number of people";
       input.id = "num-people-input";
       input.required = true;
       inputFieldContainer.appendChild(inputLabel);

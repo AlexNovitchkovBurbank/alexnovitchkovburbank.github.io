@@ -9,7 +9,7 @@ const numPeopleFieldContainerForSleepOnGroundCheckboxCreator = {
     inputLabel.textContent = "Number of people:";
     inputLabel.htmlFor = "num-people-input-for-sleep-on-ground-checkbox";
     const input = document.createElement("input");
-    input.name = "number-of-people-sleeping-on-the-ground";
+    input.name = "number of people sleeping on the ground";
     input.id = "num-people-input-for-sleep-on-ground-checkbox";
     input.required = true;
     inputFieldContainer.appendChild(inputLabel);

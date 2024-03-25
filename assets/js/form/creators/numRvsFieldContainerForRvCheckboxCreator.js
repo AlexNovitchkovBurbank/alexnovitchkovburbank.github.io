@@ -9,7 +9,7 @@ const numRvsFieldContainerForRvCheckboxCreator = {
     inputLabel.textContent = "Number of RVs:";
     inputLabel.htmlFor = "num-rvs-input-for-rv-checkbox";
     const input = document.createElement("input");
-    input.name = "number-of-rvs";
+    input.name = "number of rvs";
     input.id = "num-rvs-input-for-rv-checkbox";
     input.required = true;
     inputFieldContainer.appendChild(inputLabel);
