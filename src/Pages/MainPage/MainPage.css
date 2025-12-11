@@ -1,0 +1,13 @@
+:root {
+  background-image: url("../../assets/images/background.png");
+}
+
+#body {
+  margin-top: 2%;
+}
+
+.selfImg {
+  width: 25%;
+  height: 25%;
+  border-radius: 100%;
+}

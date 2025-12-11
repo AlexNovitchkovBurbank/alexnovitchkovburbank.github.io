@@ -1,0 +1,11 @@
+#body {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.selfImg {
+  width: 25%;
+  height: 25%;
+  border-radius: 100%;
+}

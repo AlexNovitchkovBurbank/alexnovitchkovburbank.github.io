@@ -1,0 +1,21 @@
+@media (max-width: 700px) {
+  #container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  #container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 901px) {
+  #container {
+    width: 33.3333333333%;
+  }
+}
+
+.title {
+  font-weight: bold;
+}
