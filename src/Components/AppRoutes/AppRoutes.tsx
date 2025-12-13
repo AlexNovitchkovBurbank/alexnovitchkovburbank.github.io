@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import ProjectsPage from "../../Pages/ProjectsPage/ProjectsPage";
+import CodeStructureExamplesPage from "../../Pages/CodeStructureExamplePage/CodeStructureExamplesPage";
 import MainPage from "../../Pages/MainPage/MainPage";
-import ProjectFormattingPage from "../../Pages/ProjectFormattingPage/ProjectFormattingPage";
+import FolderStructurePage from "../../Pages/FolderStructureExamplesPage/FolderStructureExamplesPage";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route path="/projectFormatting" element={<ProjectFormattingPage />} />
-      <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="/folderStructureExamples" element={<FolderStructurePage />} />
+      <Route path="/codeStructureExamples" element={<CodeStructureExamplesPage />} />
     </Routes>
   );
 };

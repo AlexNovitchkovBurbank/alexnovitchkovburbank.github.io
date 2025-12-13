@@ -1,13 +1,13 @@
-import { formatting } from "../../assets/projectFormattingExamples.json";
-import Format from "../../Components/Format";
+import { formatting } from "../../assets/folderStructure.json";
+import Format from "../../Components/FormatCard/Format";
 import Navbar from "../../Components/Navbar/Navbar";
-import "./ProjectFormattingPage.css"
+import "./FolderStructureExamplesPage.css"
 
-const ProjectFormattingPage = () => {
+const FolderStructurePage = () => {
   return (
     <>
       <Navbar />
-      <div id="body">
+      <div id="folderStructureExamplesSection">
         {formatting.unitTest.map((testFormat, i) => (
           <Format
             key={i}
@@ -21,4 +21,4 @@ const ProjectFormattingPage = () => {
   );
 };
 
-export default ProjectFormattingPage;
+export default FolderStructurePage;
