@@ -7,7 +7,7 @@ const TsJsPage = () => {
   return (
     <>
       <Navbar />
-      <div id="exampleSection">
+      <div className="exampleSection">
         {formatting.TS_JS.map((formatCard, i) => (
           <FormatCard
             key={i}
