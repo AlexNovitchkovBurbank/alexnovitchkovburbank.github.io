@@ -1,14 +1,15 @@
 import Navbar from "../../Components/Navbar/Navbar";
-import self from "../../assets/images/self.jpg";
 import "../MainPage/MainPage.css";
 
 const MainPage = () => {
+  const selfImgUrl = "./images/self.jpg"
+
   return (
     <>
       <Navbar />
-      <div id="body">
-        <div id="name">Alexander Novitchkov-Burbank</div>
-        <img className="selfImg" src={self}></img>
+      <div className="body">
+        <div className="name">Alexander Novitchkov-Burbank</div>
+        <img className="selfImg" src={selfImgUrl}></img>
       </div>
     </>
   );
