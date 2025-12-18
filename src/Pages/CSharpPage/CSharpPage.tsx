@@ -5,7 +5,7 @@ const CSharpPage = () => {
   return (
     <>
       <Navbar />
-      <div id="exampleSection">
+      <div className="exampleSection">
         
       </div>
     </>
