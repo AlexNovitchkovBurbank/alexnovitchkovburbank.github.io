@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import CodeStructureExamplesPage from "../../Pages/CodeStructureExamplePage/CodeStructureExamplesPage";
+import CSharpPage from "../../Pages/CSharpPage/CSharpPage";
 import MainPage from "../../Pages/MainPage/MainPage";
-import FolderStructurePage from "../../Pages/FolderStructureExamplesPage/FolderStructureExamplesPage";
+import TsJsPage from "../../Pages/TsJsPage/TsJsPage";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route path="/folderStructureExamples" element={<FolderStructurePage />} />
-      <Route path="/codeStructureExamples" element={<CodeStructureExamplesPage />} />
+      <Route path="/ts_js" element={<TsJsPage />} />
+      <Route path="/csharp" element={<CSharpPage />} />
     </Routes>
   );
 };

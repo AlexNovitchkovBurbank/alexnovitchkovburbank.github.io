@@ -1,0 +1,31 @@
+{
+  "formatting": {
+    "TS_JS": [
+      {
+        "title": "Test folder structure",
+        "url": "/images/TsJs/currentProject/unit tests CI.png",
+        "whyThisWay": "Having a test folder to contain all the test files seperates the src and tests.\nI seperated components, both tsx (components returning elements directly displaying on a page) and ts, and pages (the actual pages).\nPages are done using tsx or jsx and components can be done using javascript syntax as well (if using vanilla javascript)"
+      },
+      {
+        "title": "Folder structure",
+        "url": "",
+        "whyThisWay": "Should be like this"
+      },
+      {
+        "title": "Object structure",
+        "url": "",
+        "whyThisWay": "Should be like this"
+      },
+      {
+        "title": "Class structure",
+        "url": "",
+        "whyThisWay": "Should be like this"
+      },
+      {
+        "title": "Code snippet",
+        "url": "",
+        "whyThisWay": "Should be like this"
+      }
+    ]
+  }
+}
