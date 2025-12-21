@@ -1,0 +1,32 @@
+{
+  "formatting": {
+    "TS_JS": {
+      "FolderStructure": [
+        {
+          "title": "Src folder structure",
+          "url": "/images/code/TsJs/src folder structure.png",
+          "whyThisWay": "I wanted to make sure to find all my components and pages easily."
+        },
+        {
+          "title": "Test folder structure",
+          "url": "/images/code/TsJs/test tsx structure.png",
+          "whyThisWay": "Test files are not the same as src files so I want to seperate them.\nThe same structure appears in both because I want to easily find the tested file."
+        }
+      ],
+      "CodeStructure": [
+        {
+          "title": "Object structure",
+          "url": "/images/code/TsJs/object structure.png",
+          "whyThisWay": "Each object does 1 task only. This leads to more objects but I specifically what purpose it has in the codebase."
+        }
+      ],
+      "TestCodeStructure": [
+        {
+          "title": "Test code structure",
+          "url": "/images/code/TsJs/test tsx structure.png",
+          "whyThisWay": "I want to mock all dependencies out, returning fake elements. This is done to speed up the tests and to be sure that any errors are present in the tested code only."
+        }
+      ]
+    }
+  }
+}

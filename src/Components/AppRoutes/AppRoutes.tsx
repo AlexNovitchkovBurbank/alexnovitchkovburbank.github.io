@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import ProjectsPage from "../../Pages/ProjectsPage/ProjectsPage";
+import CSharpPage from "../../Pages/CSharpPage/CSharpPage";
 import MainPage from "../../Pages/MainPage/MainPage";
-import ProjectFormattingPage from "../../Pages/ProjectFormattingPage/ProjectFormattingPage";
+import TsJsPage from "../../Pages/TsJsPage/TsJsPage";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route path="/projectFormatting" element={<ProjectFormattingPage />} />
-      <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="/ts_js" element={<TsJsPage />} />
+      <Route path="/csharp" element={<CSharpPage />} />
     </Routes>
   );
 };
