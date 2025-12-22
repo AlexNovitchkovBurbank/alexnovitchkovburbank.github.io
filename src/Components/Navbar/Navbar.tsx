@@ -7,7 +7,7 @@ const Navbar = () => {
       <Link to="/">Home</Link>
       <div id="page-navigation">
         <Link to="/ts_js">TS/JS</Link>
-        <Link to="/csharp">C#</Link>
+        {/*<Link to="/csharp">C#</Link>*/}
       </div>
     </div>
   );
