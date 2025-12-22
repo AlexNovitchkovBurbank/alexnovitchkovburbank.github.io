@@ -6,4 +6,5 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
   },
+  base: process.env.NODE_ENV === 'production' ? 'alexnovitchkovburbank.github.io/' : '/',
 });
