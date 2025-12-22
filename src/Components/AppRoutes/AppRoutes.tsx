@@ -8,7 +8,7 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/ts_js" element={<TsJsPage />} />
-      <Route path="/csharp" element={<CSharpPage />} />
+      {/*<Route path="/csharp" element={<CSharpPage />} />*/}
     </Routes>
   );
 };

@@ -32,7 +32,7 @@ test("renders that the navbar has the right link text and urls", () => {
 
   expect(outer.id).toBe("navbar");
 
-  expect(links.length).toBe(3);
+  expect(links.length).toBe(2);
 
   expect(outer.children.length).toBe(2);
 
@@ -40,11 +40,11 @@ test("renders that the navbar has the right link text and urls", () => {
   expect(links[0]).toHaveAttribute(linkToAttribute, homeUurl);
 
   expect(pageNavigation.id).toBe("page-navigation");
-  expect(pageNavigation.children.length).toBe(2);
+  expect(pageNavigation.children.length).toBe(1);
 
   expect(links[1].textContent).toBe(tsJsPageLinkText);
   expect(links[1]).toHaveAttribute(linkToAttribute, tsJsPageUrl);
 
-  expect(links[2].textContent).toBe(csharpPageLinkText);
-  expect(links[2]).toHaveAttribute(linkToAttribute, csharpPageUrl);
+  //expect(links[2].textContent).toBe(csharpPageLinkText);
+  //expect(links[2]).toHaveAttribute(linkToAttribute, csharpPageUrl);
 });
