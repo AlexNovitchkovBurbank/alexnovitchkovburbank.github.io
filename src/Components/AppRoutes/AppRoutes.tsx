@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import CSharpPage from "../../Pages/CSharpPage/CSharpPage";
+//import CSharpPage from "../../Pages/CSharpPage/CSharpPage";
 import MainPage from "../../Pages/MainPage/MainPage";
 import TsJsPage from "../../Pages/TsJsPage/TsJsPage";
 
