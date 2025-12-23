@@ -17,14 +17,68 @@
         {
           "title": "Object structure",
           "url": "/images/code/TsJs/object structure.png",
-          "whyThisWay": "Each object does 1 task only. This leads to more objects but I specifically what purpose it has in the codebase."
+          "whyThisWay": "Each object does 1 task only.\nThis leads to more objects but I specifically what purpose it has in the codebase."
         }
       ],
       "TestCodeStructure": [
         {
           "title": "Test code structure",
           "url": "/images/code/TsJs/test tsx structure.png",
+          "whyThisWay": "I want to mock all dependencies out, returning fake elements.\nThis is done to speed up the tests and to be sure that any errors are present in the tested code only."
+        }
+      ]
+    },
+    "CSharp": {
+      "FolderStructure": [
+        {
+          "title": "Src folder structure",
+          "url": "/images/code/CSharp/src folder structure.png",
+          "whyThisWay": "I wanted to make sure to find all my components and pages easily."
+        },
+        {
+          "title": "Test folder structure",
+          "url": "/images/code/CSharp/test folder structure.png",
+          "whyThisWay": "Test files are not the same as src files so I want to seperate them.\nThe same structure appears in both because I want to easily find the tested file."
+        }
+      ],
+      "CodeStructure": [
+        {
+          "title": "Class structure",
+          "url": "/images/code/CSharp/validator class structure.png",
+          "whyThisWay": "Each class does 1 task only.\nThis leads to more classes but I specifically what purpose it has in the codebase."
+        },
+        {
+          "title": "Class structure (Processor)",
+          "url": "/images/code/CSharp/processor class structure.png",
+          "whyThisWay": "This class orchestrates the flow of the codebase with dependencies (classes) added in the constructor."
+        },
+        {
+          "title": "Interface structure",
+          "url": "/images/code/CSharp/validator interface structure.png",
+          "whyThisWay": "I want to make sure all the classes that are common, implement these methods"
+        },
+        {
+          "title": "Controller structure",
+          "url": "/images/code/CSharp/validator class structure.png",
+          "whyThisWay": "Each class does 1 task only.\nThis leads to more classes but I specifically what purpose it has in the codebase."
+        }
+      ],
+      "testCodeHeader": "Each test is broken into sections to visually see where everything is.\nI need to test every code path instead of just the happy path because errors and other unexpected things happen",
+      "TestCodeStructure": [
+        {
+          "title": "Controller test code structure",
+          "url": "/images/code/CSharp/controller test structure.png",
           "whyThisWay": "I want to mock all dependencies out, returning fake elements. This is done to speed up the tests and to be sure that any errors are present in the tested code only."
+        },
+        {
+          "title": "Processor test code structure",
+          "url": "/images/code/CSharp/processor test structure.png",
+          "whyThisWay": "I want to mock all dependencies out, returning fake elements. This is done to speed up the tests and to be sure that any errors are present in the tested code only."
+        },
+        {
+          "title": "Validator test code structure",
+          "url": "/images/code/CSharp/validator test structure.png",
+          "whyThisWay": ""
         }
       ]
     }
