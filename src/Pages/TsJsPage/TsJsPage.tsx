@@ -7,6 +7,7 @@ const TsJsPage = () => {
   return (
     <>
       <Navbar />
+      <div className="title">TS/JS</div>
       <div className="exampleSection">
         <div className="folderStructure formatCardContainer">
           {formatting.TS_JS.FolderStructure.map((formatCard, i) => (
