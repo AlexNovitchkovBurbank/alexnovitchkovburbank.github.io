@@ -17,11 +17,15 @@ test("tests that all TS/JS examples present", () => {
   const { container } = render(<TsJsPage />);
 
   const navbar = container.children.item(0) as HTMLElement;
-  const bodyContainer = container.children.item(1) as HTMLElement;
+  const title = container.children.item(1) as HTMLElement;
+  const bodyContainer = container.children.item(2) as HTMLElement;
 
   expect(navbar.className).toBe("navbar");
+  
+  expect(title.className).toBe("title");
+  expect(title?.textContent).toBe("TS/JS");
 
-  expect(container.children.length).toBe(2);
+  expect(container.children.length).toBe(3);
 
   expect(bodyContainer.className).toBe("exampleSection");
   expect(bodyContainer?.children.length).toBe(3);

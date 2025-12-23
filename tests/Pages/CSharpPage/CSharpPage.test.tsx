@@ -10,6 +10,10 @@ test("Render C# page", () => {
     return { default: () => <div className="navbar"></div> };
   });
 
+  vi.mock("../../../src/Components/FormatCard/FormatCard.tsx", () => {
+    return { default: () => <div className="formatCard"></div> };
+  });
+
   const { container } = render(<CSharpPage />);
 
   expect(container.children.length).toBe(3);
