@@ -8,6 +8,7 @@ const Navbar = () => {
       <div id="page-navigation">
         <Link to="/ts_js">TS/JS</Link>
         <Link to="/csharp">C#</Link>
+        <Link to="/concepts">Concepts</Link>
       </div>
     </div>
   );
