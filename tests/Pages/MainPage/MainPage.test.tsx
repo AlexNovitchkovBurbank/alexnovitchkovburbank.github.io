@@ -31,6 +31,7 @@ test('makes sure that the main page has a navbar and has "Alex Novitchkov-Burban
   expect(bodyContainer.className).toBe("body");
   expect(bodyContainer?.children.length).toBe(2);
 
+  expect(bodyContainer.children[0].tagName).toBe("DIV");
   expect(bodyContainer.children[0].textContent).toBe(name);
 
   expect(bodyContainer.children[1].tagName).toBe("IMG");
