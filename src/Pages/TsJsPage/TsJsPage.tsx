@@ -9,7 +9,10 @@ const TsJsPage = () => {
       <Navbar />
       <div className="title">TS/JS</div>
       <div className="exampleSection">
-        <div className="folderStructure formatCardContainer">
+        <section
+          id="ts_jsFolderStructure"
+          className="folderStructure formatCardContainer"
+        >
           {formatting.TS_JS.FolderStructure.map((formatCard, i) => (
             <FormatCard
               key={i}
@@ -18,8 +21,11 @@ const TsJsPage = () => {
               whyThisWay={formatCard.whyThisWay}
             />
           ))}
-        </div>
-        <div className="codeStructure formatCardContainer">
+        </section>
+        <section
+          id="ts_jsCodeStructure"
+          className="codeStructure formatCardContainer"
+        >
           {formatting.TS_JS.CodeStructure.map((formatCard, i) => (
             <FormatCard
               key={i}
@@ -28,8 +34,11 @@ const TsJsPage = () => {
               whyThisWay={formatCard.whyThisWay}
             />
           ))}
-        </div>
-        <div className="testStructure formatCardContainer">
+        </section>
+        <section
+          id="ts_jsTestsStructure"
+          className="testStructure formatCardContainer"
+        >
           {formatting.TS_JS.TestCodeStructure.map((formatCard, i) => (
             <FormatCard
               key={i}
@@ -38,7 +47,7 @@ const TsJsPage = () => {
               whyThisWay={formatCard.whyThisWay}
             />
           ))}
-        </div>
+        </section>
       </div>
     </>
   );

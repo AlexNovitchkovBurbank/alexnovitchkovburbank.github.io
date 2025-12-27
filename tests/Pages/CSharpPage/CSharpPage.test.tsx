@@ -38,6 +38,9 @@ test("Render C# page", () => {
   );
   expect(codeStructure?.className).toBe("codeStructure formatCardContainer");
   expect(testStructure?.className).toBe("testStructure formatCardContainer");
+  expect(folderStructure?.id).toBe("csharpFolderStructure");
+  expect(codeStructure?.id).toBe("csharpCodeStructure");
+  expect(testStructure?.id).toBe("csharpTestsStructure");
 
   expect(folderStructure?.children.length).toBe(2);
   expect(codeStructure?.children.length).toBe(4);

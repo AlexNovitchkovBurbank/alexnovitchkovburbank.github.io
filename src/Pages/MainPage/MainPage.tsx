@@ -2,7 +2,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import "../MainPage/MainPage.css";
 
 const MainPage = () => {
-  const selfImgUrl = "./images/self.jpg"
+  const selfImgUrl = "./images/self.jpg";
 
   return (
     <>
