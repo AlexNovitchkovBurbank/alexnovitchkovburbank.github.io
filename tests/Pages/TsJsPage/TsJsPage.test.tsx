@@ -21,7 +21,7 @@ test("tests that all TS/JS examples present", () => {
   const bodyContainer = container.children.item(2) as HTMLElement;
 
   expect(navbar.className).toBe("navbar");
-  
+
   expect(title.className).toBe("title");
   expect(title?.textContent).toBe("TS/JS");
 
@@ -34,9 +34,14 @@ test("tests that all TS/JS examples present", () => {
   const codeStructure = bodyContainer?.children.item(1) as HTMLElement;
   const testStructure = bodyContainer?.children.item(2) as HTMLElement;
 
-  expect(folderStructure?.className).toBe("folderStructure formatCardContainer");
+  expect(folderStructure?.className).toBe(
+    "folderStructure formatCardContainer"
+  );
   expect(codeStructure?.className).toBe("codeStructure formatCardContainer");
   expect(testStructure?.className).toBe("testStructure formatCardContainer");
+  expect(folderStructure?.id).toBe("ts_jsFolderStructure");
+  expect(codeStructure?.id).toBe("ts_jsCodeStructure");
+  expect(testStructure?.id).toBe("ts_jsTestsStructure");
 
   expect(folderStructure?.children.length).toBe(2);
   expect(codeStructure?.children.length).toBe(1);

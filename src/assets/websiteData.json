@@ -1,5 +1,27 @@
 {
   "formatting": {
+    "concepts": {
+      "cloud": {
+        "cloudformation": "I want to make sure I can reupload infrastructure and easily modify it.",
+        "serverless": "If I dont have a constant load on my system, I dont need a server like EC2."
+      },
+      "test": {
+        "why": "Especially for the backend part of a system, I need some way to test every case because manual testing could be lacking in coverage.",
+        "unit": "I want to make sure that all my code is tested without having to run with any real dependencies (using test doubles, mock etc.) attached. The reason for this is because if there are errors, I want to be sure they are in the unit tested section of code, not in some dependency.",
+        "integration": "I want to use dependencies to test the interaction of my code with them."
+      },
+      "CI_CD": {
+        "CI": "I want to make sure my code works and is tested automatically whenever I push to a branch or merge into dev or main.",
+        "CD": "I want to make sure that PRs do not become huge with multiple unrelated changes. I could get faster feedback if I merge my change into dev more frequently."
+      },
+      "github_branches": {
+        "main": "This is the final product that is in production (the dev branch gets merged into this branch. I never want to add to this branch directly.",
+        "dev": "This is the development branch that all changes get merged into. I never want to add to this branch directly.",
+        "feature": "These branches are reserved for adding new features. Only code related to 1 feature is added and nothing else and this is because I do not want to have a PR reviewer to easily see what changed.",
+        "bug": "These branches are reserved for fixing bugs. Only code related to 1 feature is added and nothing else and this is because I do not want to have have a PR reviewer to easily see what changed.",
+        "PR": "Before merging a branch into dev, I want reviewers to review my changes for a double and triple check of whether the code does what it needs to as well as format. I want to also make sure the PR code is not going to make the codebased more 'complex'"
+      }
+    },
     "TS_JS": {
       "FolderStructure": [
         {
@@ -10,14 +32,14 @@
         {
           "title": "Test folder structure",
           "url": "/images/code/TsJs/test tsx structure.png",
-          "whyThisWay": "Test files are not the same as src files so I want to seperate them.\nThe same structure appears in both because I want to easily find the tested file."
+          "whyThisWay": "Test files are not the same as src files so I want to seperate them. The same structure appears in both because I want to easily find the tested file."
         }
       ],
       "CodeStructure": [
         {
           "title": "Object structure",
           "url": "/images/code/TsJs/object structure.png",
-          "whyThisWay": "Each object does 1 task only.\nThis leads to more objects but I specifically what purpose it has in the codebase."
+          "whyThisWay": "Each object does 1 task only. This leads to more objects but I specifically what purpose it has in the codebase."
         }
       ],
       "TestCodeStructure": [
@@ -63,7 +85,6 @@
           "whyThisWay": "Each class does 1 task only.\nThis leads to more classes but I specifically what purpose it has in the codebase."
         }
       ],
-      "testCodeHeader": "Each test is broken into sections to visually see where everything is.\nI need to test every code path instead of just the happy path because errors and other unexpected things happen",
       "TestCodeStructure": [
         {
           "title": "Controller test code structure",

@@ -13,11 +13,14 @@
   width: 75%;
 }
 
-a {
+.navLink {
   color: white;
   margin-right: 2%;
+  border-bottom: 1px solid wheat;
 }
 
-a:hover {
+.navLink:hover {
   color: white;
+  font-weight: bold;
+  border-bottom: 2px solid wheat;
 }

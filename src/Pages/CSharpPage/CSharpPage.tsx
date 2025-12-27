@@ -1,7 +1,7 @@
 import { formatting } from "../../assets/websiteData.json";
 import FormatCard from "../../Components/FormatCard/FormatCard";
 import Navbar from "../../Components/Navbar/Navbar";
-import "./CSharpPage.css"
+import "./CSharpPage.css";
 
 const CSharpPage = () => {
   return (
@@ -9,7 +9,10 @@ const CSharpPage = () => {
       <Navbar />
       <div className="title">C#</div>
       <div className="exampleSection">
-        <div className="folderStructure formatCardContainer">
+        <section
+          id="csharpFolderStructure"
+          className="folderStructure formatCardContainer"
+        >
           {formatting.CSharp.FolderStructure.map((formatCard, i) => (
             <FormatCard
               key={i}
@@ -18,8 +21,11 @@ const CSharpPage = () => {
               whyThisWay={formatCard.whyThisWay}
             />
           ))}
-        </div>
-        <div className="codeStructure formatCardContainer">
+        </section>
+        <section
+          id="csharpCodeStructure"
+          className="codeStructure formatCardContainer"
+        >
           {formatting.CSharp.CodeStructure.map((formatCard, i) => (
             <FormatCard
               key={i}
@@ -28,8 +34,11 @@ const CSharpPage = () => {
               whyThisWay={formatCard.whyThisWay}
             />
           ))}
-        </div>
-        <div className="testStructure formatCardContainer">
+        </section>
+        <section
+          id="csharpTestsStructure"
+          className="testStructure formatCardContainer"
+        >
           {formatting.CSharp.TestCodeStructure.map((formatCard, i) => (
             <FormatCard
               key={i}
@@ -38,7 +47,7 @@ const CSharpPage = () => {
               whyThisWay={formatCard.whyThisWay}
             />
           ))}
-        </div>
+        </section>
       </div>
     </>
   );
