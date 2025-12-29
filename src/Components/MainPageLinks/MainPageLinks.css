@@ -1,0 +1,18 @@
+#mainPageLinks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.mainPageHeaderText {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.mainPageLink {
+  max-height: 20px;
+}
+
+.mainPageLink:hover {
+  color: #ffffff;
+}
