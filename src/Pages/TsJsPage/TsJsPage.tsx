@@ -1,3 +1,4 @@
+import { useLocation } from "react-router";
 import { formatting } from "../../assets/websiteData.json";
 import FormatCard from "../../Components/FormatCard/FormatCard";
 import Navbar from "../../Components/Navbar/Navbar";
@@ -5,14 +6,14 @@ import "./TsJsPage.css";
 import { useEffect } from "react";
 
 const TsJsPage = () => {
-  const hash = window.location.hash;
+  const { hash } = useLocation();
 
   useEffect(() => {
     if (hash) {
       const timer = setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+        const idElement = document.querySelector(hash);
+        if (idElement) {
+          idElement.scrollIntoView({ behavior: "smooth" });
         }
       }, 100);
 

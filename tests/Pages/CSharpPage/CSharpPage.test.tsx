@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { expect, test, vi } from "vitest";
 import React from "react";
-import { MemoryRouter, } from "react-router";
+import { MemoryRouter } from "react-router";
 
 test("Render C# page", () => {
   vi.mock("../../../src/Components/Navbar/Navbar.tsx", () => {
@@ -15,7 +15,15 @@ test("Render C# page", () => {
   });
 
   const { container } = render(
-    <MemoryRouter>
+    <MemoryRouter
+      initialEntries={[
+        {
+          pathname: "/csharp",
+          search: "?id=csharpFolderStructure",
+          state: { fromDashboard: true },
+        },
+      ]}
+    >
       <CSharpPage />
     </MemoryRouter>
   );
