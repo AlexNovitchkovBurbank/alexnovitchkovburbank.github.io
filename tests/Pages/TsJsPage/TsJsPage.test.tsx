@@ -14,7 +14,19 @@ test("tests that all TS/JS examples present", () => {
     return { default: () => <div className="formatCard"></div> };
   });
 
-  const { container } = render(<MemoryRouter><TsJsPage /></MemoryRouter>);
+  const { container } = render(
+    <MemoryRouter
+      initialEntries={[
+        {
+          pathname: "/ts_js",
+          search: "?id=ts_jsFolderStructure",
+          state: { fromDashboard: true },
+        },
+      ]}
+    >
+      <TsJsPage />
+    </MemoryRouter>
+  );
 
   const navbar = container.children.item(0) as HTMLElement;
   const title = container.children.item(1) as HTMLElement;

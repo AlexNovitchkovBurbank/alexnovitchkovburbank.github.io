@@ -3,16 +3,17 @@ import { formatting } from "../../assets/websiteData.json";
 import FormatCard from "../../Components/FormatCard/FormatCard";
 import Navbar from "../../Components/Navbar/Navbar";
 import "./CSharpPage.css";
+import { useLocation } from "react-router";
 
 const CSharpPage = () => {
-  const hash = window.location.hash
+  const { hash } = useLocation();
 
   useEffect(() => {
     if (hash) {
       const timer = setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+        const idElement = document.querySelector(hash);
+        if (idElement) {
+          idElement.scrollIntoView({ behavior: "smooth" });
         }
       }, 100);
 
