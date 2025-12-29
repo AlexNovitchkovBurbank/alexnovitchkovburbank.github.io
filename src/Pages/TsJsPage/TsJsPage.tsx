@@ -2,8 +2,24 @@ import { formatting } from "../../assets/websiteData.json";
 import FormatCard from "../../Components/FormatCard/FormatCard";
 import Navbar from "../../Components/Navbar/Navbar";
 import "./TsJsPage.css";
+import { useEffect } from "react";
 
 const TsJsPage = () => {
+  const hash = window.location.hash;
+
+  useEffect(() => {
+    if (hash) {
+      const timer = setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+
+      return () => clearTimeout(timer); // Clear the timeout because otherwise I would have memory leaks
+    }
+  }, [hash]);
+
   return (
     <>
       <Navbar />

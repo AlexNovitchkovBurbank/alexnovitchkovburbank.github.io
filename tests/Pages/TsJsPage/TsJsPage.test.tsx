@@ -1,9 +1,9 @@
 import TsJsPage from "../../../src/Pages/TsJsPage/TsJsPage";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { expect, test, vi } from "vitest";
 import React from "react";
-import { BrowserRouter } from "react-router";
+import { MemoryRouter } from "react-router";
 
 test("tests that all TS/JS examples present", () => {
   vi.mock("../../../src/Components/Navbar/Navbar.tsx", () => {
@@ -14,7 +14,7 @@ test("tests that all TS/JS examples present", () => {
     return { default: () => <div className="formatCard"></div> };
   });
 
-  const { container } = render(<TsJsPage />);
+  const { container } = render(<MemoryRouter><TsJsPage /></MemoryRouter>);
 
   const navbar = container.children.item(0) as HTMLElement;
   const title = container.children.item(1) as HTMLElement;

@@ -1,9 +1,9 @@
 import CSharpPage from "../../../src/Pages/CSharpPage/CSharpPage";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { expect, test, vi } from "vitest";
 import React from "react";
-import { BrowserRouter } from "react-router";
+import { MemoryRouter, } from "react-router";
 
 test("Render C# page", () => {
   vi.mock("../../../src/Components/Navbar/Navbar.tsx", () => {
@@ -14,7 +14,11 @@ test("Render C# page", () => {
     return { default: () => <div className="formatCard"></div> };
   });
 
-  const { container } = render(<CSharpPage />);
+  const { container } = render(
+    <MemoryRouter>
+      <CSharpPage />
+    </MemoryRouter>
+  );
 
   expect(container.children.length).toBe(3);
 
@@ -33,14 +37,16 @@ test("Render C# page", () => {
   const codeStructure = bodyContainer?.children.item(1) as HTMLElement;
   const testStructure = bodyContainer?.children.item(2) as HTMLElement;
 
+  expect(folderStructure?.id).toBe("csharpFolderStructure");
   expect(folderStructure?.className).toBe(
     "folderStructure formatCardContainer"
   );
-  expect(codeStructure?.className).toBe("codeStructure formatCardContainer");
-  expect(testStructure?.className).toBe("testStructure formatCardContainer");
-  expect(folderStructure?.id).toBe("csharpFolderStructure");
+
   expect(codeStructure?.id).toBe("csharpCodeStructure");
+  expect(codeStructure?.className).toBe("codeStructure formatCardContainer");
+
   expect(testStructure?.id).toBe("csharpTestsStructure");
+  expect(testStructure?.className).toBe("testStructure formatCardContainer");
 
   expect(folderStructure?.children.length).toBe(2);
   expect(codeStructure?.children.length).toBe(4);

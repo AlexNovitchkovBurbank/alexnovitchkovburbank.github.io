@@ -1,3 +1,4 @@
+import MainPageLinks from "../../Components/MainPageLinks/MainPageLinks";
 import Navbar from "../../Components/Navbar/Navbar";
 import "../MainPage/MainPage.css";
 
@@ -11,6 +12,7 @@ const MainPage = () => {
         <div className="name">Alexander Novitchkov-Burbank</div>
         <img className="selfImg" src={selfImgUrl}></img>
       </div>
+      <MainPageLinks />
     </>
   );
 };
